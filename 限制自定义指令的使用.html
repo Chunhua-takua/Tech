@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <title>Huawei</title>
+</head>
+<body>
+
+<script>
+    var app = angular.module("myApp", []);
+    app.directive("myDirective", function () {
+        return {
+            template : "<h1>这是自定义指令</h1>"
+        };
+    });
+</script>
+</body>
+</html>

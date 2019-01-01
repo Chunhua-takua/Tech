@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <title>校验用户输入</title>
+</head>
+<body>
+    <!--ng-model 指令可以将输入域的值与 AngularJS 创建的变量绑定。-->
+    <form ng-app="" name="un">
+        Email:
+        <input type="email" name="myAddr" ng-model="text">
+        <span ng-show="un.myAddr.$error.email">Invalid email address.</span>
+    </form>
+
+</body>
+</html>
