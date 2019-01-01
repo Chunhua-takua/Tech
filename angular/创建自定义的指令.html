@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	</head>
+
+    <body ng-app="myApp">
+    <!-- 在调用的时候需要注意名称 -->
+    <huawei-directive></huawei-directive>
+    
+    <script>
+        var app = angular.module("myApp", []);
+        app.directive("这是自定义的指令", function() {
+            return {
+                template: "<h1>user directive</h1>"
+            };
+            
+        });
+    </script>
+    </body>
+</html>

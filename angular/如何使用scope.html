@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+    <title>Thomson</title>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl" ng-model="">
+        <h1>{{carname}}</h1>
+    </div>
+
+    <script>
+        /*ng-model是用来把input绑定到angular变量的*/
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function ($scope) {
+            $scope.carname = "Volvo";
+        });
+    </script>
+</body>
+</html>
