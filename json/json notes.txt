@@ -1,1 +1,1 @@
-json语法是js语法的子集。
+json grammar is a subset of js grammar.
