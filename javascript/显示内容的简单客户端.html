@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            .reveal * { display: none; }
+            .reveal *.handle { display: block; }
+        </style>
+        
+        <script>
+            window.onload = function() {
+                // 找到所有class名为reveal的元素
+                var elements = document.getElementsByClassName("reveal");
+                
+                // 遍历每个element
+                for (var i = 0; i < elements.length; i++) {
+                    var elt = elements[i];
+                    
+                    // 找到容器中的handle元素
+                    var title = elt.getElementsByClassName("handle")[0];
+                    
+                    // 当点击这个元素时，显示剩下的内容
+                    addRevealHandler(title, elt);}
+                
+                function addRevealHandler() {
+                    title.onclick = function() {
+                        if (elt.className == "reveal")
+                            elt.className = "revealed";
+                        else if (elt.className == "revealed")
+                            elt.className = "reveal";
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <div class="reveal">
+            <h1 class="handle">Click here to reveal hidden text</h1>
+            <p>This paragraph is hidden. It appears when you click on the title.</p>
+        </div>
+    </body>
+</html>
