@@ -1,0 +1,26 @@
+<html>
+	<head>
+	    <title>create objects by json string</title>
+	</head>
+
+	<body>
+		<h2>通过JSON字符串来创建对象</h2>
+		<p>
+			First Name: <span id="fname"></span><br>
+			Last Name: <span id="lname"></span><br>
+		</p>
+		
+		<script>
+/*			var txt = '{ "employees" : [' +
+				'{ "firstName":"Bill" , "lastName":"Gates" },' +
+				'{ "firstName":"George" , "lastName":"Bush" },' +
+				'{ "firstName":"Thomas" , "lastName":"Carter" } ]}';
+*/				
+			var txt = '{ "employees" : [ { "firstName":"Bill" , "lastName":"Gates" }, { "firstName":"George" , "lastName":"Bush" },{ "firstName":"Thomas" , "lastName":"Carter" } ]}';
+			var obj = eval("(" + txt + ")");
+			
+			document.getElementById("fname").innerHTML = obj.employees[0].firstName;
+			document.getElementById("lname").innerHTML = obj.employees[0].lastName;
+		</script>
+	</body>
+</html>
