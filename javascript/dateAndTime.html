@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Get Date and Time</title>
+	</head>
+	
+	<body>
+		<script>
+			function getDateAndTime() {
+				var then = new Date(2018, 0, 6);
+				var later = new Date(2018, 0, 6, 17, 10, 30);
+				var now = new Date();
+				var elapsed = now - then;
+				
+				document.getElementById("then").innerHTML = then;
+				document.getElementById("later").innerHTML = later;
+				document.getElementById("now").innerHTML = now;
+				document.getElementById("elapsed").innerHTML = elapsed;
+				
+				document.getElementById("fullYear").innerHTML = later.getFullYear();
+				document.getElementById("month").innerHTML = later.getMonth();
+				document.getElementById("date").innerHTML = later.getDate();
+				document.getElementById("hour").innerHTML = later.getHours();
+				document.getElementById("utcHour").innerHTML = later.getUTCHours();
+			}
+			
+			window.onload = getDateAndTime;
+		</script>
+		
+		<h1></h1>
+		<p>获取2019年1月6日时间</p>
+		<span id="then"></span><br><br>
+		
+		<p>获取2019年1月6日17:10:30时间</p>
+		<span id="later"></span><br><br>
+		
+		<p>获取当前时间</p>
+		<span id="now"></span><br><br>
+		
+		<p>时间减法</p>
+		<span id="elapsed"></span><br><br>
+		
+		<p>获取年份</p>
+		<span id="fullYear"></span><br><br>
+		
+		<p>获取月份</p>
+		<span id="month"></span><br><br>
+		
+		<p>获取日期</p>
+		<span id="date"></span><br><br>
+		
+		<p>获取小时</p>
+		<span id="hour"></span><br><br>
+		
+		<p>获取UTC小时</p>
+		<span id="utcHour"></span><br><br>
+	</body>
+</html>
