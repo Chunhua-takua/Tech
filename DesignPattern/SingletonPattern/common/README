@@ -1,0 +1,5 @@
+compile error
+错误: 编码GBK的不可映射字符
+使用
+javac -encoding UTF-8 *.java
+进行编译
