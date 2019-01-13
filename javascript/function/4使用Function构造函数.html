@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+	<title>使用Function构造函数</title>
+	<script>
+	  window.onload = function() {
+		var multiply = new Function("x", "y", "return x*y");
+		var num = multiply(1, 2);
+		document.getElementById("test").innerHTML = num;
+		
+		var add = new Function("x", "y", "return x+y");
+		document.getElementById("test1").innerHTML = add(1, 2);
+	  }
+	</script>
+  </head>
+  
+  <body>
+	<h3>multiplication</h3>
+    1 * 2 = <span id="test"></span><br>
+	<h3>addition</h3>
+    1 + 2 = <span id="test1"></span><br>
+  </body>
+</html>
