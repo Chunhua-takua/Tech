@@ -1,4 +1,7 @@
 /* 对所有p元素有效 */
 p {
+	/*首行缩进*/
 	text-indent: .5in;
+	/*字号*/
+	font-size: 24px;
 }
