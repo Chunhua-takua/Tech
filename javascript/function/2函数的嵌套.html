@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<title>函数的嵌套写法</title>
+		<script>
+			window.onload = function() {
+				function hypotenuse(a, b) {
+					function square(x) {
+						return x*x;
+					}
+					return Math.sqrt(square(a) + square(b));
+				}
+				
+				document.getElementById("test").innerHTML = hypotenuse(3, 4);
+			}
+		</script>
+	</head>
+	
+	<body>
+		<span id="test"></span>
+	</body>
+</html>

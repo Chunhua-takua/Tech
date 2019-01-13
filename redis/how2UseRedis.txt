@@ -1,0 +1,10 @@
+启动	redis-cli
+测试redis服务是否已经启动	PING
+key命令的基本语法：command key_name
+设置一个缓存键值对 set key value
+删除一个键值对 del key
+
+
+redis HASH
+将多个f-v设置到hash表中：hmset key_name f1 v1 ... fn vn
+获取hash表中指定key的所有f-v：hgetall key_name

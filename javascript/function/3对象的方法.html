@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<title>定义对象的方法</title>
+		<script>
+			window.onload = function() {
+				var calculator = {
+					operand1: 1,
+					operand2: 2,
+					add: function(a, b) {
+						// this 指代当前对象
+						this.result = this.operand1 + this.operand2;
+					}
+				};
+
+				// 方法调用和函数调用的不同
+				calculator.add();
+				document.getElementById("test").innerHTML = calculator.result;
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<h2>Result</h2><br>
+		<span id="test"></span><br>
+	</body>
+</html>
