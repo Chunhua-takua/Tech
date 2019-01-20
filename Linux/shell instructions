@@ -1,0 +1,5 @@
+1. screen shot
+    gnome-screenshot | prt scrn
+    
+2. gedit中文乱码，指定编码方式打开文件
+     gedit --encoding=gbk filename
