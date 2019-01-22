@@ -6,5 +6,32 @@ key命令的基本语法：command key_name
 
 
 redis HASH
-将多个f-v设置到hash表中：hmset key_name f1 v1 ... fn vn
-获取hash表中指定key的所有f-v：hgetall key_name
+1. 将多个f-v设置到hash表中：hmset key_name f1 v1 ... fn vn
+    e.g.: hmset people Argos 23 Bob 21 Christine 12 Douglas 34 Eason 23 Franklin 78 George 21
+    hmset computers ThinkPad China Asus China Toshiba Japan HP America Dell America Lenovo China MSI China Samsung Korea LG Korea Alienware America
+2. 获取hash表中指定key的所有f-v：hgetall key_name
+3. Delete a f-v from hash map: hdel key_name field1 field2...fieldn
+    return: 被成功删除字段的数量，不包括被忽略的字段。
+    e.g.: hdel people Argos Bob
+4. Check whether a f-v exists in a hash map: hexists key_name field_name
+    exits, returns 1; otherwise, returns 0;
+    e.g.: hexists people Christine
+5. 为表中的字段加上指定int增量: hincrby key_name field_name delta
+    e.g.: hincrby people Christine 5; returns (integer) 17
+    hincrby computers ThinkPad 1; returns (error) ERR hash value is not an integer
+5. 为表中的字段加上指定float增量: hincrbyfloat key_name field_name delta
+    e.g.: hincrbyfloat people Christine 0.5
+6. 获取指定hash map中所有的field: hkeys key
+    e.g.: hkeys people
+7. 获取field数量: hlen key_name
+    e.g.: hlen people
+8. 返回哈希表中，一个或多个给定字段的值。如果指定的字段不存在于哈希表，那么返回一个 nil 值. hmget key_name field1 field2 ... fieldn
+    e.g.: hmget people Douglas Franklin
+9. 批量set: HMSET KEY_NAME FIELD1 VALUE1 ...FIELDN VALUEN
+    e.g.: hmset color R Red G Green B Blue
+10. 为哈希表中的字段赋值: hset key_name k v
+    e.g.: hset color R Racheal
+11. 为哈希表中不存在的的字段赋值: HSETNX KEY_NAME FIELD VALUE
+    e.g.: hsetnx color R Ruby
+12. 返回哈希表所有域(field)的值: hvals key_name
+    e.gl: hvals color
