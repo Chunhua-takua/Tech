@@ -35,3 +35,44 @@ redis HASH
     e.g.: hsetnx color R Ruby
 12. 返回哈希表所有域(field)的值: hvals key_name
     e.gl: hvals color
+    
+redis LIST
+1. 向表中插入一个或者多个数据: lpush key_name v1 v2 ... vn
+    e.g.: lpush city Nanjing
+        lpush city Oxford NewYork
+2. 从表头移除并获取第一个元素, 阻塞: blpop key_name timeout
+    e.g.:  blpop city 10
+    returns: 1) "city"
+            2) "NewYork"
+3. 从表尾移除并获取元素: brpop key_name timeout
+    e.g.: brpop city 1
+4. 从表1尾移除一个元素并插入表2头: brpoplpush list1 list2 timeout
+    e.g.: lpush msg "Konnichiwa"
+    lpush msg Ohayo gozaimasu
+    brpoplpush msg reciever 300
+5. 根据index从表中元素list[index]: lindex list index
+    e.g.: lindex city 0
+    returns: "Oxford"
+6. 指定在表中已有元素的前/后插入元素，如果pivot不存在那么返回-1: linsert list after|before pivot value
+    e.g.: linsert city before Oxford Paris
+        linsert city after Oxford Tokyo
+7. 获取list长度: llen list
+    e.g.: llen city
+8. 移除表中的第一个元素并返回该元素，和blpop的不同之处在没有timeout: lpop list
+    e.g.: lpop city 
+9. 移除表中的最后一个元素并返回该元素，和brpop的不同之处在没有timeout: rpop list
+    e.g.: rpop city 
+10. 插入元素到已经存在的表头，返回list长度: lpushx list value
+    e.g.: lpushx country US
+11. 从表头开始依次删除count个元素: lrem list count value
+    e.g.: lrem country  2 US
+12. 根据index设置元素: lset list index value
+    e.g.: lset city 0 Beijing
+13. 修剪列表，删除不在范围内的元素: ltrim list start stop
+    e.g.: ltrim country 0 4
+14. 从表source中取最后一个元素并设置位dest的第一个: rpoplpush source dest
+    e.g.: rpoplpush msg reciever
+15. 在表尾插入元素: rpush list value
+    e.g.: rpush msg hello
+16. 在已有表的尾部插入元素: rpushx list value
+    e.g.: rpushx msg hi
