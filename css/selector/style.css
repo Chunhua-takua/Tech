@@ -1,0 +1,12 @@
+/*cascading层叠效果：
+  1. 每个独立的HTML元素的style属性
+  2. 文档的样式
+  3. web浏览器的默认样式
+*/
+/* 对所有p元素有效 */
+p {
+	/*首行缩进*/
+	text-indent: .5in;
+	/*字号*/
+	font-size: 24px;
+}

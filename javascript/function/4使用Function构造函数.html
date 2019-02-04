@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html>
+  <head>
+	<title>使用Function构造函数</title>
+	<script>
+	  window.onload = function() {
+		var multiply = new Function("x", "y", "return x*y");
+		var num = multiply(1, 2);
+		document.getElementById("test").innerHTML = num;
+		
+		var add = new Function("x", "y", "return x+y");
+		document.getElementById("test1").innerHTML = add(1, 2);
+	  }
+	</script>
+  </head>
+  
+  <body>
+	/* 每次调用Function()都会解析函数体并创建新的函数对象，  */
+	/* 在循环体中会降低效率，不要使用这种方法。  */
+	/* 循环中可以使用嵌套函数和函数定义表达式，不会重复解析。*/
+	<h3>multiplication</h3>
+    1 * 2 = <span id="test"></span><br>
+	<h3>addition</h3>
+    1 + 2 = <span id="test1"></span><br>
+  </body>
+</html>

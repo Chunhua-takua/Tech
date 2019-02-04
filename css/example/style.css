@@ -1,0 +1,23 @@
+/* 元素 */
+h1, h2 { color: blue; font-style: italic }
+
+/* class */
+.WARNING {
+	font-weight: bold;
+	font-size: 150%;
+	margin: 0 lin 0 lin;
+	background-color: yellow;
+	border: solid red 8px;
+	padding: 10px;
+}
+
+/* class里的元素 */
+.WARNING h2 {
+	text-align: center;
+}
+
+/* id */
+#special {
+	text-align: center;
+	text-transform: uppercase;
+}
