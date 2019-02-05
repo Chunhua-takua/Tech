@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     protected TreeNode<E> root;
@@ -197,7 +199,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
             return;
 
         inorder(root.left);
-        System.out.println(root.element);
+        System.out.print(root.element + " ");
         inorder(root.right);
     }
 
@@ -217,7 +219,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
         if (root == null)
             return;
 
-        System.out.println(root.element);
+        System.out.print(root.element + " ");
         preorder(root.left);
         preorder(root.right);
     }
@@ -233,7 +235,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
 
         postorder(root.left);
         postorder(root.right);
-        System.out.println(root.element);
+        System.out.print(root.element + " ");
     }
 
     @Override
@@ -241,4 +243,32 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
         return null;
     }
 
+    public static class TreeNode<E extends Comparable<E>> {
+        protected E element;
+        protected TreeNode<E> left;
+        protected TreeNode<E> right;
+
+        public TreeNode(E e) {
+            element = e;
+        }
+    }
+
+	/** Returns a path from the root leading to the specified element */
+    public List<TreeNode<E>> path(E e) {
+        List<TreeNode<E>> path = new ArrayList<>();
+        TreeNode<E> current = root;
+        while (current != null) {
+            if (e.compareTo(current.element) < 0) {
+                current = current.left;
+            }
+            else if (e.compareTo(current.element) > 0) {
+                current = current.right;
+            }
+            else
+                break;
+            path.add(current);
+        }
+
+        return path;
+    }
 }
