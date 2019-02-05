@@ -79,7 +79,73 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
     }
 
     @Override
+    /**
+     * 考虑被删除的节点是否有left child
+     * 如果有，那么用left subtree的rightmost节点调整
+     * 如果没有，那么用right child调整
+     */
     public boolean delete(E e) {
+        // Locate the node to be deleted and also locate its parent node
+        TreeNode<E> current = root;
+        TreeNode<E> parent = null;
+
+        while (current != null) {
+            if (e.compareTo(current.element) < 0)
+                current = current.left;
+            else if (e.compareTo(current.element) > 0)
+                current = current.right;
+            else
+                break;
+        }
+
+        // Element is not in the tree
+        if (current == null)
+            return false;
+
+        // Case 1: current has no left child
+        if (current.left == null) {
+            if (parent != null) {
+                if (current.element.compareTo(parent.element) < 0) {
+                    parent.left = current.right;
+                }
+                else
+                    parent.right = current.right;
+            }
+            else {
+                root = current.right;
+            }
+
+        }
+        else {
+            // Case 2: current has a left child
+            // Locate the right most node int the left subtree of the current node and also its parent
+            TreeNode<E> parentOfRightMost = current;
+            TreeNode<E> rightMost = current.left;
+
+            while (rightMost.right != null) {
+                parentOfRightMost = rightMost;
+                rightMost = rightMost.right;
+            }
+
+            current.element = rightMost.element;
+
+            // Eliminate rightmost node
+            if (parentOfRightMost.right == rightMost) {
+                parentOfRightMost.right = rightMost.left;
+            }
+            else {
+                parentOfRightMost.left = rightMost.left;
+            }
+        }
+
+        size--;
+        return true;
+    }
+
+/*
+    @Override
+    public boolean delete(E e) {
+        System.out.println("delete, e=" + e);
         TreeNode<E> current = root;
         TreeNode<E> parent = null;
 
@@ -111,61 +177,84 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
 					if (current.left == null && current.right != null) {
 						current = current.right;
 					}
-                }
 
-                // case 1: current is leaf node
-                if (current.right == null && current.left == null) {
-                    if (e.compareTo(parent.element) < 0)
-                        parent.left = null;
-                    else
-                        parent.right = null;
-                }
+					// 0-4. root node has both right and left children
+                    if (current.left != null && current.right != null) {
+                        // Find the rightmost node of left subtree
+                        TreeNode<E> rightMost = current.left;
+                        TreeNode<E> parentOfRightMost = current;
 
-                // case 2: current has only left node
-                if (current.left != null && current.right == null) {
-                    if (e.compareTo(parent.element) < 0) {
-                        parent.left = current.left;
-                    }
-                    else {
-                        parent.right = current.left;
-                    }
-                }
+                        while (rightMost.right != null) {
+                            parentOfRightMost = rightMost;
+                            rightMost = rightMost.right;
+                        }
 
-                // case 3: current has only right node
-                if (current.left == null && current.right != null) {
-                    if (e.compareTo(parent.element) < 0) {
-                        parent.left = current.right;
-                    }
-                    else {
-                        parent.right = current.right;
+                        current.element = rightMost.element;
+
+                        if (parentOfRightMost.right == rightMost)
+                            parentOfRightMost.right = rightMost.left;
+                        else
+                            parentOfRightMost.left = rightMost.left;
                     }
                 }
-
-                // case 4: current has both right and left nodes
-                if (e.compareTo(parent.element) < 0) {
-					TreeNode<E> min = current.right;
-					TreeNode<E> minParent = current;
-					while (min.left != null) {
-						minParent = min;
-						min = min.left;
-					}
-					
-					minParent.left = min.right;
-					min.right = current.right;
-					min.left = current.left;
-					parent.left = min;
-				}
                 else {
-					TreeNode<E> min = current.left;
-					TreeNode<E> minParent = current;
-					while (min.left != null) {
-						minParent = min;
-						min = min.left;
-					}
-					minParent.left = min.right;
-					min.right = current.right;
-					min.left = current.left;
-					parent.right = min;
+
+                    // case 1: current is leaf
+                    // node
+                    if (current.right == null && current.left == null) {
+                        if (e.compareTo(parent.element) < 0)
+                            parent.left = null;
+                        else
+                            parent.right = null;
+                    }
+
+                    // case 2: current has only left node
+                    if (current.left != null && current.right == null) {
+                        if (e.compareTo(parent.element) < 0) {
+                            parent.left = current.left;
+                        }
+                        else {
+                            parent.right = current.left;
+                        }
+                    }
+
+                    // case 3: current has only right node
+                    if (current.left == null && current.right != null) {
+                        if (e.compareTo(parent.element) < 0) {
+                            parent.left = current.right;
+                        }
+                        else {
+                            parent.right = current.right;
+                        }
+                    }
+
+                    // case 4: current has both right and left nodes
+                    if (e.compareTo(parent.element) < 0) {
+                        TreeNode<E> min = current.right;
+                        TreeNode<E> minParent = current;
+                        while (min.left != null) {
+                            minParent = min;
+                            min = min.left;
+                        }
+
+                        minParent.left = min.right;
+                        min.right = current.right;
+                        min.left = current.left;
+                        parent.left = min;
+                    }
+                    else {
+                        TreeNode<E> min = current.left;
+                        TreeNode<E> minParent = current;
+                        while (min.left != null) {
+                            minParent = min;
+                            min = min.left;
+                        }
+                        minParent.left = min.right;
+                        min.right = current.right;
+                        min.left = current.left;
+                        parent.right = min;
+                    }
+
                 }
 
                 size--;
@@ -175,6 +264,7 @@ public class BST<E extends Comparable<E>> extends AbstractTree<E> {
 
         return false;
     }
+*/
 
     @Override
     public int getSize() {
