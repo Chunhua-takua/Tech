@@ -76,3 +76,23 @@ redis LIST
     e.g.: rpush msg hello
 16. 在已有表的尾部插入元素: rpushx list value
     e.g.: rpushx msg hi
+    
+集合SET
+1. 向集合set_key中插入元素value: sadd set_key value [v ...]
+    e.g.: sadd day Mon
+    sadd day Tue Wed
+2. 删除一个或多个元素srem key member [member ...]
+    e.g.: srem day Sat Thu
+3. 获取set中的元素个数：scard key
+    e.g.: scard day
+4. set1-set2差集：sdiff set1 set2
+    e.g.: sdiff day day0
+5. 求差集并存储：sdiffstore dest set1 set2
+6. 求交集：sinter set1 set2
+7. 求交集并存储：sinterstore set0 set1 set2
+8. 判断集合set中是否有元素value: sismember set value
+9. 返回集合set中的所有元素：smembers set
+10. 将元素v移动从source到dest： smove source dest v
+11. 从集合set中随机删除并返回count个元素: spop set count
+12. 从集合set中随机返回count个元素: srandmember set count
+
