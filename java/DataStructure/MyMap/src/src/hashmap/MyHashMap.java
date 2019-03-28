@@ -73,12 +73,27 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     }
 
     @Override
-    public boolean containsKey(Object key) {
+    public boolean containsKey(K key) {
+        int bucketIndex = hash(key.hashCode());
+        LinkedList<Entry<K, V>> bucket = table[bucketIndex];
+        for (Entry<K, V> entry : bucket)
+            if (entry.key.equals(key))
+                return true;
+
         return false;
     }
 
     @Override
-    public boolean containsValue(Object value) {
+    public boolean containsValue(V value) {
+//        return false;
+        for (int i = 0; i < capacity; i++) {
+            LinkedList<Entry<K, V>> bucket = table[i];
+            if (bucket != null)
+                for (Entry<K, V> entry : bucket)
+                    if (entry.value.equals(value))
+                        return true;
+        }
+
         return false;
     }
 
@@ -99,7 +114,18 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
     }
 
     @Override
-    public Object get(Object key) {
+    /**
+     * Return the value that matches the key
+     */
+    public V get(K key) {
+        int bucketIndex = hash(key.hashCode());
+        if (table[bucketIndex] != null) {
+            for (Entry<K, V> entry : table[bucketIndex]) {
+                if (entry.key.equals(key))
+                    return entry.value;
+            }
+        }
+
         return null;
     }
 
@@ -115,7 +141,46 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
     @Override
     public V put(K key, V value) {
-        return null;
+        // map中已经存在key，放入新值返回旧值
+        if (get(key) != null) {
+            int bucketIndex = hash(key.hashCode());
+            LinkedList<Entry<K, V>> bucket = table[bucketIndex];
+            V oldValue = null;
+            for (Entry<K, V> entry : bucket)
+                if (entry.key.equals(key)) {
+                    oldValue = entry.value;
+                    entry.value = value;
+                    return oldValue;
+                }
+        }
+
+        // 加入新entry，首先校验size；容量不足则扩容
+        if (size >= capacity * loadFactorThreshold) {
+            if (capacity == MAXIMUM_CAPACITY)
+                throw new RuntimeException("Exceeding maximum capacity");
+
+            rehash();
+        }
+
+        int bucketIndex = hash(key.hashCode());
+        // 如果这个桶之前从来没有使用过
+        if (table[bucketIndex] == null) {
+            table[bucketIndex] = new LinkedList<>();
+        }
+
+        // 把key, value扔到桶里
+        table[bucketIndex].addLast(new Entry<>(key, value));
+        size++;
+
+        return value;
+    }
+
+    private void rehash() {
+        Set<Entry<K, V>> set = entrySet();
+        capacity <<= 1;
+        table = new LinkedList[capacity];
+        for (Entry<K, V> entry : set)
+            put(entry.key, entry.value);
     }
 
     @Override
@@ -146,5 +211,24 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
         builder.append("]");
 
         return builder.toString();
+    }
+
+    /**
+     * Hash function <br>
+     * @param hashCode key的哈希值
+     * @return <K, V>存放的桶的编号
+     */
+    private int hash(int hashCode) {
+        return supplementalHash(hashCode) & (capacity - 1);
+    }
+
+    /**
+     * 对hashCode进行扰动，防止hashCode高位不同而低位相同导致太多的冲突
+     * @param h
+     * @return
+     */
+    private int supplementalHash(int h) {
+        h ^= (h >>> 20) ^ (h >>> 12);
+        return h ^ (h >>> 7) ^ (h >>> 4);
     }
 }
