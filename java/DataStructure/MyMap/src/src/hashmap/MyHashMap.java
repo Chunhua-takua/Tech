@@ -85,7 +85,6 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
     @Override
     public boolean containsValue(V value) {
-//        return false;
         for (int i = 0; i < capacity; i++) {
             LinkedList<Entry<K, V>> bucket = table[i];
             if (bucket != null)
@@ -131,7 +130,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
@@ -150,6 +149,7 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
                 if (entry.key.equals(key)) {
                     oldValue = entry.value;
                     entry.value = value;
+//                    System.out.println("put old key: " + key + ", value:" + value + ", size = " + size);
                     return oldValue;
                 }
         }
@@ -172,25 +172,39 @@ public class MyHashMap<K, V> implements MyMap<K, V> {
         table[bucketIndex].addLast(new Entry<>(key, value));
         size++;
 
+//        System.out.println("put new key: " + key + ", value:" + value + ", size = " + size);
         return value;
     }
 
     private void rehash() {
+//        System.out.println("rehash");
         Set<Entry<K, V>> set = entrySet();
         capacity <<= 1;
         table = new LinkedList[capacity];
         for (Entry<K, V> entry : set)
             put(entry.key, entry.value);
+        size = set.size();
     }
 
     @Override
-    public void remove(Object key) {
-
+    public void remove(K key) {
+        int bucketIndex = hash(key.hashCode());
+        LinkedList<Entry<K, V>> bucket = table[bucketIndex];
+        if (bucket != null) {
+            for (Entry<K, V> entry : bucket) {
+                if (entry.key.equals(key)) {
+                    bucket.remove(entry);
+                    size--;
+                }
+            }
+        }
+        else
+            System.out.println("Key not found: " + key);
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
