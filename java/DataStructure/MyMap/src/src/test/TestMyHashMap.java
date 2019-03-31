@@ -26,5 +26,7 @@ public class TestMyHashMap {
         map.remove("Smith");
         System.out.println("After Smith removed: " + map);
         System.out.println("Size: " + map.size());
+
+        System.out.println("Entries in map: " + map.entrySet());
     }
 }
