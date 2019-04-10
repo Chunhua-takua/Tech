@@ -6,5 +6,6 @@ public class TestMyHashSet {
         MySet<String> set = new MyHashSet<>();
 
         set.add("Smith");
+        System.out.println(set);
     }
 }

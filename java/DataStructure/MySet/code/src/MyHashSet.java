@@ -34,6 +34,7 @@ public class MyHashSet<E> implements MySet<E> {
             this.capacity = trimToPowerOf2(initialCapacity);
 
         this.loadFactorThreshold = initialLoadFactorThreshold;
+        table = new LinkedList[this.capacity];
     }
 
     private int trimToPowerOf2(int initialCapacity) {
@@ -51,19 +52,36 @@ public class MyHashSet<E> implements MySet<E> {
     }
 
     @Override
-    public boolean constains(E e) {
+    public boolean contains(E e) {
+        int bucketIndex = hash(e.hashCode());
+        LinkedList<E> bucket = table[bucketIndex];
+
+        if (null != bucket) {
+           for (E element : bucket) {
+               if (element.equals(e))
+                   return true;
+           }
+        }
         return false;
     }
 
     @Override
     public boolean add(E e) {
-//        int bucketIndex = hash(e.hashCode());
-//        if (table[bucketIndex] != null) {
-//            table[bucketIndex] = new LinkedList<>();
-//            table[bucketIndex].addLast(e);
-//        }
+        // 先判断set中有没有元素e，如果有则不能加入
+        if (contains(e))
+            return false;
 
-        return false;
+        // 元素e在set中不存在，那么加入set中
+        int bucketIndex = hash(e.hashCode());
+
+        LinkedList<E> bucket = table[bucketIndex];
+        if (null == bucket)
+            table[bucketIndex] = new LinkedList();
+
+        table[bucketIndex].add(e);
+
+        size++;
+        return true;
     }
 
     private int hash(int hashCode) {
@@ -93,5 +111,19 @@ public class MyHashSet<E> implements MySet<E> {
     @Override
     public Iterator<E> iterator() {
         return null;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder builder = new StringBuilder("[");
+
+        for (LinkedList<E> bucket : table) {
+            if (null != bucket)
+                for (E e : bucket)
+                    builder.append(e.toString() + ", ");
+        }
+        builder.append("]");
+
+        return builder.toString();
     }
 }

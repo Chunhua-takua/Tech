@@ -11,29 +11,15 @@ class TreeNode<E> {
 		没有返回值类型。
 	*/
     public TreeNode(E e) {
-		System.out.println("e=", e);
         element = e;
     }
 	
-	/*public void printNode() {
+	public void printNode() {
 		if (element != null)
 			System.out.println(String.valueOf(element));
 		else
 			System.out.println("null");
-	}*/
-	
-	public static boolean search(TreeNode<E> root, E element) {
-	TreeNode<E> current = root;
-	
-	while (current != null) {
-		if (element > current.element) {
-			current = current.right;
-		}
-		else if (element < current.element)
-			current = current.left;
-		else
-			return true;
 	}
-	return false;
-    }
+    
+
 }
