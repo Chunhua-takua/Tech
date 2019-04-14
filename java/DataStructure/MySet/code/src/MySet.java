@@ -1,7 +1,7 @@
 public interface MySet<E> extends Iterable<E> {
     public void clear();
 
-    public boolean constains(E e);
+    public boolean contains(E e);
 
     public boolean add(E e);
 
