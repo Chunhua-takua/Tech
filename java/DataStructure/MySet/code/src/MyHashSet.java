@@ -1,5 +1,7 @@
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class MyHashSet<E> implements MySet<E> {
     private static int DEFAULT_INITAL_CAPACITY = 4;
@@ -95,22 +97,67 @@ public class MyHashSet<E> implements MySet<E> {
 
     @Override
     public boolean remove(E e) {
+//        return false;
+
+        int bucketIndex = hash(e.hashCode());
+        if (table[bucketIndex] != null && table[bucketIndex].size() > 0) {
+            table[bucketIndex].remove(e);
+            return true;
+        }
+
         return false;
+
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new MyHashSetIterator(this);
+    }
+
+    private class MyHashSetIterator implements Iterator<E> {
+        private List<E> list;
+        private int current = 0;
+        private MyHashSet<E> set;
+
+        public MyHashSetIterator(MyHashSet<E> set) {
+            this.set = set;
+            list = setToList(set);
+        }
+
+        @Override
+        public boolean hasNext() {
+            return current < list.size();
+        }
+
+        @Override
+        /**
+         * Get current element and move cursor to the next
+         */
+        public E next() {
+            return list.get(current++);
+        }
+    }
+
+    private ArrayList<E> setToList(MyHashSet<E> set) {
+        ArrayList<E> result = new ArrayList<>();
+
+        for (int i = 0; i < capacity; i++) {
+            if (table[i] != null)
+                for (E e : table[i])
+                    result.add(e);
+        }
+
+        return result;
     }
 
     @Override
@@ -120,7 +167,7 @@ public class MyHashSet<E> implements MySet<E> {
         for (LinkedList<E> bucket : table) {
             if (null != bucket)
                 for (E e : bucket)
-                    builder.append(e.toString() + ", ");
+                    builder.append(e.toString() + " ");
         }
         builder.append("]");
 
