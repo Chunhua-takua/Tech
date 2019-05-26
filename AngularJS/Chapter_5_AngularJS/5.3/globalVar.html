@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript" src="../../angular-1.7.8/angular.min.js"></script>
+
+    </head>
+    <body>
+        <div class="" ng-app="fkApp">
+            <input type="text" ng-model="name">
+            {{name}}
+        </div>
+        <script type="text/javascript">
+            // 根据模块名创建模块
+            var app = angular.module("fkApp", []);
+            // 设置全局变量
+            app.value("name", "孙悟空");
+            // 设置全局常量
+            app.constant("MAX_AGE", "100");
+            app.value("name", "孙行者");
+            app.constant("MAX_AGE", "400");
+            // 注册名为fkCtrl的控制器
+            app.controller("fkCtrl", function(name, MAX_AGE) {
+                console.log(name);
+                console.log(MAX_AGE);
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!-- 使用数组 -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <!-- <script type="text/javascript" src="../../angular.js/1.4.6/angular.min.js"></script> -->
+        <script type="text/javascript" src="../../angular-1.7.8/angular.min.js"></script>
+    </head>
+    <!-- 初始化数组users -->
+    <body ng-app ng-init="users=[{name:'sunwukong', age:1000}, {name:'zhubajie', age:900}, {name:'tangseng', age:23}]">
+        First user is {{users[0].name}}, age is {{users[0].age}}<br>
+        Second user is {{users[1].name}}, age is {{users[1].age}}<br>
+        Third user is {{users[2].name}}, age is {{users[2].age}}<br>
+    </body>
+</html>

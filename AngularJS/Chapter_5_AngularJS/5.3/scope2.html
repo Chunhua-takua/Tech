@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript" src="../../angular-1.7.8/angular.min.js"></script>
+
+    </head>
+    <body>
+        <div class="" ng-app="fkApp" ng-controller="fkCtrl">
+            <!-- 使用ng-click绑定事件处理函数 -->
+            <button type="button" name="button" ng-click="clickhandler();">Click me</button>
+            Clicked {{count}} times.
+        </div>
+        <script type="text/javascript">
+            var app = angular.module("fkApp", []);
+            // $scope代表控制器对应的作用域
+            app.controller("fkCtrl", function($scope) {
+                $scope.count = 0;
+                // 为$scope增加方法
+                $scope.clickhandler = function(e) {
+                    $scope.count++;
+                    console.log($scope.count);
+                }
+            });
+        </script>
+    </body>
+</html>
