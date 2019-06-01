@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+    </head>
+    
+    <body ng-app="fkApp">
+        <div ng-controller="fkCtrl">
+            Book name: <input type="text" ng-model="bookName"><br>
+            <input type="text" readonly="readOnly" ng-model="bookName">
+        </div>
+        <div ng-controller="myCtrl">
+            {{theName}}
+        </div>
+        <script>
+            var app = angular.module("fkApp", []);
+
+            app.controller("fkCtrl", function($scope, $rootScope) {
+                $scope.bookName = "you are going nuts";
+                $rootScope.theName = $scope.bookName;
+            });
+
+            app.controller("myCtrl", function($scope, $rootScope) {
+
+            });
+        </script>
+    </body>
+</html>
