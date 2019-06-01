@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript" src="../../angular-1.7.8/angular.min.js"></script>
+
+    </head>
+    <body>
+        <div class="" ng-app="fkApp" ng-controller="fkCtrl">
+            商品价格：<input type="number" ng-model="price"></input><br>
+            商品数量：<input type="number" ng-model="num"></input><br>
+            总价：{{price * num}}
+        </div>
+        <script type="text/javascript">
+            var app = angular.module("fkApp", []);
+            // $scope代表控制器对应的作用域
+            app.controller("fkCtrl", function($scope) {
+                $scope.price = 50.2;
+                $scope.num = 4;
+            });
+        </script>
+    </body>
+</html>
