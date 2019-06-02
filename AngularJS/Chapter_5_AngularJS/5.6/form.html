@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript" src="../../angular-1.7.8/angular.min.js"></script>
+        <style media="screen">
+            .my-form {
+                transition: all linear 0.5s;
+                background: transparent;
+            }
+            /* 定义表单没有填写时的样式 */
+            .my-form .ng-pristine {
+                background: lightGray;
+            }
+            /* 表单填写时的样式，背景变为黄色 */
+            .my-form .ng-dirty {
+                background: yellow;
+            }
+            /* 表单无效时的样式 */
+            .my-form .ng-invalid {
+                background: red;
+            }
+        </style>
+    </head>
+    <body ng-app>
+        <form name="myForm" class="my-form" action="index.html" method="post">
+            User name: <input type="text" name="" value="" ng-model="user.name"><br>
+            <code>The user name is {{user.name}}</code>
+        </form>
+    </body>
+</html>

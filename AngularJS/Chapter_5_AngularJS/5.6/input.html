@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript" src="../../angular-1.7.8/angular.min.js"></script>
+        <style media="screen">
+            .myForm #min {
+                background: lightGray;
+            }
+            .myForm #max {
+                background: lightGray;
+            }
+        </style>
+    </head>
+    <body ng-app="rangeExample">
+        <form class="myForm" action="index.html" method="post" ng-controller="fkCtrl">
+            范围：<input type="range" min="{{min}}" max={{max}} ng-model="value">
+            <hr>
+            范围的值：<input id="value" type="number" ng-model="value"><br>
+            最小值：<input id="min" type="number" ng-model="min"><br>
+            最大值：<input id="max" type="number" ng-model="max"><br>
+            value = {{value}}
+
+        </form>
+
+        <script type="text/javascript">
+            var app = angular.module("rangeExample", []);
+            app.controller("fkCtrl", function($scope) {
+                $scope.min = 10;
+                $scope.max = 90;
+                /* Default value */
+                $scope.value = 75;
+            });
+        </script>
+    </body>
+</html>
