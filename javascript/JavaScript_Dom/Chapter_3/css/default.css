@@ -29,3 +29,7 @@ h2.special {
     color: #ccc;
     padding: 1em;
 }
+
+#purchases li {
+    font-weight: bold;
+}
