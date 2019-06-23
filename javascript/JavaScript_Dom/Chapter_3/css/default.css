@@ -1,0 +1,35 @@
+/* 继承
+   body中的子元素会继承body的样式
+*/
+body {
+    color: white;
+    background-color: black;
+}
+
+p {
+    color: yellow;
+    font-family: "arial", sans-serif;
+    font-size: 1.2em;
+}
+
+/* class属性 */
+.special {
+    font-style: italic;
+}
+
+/* 元素h2 class为special的属性 */
+h2.special {
+    text-transform: uppercase;
+}
+
+/* id属性 */
+#purchases {
+    border: 1px solid white;
+    background-color: #333;
+    color: #ccc;
+    padding: 1em;
+}
+
+#purchases li {
+    font-weight: bold;
+}
