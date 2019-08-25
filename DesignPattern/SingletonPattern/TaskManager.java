@@ -16,6 +16,8 @@ class TaskManager {
 	// public 保证外部可以得到实例
 	// static 保证不需要实例化这个类就可以调用实例
     public static getInstance() {
+        // 并发时，多个线程在此处判断tm == null为true
+        // 于是会new多个TaskManager对象，违背了单例模式的初衷
         if (tm == null)
             tm = new TaskManager();
         return tm;
