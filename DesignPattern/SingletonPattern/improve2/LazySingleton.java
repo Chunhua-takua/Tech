@@ -6,10 +6,15 @@ class LazySingleton {
      */
     private static LazySingleton instance = null;
 
+    /**
+     * synchronized在高并发情形下性能比较低
+     * @return
+     */
     public synchronized LazySingleton getInstance() {
         if (instance == null) {
             instance = new LazySingleton();
         }
         return instance;
     }
+
 }
