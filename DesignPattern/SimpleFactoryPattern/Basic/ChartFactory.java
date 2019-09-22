@@ -1,7 +1,4 @@
 // 图标工厂类：工厂类
-import PieChart;
-import HistogramChart;
-import LineChart;
 
 class ChartFactory {
     // 静态工厂方法
