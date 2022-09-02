@@ -1,0 +1,110 @@
+\documentclass[a4paper]{article}
+\usepackage[UTF8, scheme=plain]{ctex}
+% \usepackage[hidelinks]{hyperref}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktocpage=true
+}
+\usepackage[margin=1in]{geometry}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xassoccnt}
+
+% 不显示自动编号 且 能自动生成目录
+\setcounter{secnumdepth}
+{0}
+
+% 黑体2号
+\title{\heiti\zihao{2} 《鲁迅全集》笔记}
+\author{TKA}
+\date{\today}
+
+% \renewcommand\contentsname{目录}
+
+% 行距
+\renewcommand{\baselinestretch}
+{1.75}
+
+\fancyhf{}
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+
+\begin{document}
+    % 标题页不显示页码
+    \maketitle
+    \thispagestyle{empty}
+
+    \newpage
+
+    % 目录 罗马数字页码
+    \setcounter{page}{1}
+    \pagenumbering{Roman}
+    \cfoot{\thepage}
+
+    % foot decorative lines
+    \renewcommand{\footrulewidth}{1pt}
+    \fancyhead[R]{\textbf{《鲁迅全集》笔记}}
+    \tableofcontents
+
+    \newpage
+
+    % 正文 阿拉伯数字页码
+
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    % 当前页 of 总页数
+    \cfoot{Page \thepage\ of \pageref{LastPage}}
+
+    \zihao{4}
+    \part{而已集}
+
+    \section{“公理”之所在}
+    我的话已经说完，去年说的，今年还适用，恐怕明年也还适用。但我诚恳地希望他不至于适用到十年二十年之后。
+
+    \section{答有恒先生}
+    我也在救助我自己，还是老法子：一是麻痹，二是忘却。
+
+    \section{读所谓“大内档案”}
+
+    军阀是不看杂志的，就靠叭儿狗嗅，候补叭儿狗吠。
+
+    \section{革命时代的文学}
+但为什么人类成了人，猴子终于是猴子呢？这就因为猴子不肯变化——它爱用四只脚走路。也许曾有一个猴子站起来，试用两脚走路的罢，但许多猴子就说：“我们底祖先一向是爬的，不许你站！”咬死了。
+
+有些民族因为叫苦无用，连苦也不叫了。
+
+所有的文学，歌呀，诗呀，大抵是给上等人看的：他们吃饭了，睡在躺椅上，捧着看。
+
+或者讲上等人怎样有趣和快乐，下等人怎样可笑。
+下等人没奈何，也只好替他们一同欢喜欢喜。
+
+\section{黄花节的杂感}
+
+久受压制的人们，被压制时只能忍苦，幸而解放了便只知道作乐，悲壮剧是不能久留在记忆里的。
+
+然而革命成功的时候，革命家死掉了，却能每年给生存的大家以热闹，甚而至于欢欣鼓舞。惟独革命家，无论他生或死，都能给大家以幸福。
+
+\section{略谈香港}
+
+其实是种族革命，要将土地从异族的手里取得，归还旧主人。
+
+\section{谈“激烈”}
+
+因为奴才都叹气，虽无大害，主人看了究竟不舒服。必须要如罗素所称赞的杭州的轿夫一样，常是笑嘻嘻。
+
+\section{小杂感}
+
+曾经阔气的要复古，正在阔气的要保持现状，未曾阔气的要革新。
+大抵如是。大抵！
+
+人类的悲欢并不相通，我只觉得他们吵闹。
+
+叭儿狗往往比它的主人更严厉。
+
+凡为当局所“诛”者皆有“罪”。
+
+法三章者，话一句耳。
+
+
+\end{document}
