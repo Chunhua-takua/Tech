@@ -1,0 +1,115 @@
+\documentclass[
+    a4paper
+    ]{ctexart}
+
+\usepackage[UTF8, scheme=plain]{ctex}
+\usepackage[hidelinks]{hyperref}
+\usepackage[
+    twoside,
+    top = 37mm,
+    left = 28mm,
+    right = 26mm,
+    bottom = 35mm
+    ]{geometry}
+
+\usepackage{titlesec}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{color}
+\definecolor{gray}{RGB}{100,100,100}
+
+\usepackage{graphicx}
+\usepackage{ulem}
+\usepackage{CJKulem}
+\usepackage{enumitem}
+\usepackage{makecell}
+\usepackage{longtable}
+\usepackage{supertabular}
+\usepackage{siunitx}
+\usepackage{amssymb}
+
+\date{}
+
+% 行距
+\renewcommand{\baselinestretch}
+{1.5}
+
+\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
+
+\usepackage{ctex}
+\CTEXsetup[name={}, number={\chinese{section}}, format={\bfseries}]{section}
+% \CTEXsetup[name={（, ）}, number={\chinese{subsection}}]{subsection}
+% \CTEXsetup[name={}, number={}, format={\heiti\zihao{-4}}]{paragraph}
+
+% 调整subsection的计数格式
+\renewcommand\thesubsection{\arabic{subsection}}
+
+\begin{document}
+    % 黑体小2号
+    \title{\zihao{-2}\heiti\textbf\texorpdfstring{罪案\\ 阅\quad 卷\quad 笔\quad 录}}
+    
+    \maketitle
+    % \newpage
+
+    \vspace{25em}
+    \centerline{\zihao{-4}\textbf{北京市万商天勤 (南京) 律师事务所}}
+    \vspace{1em}
+    \centerline{\zihao{-4}\textbf{2022年09月}}
+
+    % 首页显示页眉页脚
+    \thispagestyle{fancy}
+
+    \fancyhf{}
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhead[L]{\includegraphics[scale=0.5]{D:/vt_logos/vt_logo_5.png}}
+    \fancyfoot[L]{\zihao{-5}\textcolor{gray}{律所地址：江苏省南京市建邺区江东中路347号国金中心一期31层}}
+
+    % 目录 罗马数字页码
+    \newpage
+    \fancyhf{}
+    \pagestyle{fancy}
+    \setcounter{page}{1}
+    \pagenumbering{Roman}
+    \setlength{\headsep}{60pt}
+    \fancyfoot[C]{\thepage}
+    \fancyhead[L]{\includegraphics[scale=0.5]{D:/vt_logos/vt_logo_5.png}}
+    \fancyhead[R]{目录}
+    \renewcommand{\headrulewidth}{0.5pt}
+    \tableofcontents
+    \newpage
+
+    \fancyhf{}
+    \pagestyle{fancy}
+    \fancyhead[L]{\includegraphics[scale=0.5]{D:/vt_logos/vt_logo_5.png}}
+    \fancyhead[R]{阅卷笔录}
+    % \fancyhead[R]{\rightmark}
+    % \fancyhead[R]{\leftmark}
+    \renewcommand{\headrulewidth}{0.5pt}
+    \setlength{\headsep}{50pt}
+    \setlength{\footskip}{30pt}
+
+    % 正文 阿拉伯数字页码
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    \fancyfoot[C]{第 {\thepage} 页\quad 共 \pageref{LastPage} 页}
+
+    % {
+    \songti\zihao{-4}
+    \setlength{\parindent}{2em}
+
+    \begin{sloppy}
+        \input{part1}
+
+        % \input{part2shuzheng}
+
+        \section{
+            犯罪嫌疑人供述
+        }
+    % \setcounter{section}{1}
+
+        % \input{part2gongshu_wangwei}
+
+    \end{sloppy}
+    % }
+
+\end{document}
