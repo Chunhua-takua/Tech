@@ -32,21 +32,19 @@
 
 % 行距
 \renewcommand{\baselinestretch}
-{1.5}
+{1.4}
 
 \newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 
 \usepackage{ctex}
 \CTEXsetup[name={}, number={\chinese{section}}, format={\bfseries}]{section}
-% \CTEXsetup[name={（, ）}, number={\chinese{subsection}}]{subsection}
-% \CTEXsetup[name={}, number={}, format={\heiti\zihao{-4}}]{paragraph}
 
 % 调整subsection的计数格式
 \renewcommand\thesubsection{\arabic{subsection}}
 
 \begin{document}
     % 黑体小2号
-    \title{\zihao{-2}\heiti\textbf\texorpdfstring{xxxx\\ 阅\quad 卷\quad 笔\quad 录}}
+    \title{\zihao{-2}\heiti\textbf\texorpdfstring{污染环境案\\ 阅\quad 卷\quad 笔\quad 录}}
     
     \maketitle
     % \newpage
@@ -54,7 +52,7 @@
     \vspace{25em}
     \centerline{\zihao{-4}\textbf{北京市万商天勤 (南京) 律师事务所}}
     \vspace{1em}
-    \centerline{\zihao{-4}\textbf{2022年09月}}
+    \centerline{\zihao{-4}\textbf{2022 年 10 月}}
 
     % 首页显示页眉页脚
     \thispagestyle{fancy}
@@ -62,7 +60,7 @@
     \fancyhf{}
     \renewcommand{\headrulewidth}{0pt}
     \fancyhead[L]{\includegraphics[scale=0.5]{D:/vt_logos/vt_logo_5.png}}
-    \fancyfoot[L]{\zihao{-5}\textcolor{gray}{律所地址：江苏省南京市建邺区江东中路347号国金中心一期31层}}
+    \fancyfoot[L]{\zihao{-5}\textcolor{gray}{律所地址：江苏省南京市建邺区江东中路 347 号国金中心一期31层}}
 
     % 目录 罗马数字页码
     \newpage
@@ -70,9 +68,9 @@
     \pagestyle{fancy}
     \setcounter{page}{1}
     \pagenumbering{Roman}
-    \setlength{\headsep}{60pt}
+    \setlength{\headsep}{50pt}
     \fancyfoot[C]{\thepage}
-    \fancyhead[L]{\includegraphics[scale=1]{./pic/vt_logo.png}}
+    \fancyhead[L]{\includegraphics[scale=0.5]{D:/vt_logos/vt_logo_5.png}}
     \fancyhead[R]{目录}
     \renewcommand{\headrulewidth}{0.5pt}
     \tableofcontents
@@ -81,91 +79,43 @@
     \fancyhf{}
     \pagestyle{fancy}
     \fancyhead[L]{\includegraphics[scale=0.5]{D:/vt_logos/vt_logo_5.png}}
-    \fancyhead[R]{xxxx阅卷笔录}
+    \fancyhead[R]{阅卷笔录}
     % \fancyhead[R]{\rightmark}
     % \fancyhead[R]{\leftmark}
     \renewcommand{\headrulewidth}{0.5pt}
-    \setlength{\headsep}{60pt}
+    \setlength{\headsep}{50pt}
     \setlength{\footskip}{30pt}
-
+    
     % 正文 阿拉伯数字页码
     \setcounter{page}{1}
     \pagenumbering{arabic}
     \fancyfoot[C]{第 {\thepage} 页\quad 共 \pageref{LastPage} 页}
 
-    {
-        \songti\zihao{-4}
-        \setlength{\parindent}{2em}
+    \songti\zihao{-4}
+    \setlength{\parindent}{2em}
 
-\begin{sloppy}
-\part{
-    文书卷
-}
+    \begin{sloppy}
+        % 文书卷
+        \input{PartWenshu}
 
-\section{
-    xxx；
-    xxx；
-    卷一1
-}
+        % 证据卷
+        % 书证
+        \input{PartZhengjuShuzheng}
+        % 犯罪嫌疑人供述和辩解
+        \input{./gongshu/yanghui}
+        
+        % 证人证言
+        \input{./zhengyan/gehengchun}
+        
+        % 辨认笔录
+        \input{PartZhengjuBianren}
 
+        % 鉴定意见
+        \input{./jianding/sfjdyjs}
 
-\part{
-    证据卷
-}
-\setcounter{section}{0}
-\section{
-    书证
-}
-\subsection{
-    （xx）户籍证明；
-    卷二1-5
-}
+        % 书证
+        \input{shuzheng}
 
-%%%%%%%%%%%%%%%% 以上书证
-
-
-
-
-\section{
-    犯罪嫌疑人供述
-}
-% \setcounter{section}{1}
-\subsection{
-    sb
-}
-\subsubsection{
-    time；
-    location；
-    who；
-    卷
-}
-content
-%%%%%%%%%%%%%%%% 以上证人证言
-
-\section{
-    辨认笔录
-}
-\subsection{
-    sb
-}
-\subsubsection{
-    time;
-    location;
-}
-
-
-
-
-
-\section{
-    鉴定意见
-}
-\subsection{
-   
-}
-
-
-\end{sloppy}
-    }
+    \end{sloppy}
 
 \end{document}
