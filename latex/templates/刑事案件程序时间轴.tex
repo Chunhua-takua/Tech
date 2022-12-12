@@ -1,0 +1,196 @@
+\documentclass[
+    a4paper
+    ]{ctexart}
+
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage[UTF8, scheme=plain]{ctex}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktocpage=true,
+    hidelinks
+}
+% \usepackage[hidelinks]{hyperref}
+
+\usepackage[
+    top = 37mm,
+    left = 28mm,
+    right = 26mm,
+    bottom = 35mm
+    ]{geometry}
+
+\usepackage{titlesec}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{color}
+\definecolor{gray}{RGB}{100,100,100}
+
+\usepackage{graphicx}
+\usepackage{ulem}
+\usepackage{CJKulem}
+
+\usepackage{ctex}
+\CTEXsetup[name={}, number={\chinese{section}}, format={\bfseries}]{section}
+
+\date{}
+
+% 行距
+\renewcommand{\baselinestretch}
+{1.5}
+
+\begin{document}
+    % 黑体小2号
+    \title{\zihao{2}\heiti\textbf{刑事案件程序时间轴 }}
+    % \setlength{\headsep}{10pt}
+    \maketitle
+
+    % 首页显示页眉页脚
+    \thispagestyle{fancy}
+
+    \fancyhf{}
+    \fancyhead[L]{\includegraphics[scale=0.5]{D:/vt_logos/vt_logo_5.png}}
+
+
+    % 正文 阿拉伯数字页码
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    \renewcommand{\headrulewidth}{0.5pt}
+
+    \fancyhf{}
+    \pagestyle{fancy}
+    \fancyhead[L]{\includegraphics[scale=0.5]{D:/vt_logos/vt_logo_5.png}}
+
+    \fancyfoot[C]{第 {\thepage} 页\quad 共 \pageref{LastPage} 页}
+
+    \setlength{\headsep}{50pt}
+
+    \begin{sloppy}
+    {\zihao{4}
+        \setlength{\parindent}{2em}
+
+        \section{
+            侦查阶段（公安阶段）
+        }
+        \begin{center}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \textbf{事项} & \textbf{法条依据} & \textbf{期限} \\
+                \hline
+                传唤、拘传 & \multirow{2}*{一百一十九} & 12小时\\
+                \cline{1-1}
+                \cline{3-3}
+                传唤、拘传（案情特别重大、复杂） & ~ & 24小时\\
+                \hline
+
+                \multirow{3}*{拘留} & \multirow{7}*{九十一} & 3天以内\\
+                \cline{3-3}
+                ~ & ~ & 特殊情况，4-7天\\
+                \cline{3-3}
+                ~ & ~ & 30天 \\
+                \cline{1-1}
+                \cline{3-3}
+
+                提请批准逮捕 & ~ & 7天 \\
+                \cline{1-1}
+                \cline{3-3}
+        
+                \multirow{3}*{报捕、审查逮捕} & ~ & 3天以内\\
+                \cline{3-3}
+                ~ & ~ & 特殊情况，4-7天\\
+                \cline{3-3}
+                ~ & ~ & 30天 \\
+                \hline
+
+                逮捕后的侦查羁押 & \multirow{2}*{一百五十六} & 2个月  \\
+                \cline{1-1}
+                \cline{3-3}
+                （案情复杂）逮捕后的侦查羁押 & ~ & 延长1个月  \\
+                \hline
+                （重大复杂）逮捕后的侦查羁押 & 一百五十八 & 延长2个月  \\
+                \hline
+                （重刑案件）逮捕后的侦查羁押 & 一百五十九 & 延长2个月  \\
+                \hline
+                \makecell[c]{（发现另有罪行一次）\\侦查羁押期限的重新计算} & 一百六十 & 7个月 \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \vspace{1em}
+        普通案件通常37天 + 2个月，最长合计可能15个月。
+
+        \section{
+            审查起诉（检察院阶段）
+        }
+        \begin{center}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \textbf{事项} & \textbf{法条依据} & \textbf{期限} \\
+                \hline
+                审查起诉 & \multirow{2}*{一百七十二} & 1个月 \\
+                \cline{1-1}
+                \cline{3-3}
+                （重大、复杂）审查起诉 & ~ & 延长15天\\
+                \hline
+                第一次补侦 & \multirow{4}*{一百七十五} & 1个月 \\
+                \cline{1-1}
+                \cline{3-3}
+                审查起诉 & ~ & 1.5个月 \\
+                \cline{1-1}
+                \cline{3-3}
+                第二次补侦 & ~ & 1个月 \\
+                \cline{1-1}
+                \cline{3-3}
+                审查起诉 & ~ & 1.5个月 \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \vspace{1em}
+        普通案件不必经两退三延，时间在2个月左右。如有两退三延的情况，检察院阶段可能历经6个月或更久。
+
+        \section{
+            一审阶段（法院阶段）
+        }
+        \begin{center}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \textbf{事项} & \textbf{法条依据} & \textbf{期限} \\
+                \hline
+
+                一般情况 & \multirow{8}*{二百零八}    & 3个月 \\
+                
+                
+                % \hline
+                \cline{1-1}
+                \cline{3-3}
+                重大复杂延长 & ~ & 3个月 \\
+                \cline{1-1}
+                \cline{3-3}
+                第一次补充侦查 & ~ & 1个月 \\
+                \cline{1-1}
+                \cline{3-3}
+                补侦后期限重新计算 & ~  & 6个月\\
+                \cline{1-1}
+                \cline{3-3}
+                第二次补充侦查 & ~ & 1个月 \\
+                \cline{1-1}
+                \cline{3-3}
+                补侦后期限重新计算 & ~ & 6个月 \\
+                \cline{1-1}
+                \cline{3-3}
+                改变管辖重新计算 & ~ & 20个月\\
+                \cline{1-1}
+                \cline{3-3}
+                特殊情况最高法院批准一次 & ~ & 3个月\\
+                \hline
+            \end{tabular}
+        \end{center}
+
+        \vspace{1em}
+        普通案件通常3-6个月，最长合计可能43个月。
+
+    }
+
+\end{sloppy}
+\end{document}
