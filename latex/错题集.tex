@@ -1,0 +1,112 @@
+\documentclass[a4paper]{ctexart}
+\usepackage[UTF8, scheme=plain]{ctex}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktocpage=true
+}
+\usepackage[margin=1in]{geometry}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xassoccnt}
+
+% 首行缩进
+\usepackage{indentfirst}
+
+% \usepackage{xeCJK} 
+% \setCJKfamilyfont{mingliu} {BIZ-UDMINCHOM.TTC}
+% \newcommand{  \mingliu } {  \CJKfamily{mingliu} } %创建新字体调用命令
+
+% 不显示自动编号 且 能自动生成目录
+\setcounter{secnumdepth}
+{0}
+
+% 黑体2号
+\title{\heiti\zihao{2} 英语错题集}
+\author{Zhang Ziyan}
+% \date{\today}
+
+% \renewcommand\contentsname{目录}
+
+% 行距
+\renewcommand{\baselinestretch}
+{1.75}
+
+\fancyhf{}
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+
+\begin{document}
+    % 标题页不显示页码
+    \maketitle
+    \thispagestyle{empty}
+
+    \newpage
+
+    % 目录 罗马数字页码
+    \setcounter{page}{1}
+    \pagenumbering{Roman}
+    \cfoot{\thepage}
+
+    % foot decorative lines
+    \renewcommand{\footrulewidth}{1pt}
+    % \fancyhead[R]{\textbf{《鲁迅全集》笔记}}
+    \tableofcontents
+
+    \newpage
+
+    % 正文 阿拉伯数字页码
+
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    % 当前页 of 总页数
+    \cfoot{Page \thepage\ of \pageref{LastPage}}
+
+    \zihao{3}
+
+    \begin{sloppy}
+        
+        \setcounter{section}{0}
+        
+		\section{2024年08月}
+        \begin{enumerate}
+            \item{
+                \underline{\hbox to 10mm{}} his \underline{\hbox to 10mm{}} face, we know he is sure to have passed the exam. 
+                       
+                \begin{tabular}{rcl}
+                    \makebox[3em][s]{A. Seeing; excited}  & \hspace{6em} & {B. Seeing; exciting} \\
+                    \makebox[3em][s]{C. Seen; excited} & \hspace{6em} & {D. Seen; exciting}\\
+                \end{tabular}
+                % A
+		    } \\
+            \item{
+                It’s \underline{\hbox to 10mm{}} to play with Lego Robot in the training camp. How I wish I could come here for \underline{\hbox to 10mm{}} second time.
+                
+                \begin{tabular}{rcl}
+                    \makebox[3em][s]{A. a great fun; a}  & \hspace{6em} & {B. great fun; a} \\
+                    \makebox[3em][s]{C. a great fun; the} & \hspace{6em} & {D. great fun; the}\\
+                \end{tabular}
+                % B
+		    } \\
+            \item{
+                When I try to understand \underline{\hbox to 10mm{}} that prevents so many children from being happy, there seem to be three causes.
+                
+                \begin{tabular}{rcl}
+                    \makebox[3em][s]{A. why it is}  & \hspace{6em} & {B. what it does} \\
+                    \makebox[3em][s]{C. why it does} & \hspace{6em} & {D. what it is}\\
+                \end{tabular}
+                % D
+		    } \\
+            \item{
+                Our school is planning a farewell party for Mr. Li, \underline{\hbox to 10mm{}} will retire soon.
+                
+                \begin{tabular}{rcl}
+                    \makebox[3em][s]{A. he  }  & \hspace{6em} & {B. which  } \\
+                    \makebox[3em][s]{C. that  } & \hspace{6em} & {D. who}\\
+                \end{tabular}
+                % D
+		    } \\
+        \end{enumerate}
+    \end{sloppy}
+\end{document}
