@@ -1,0 +1,80 @@
+\documentclass[a4paper]{ctexart}
+\usepackage[UTF8, scheme=plain]{ctex}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktocpage=true
+}
+\usepackage[margin=1in]{geometry}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xassoccnt}
+
+% 首行缩进
+\usepackage{indentfirst}
+
+% \usepackage{xeCJK} 
+% \setCJKfamilyfont{mingliu} {BIZ-UDMINCHOM.TTC}
+% \newcommand{  \mingliu } {  \CJKfamily{mingliu} } %创建新字体调用命令
+
+% 不显示自动编号 且 能自动生成目录
+\setcounter{secnumdepth}
+{0}
+
+% 黑体2号
+\title{\heiti\zihao{2} 英语错题集}
+\author{Zhang Ziyan}
+% \date{\today}
+
+% \renewcommand\contentsname{目录}
+
+% 行距
+\renewcommand{\baselinestretch}
+{1.75}
+
+\fancyhf{}
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+
+\begin{document}
+    % 标题页不显示页码
+    \maketitle
+    \thispagestyle{empty}
+
+    \newpage
+
+    % 目录 罗马数字页码
+    \setcounter{page}{1}
+    \pagenumbering{Roman}
+    \cfoot{\thepage}
+
+    % foot decorative lines
+    \renewcommand{\footrulewidth}{1pt}
+    % \fancyhead[R]{\textbf{《鲁迅全集》笔记}}
+    \tableofcontents
+
+    \newpage
+
+    % 正文 阿拉伯数字页码
+
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    % 当前页 of 总页数
+    \cfoot{Page \thepage\ of \pageref{LastPage}}
+
+    \zihao{3}
+
+    \begin{sloppy}
+        
+        \setcounter{section}{0}
+        \begin{enumerate}
+        \input{./202408}
+        \input{./202409}
+
+		% \section{2024年08月}
+        % \begin{enumerate}
+            
+        \end{enumerate}
+    \end{sloppy}
+\end{document}
