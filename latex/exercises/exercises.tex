@@ -37,6 +37,9 @@
 \fancyhf{}
 \pagestyle{fancy} %fancyhdr宏包新增的页面风格
 
+% \counterwithin{part}{section}
+% \renewcommand{\thesection}{\arabic{section}}
+
 \begin{document}
     % 标题页不显示页码
     \maketitle
@@ -66,15 +69,11 @@
     \zihao{3}
 
     \begin{sloppy}
-        
-        \setcounter{section}{0}
         \begin{enumerate}
-        \input{./202408}
-        \input{./202409}
-
-		% \section{2024年08月}
-        % \begin{enumerate}
-            
+            \input{./202408}
+        \end{enumerate}
+        \begin{enumerate}
+            \input{./202409}   
         \end{enumerate}
     \end{sloppy}
 \end{document}
