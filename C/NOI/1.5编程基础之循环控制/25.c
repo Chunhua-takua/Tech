@@ -3,9 +3,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-bool isSPNormal(int n);
-bool isDPNormal(int n);
-
 int main() {
     // 25:求特殊自然数
 
