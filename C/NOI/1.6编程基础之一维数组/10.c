@@ -61,6 +61,7 @@ int main() {
     if (carry == 1)
         c[N - max_len] = 1;
 
+    // print sum
     int zero = 0;
     // printf("max_len:%d\n", max_len);
     for (int i = 0; i < N + 1; ++i) {
