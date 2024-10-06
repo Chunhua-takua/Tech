@@ -1,4 +1,4 @@
-// 03:基因相关性
+// 04:石头剪子布
 #include <stdio.h>
 // #include <math.h>
 #include <string.h>
