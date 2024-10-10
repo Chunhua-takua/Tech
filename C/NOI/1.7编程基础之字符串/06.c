@@ -1,4 +1,4 @@
-// 05:输出亲朋字符串
+// 06:合法 C 标识符
 #include <stdio.h>
 // #include <math.h>
 #include <string.h>
