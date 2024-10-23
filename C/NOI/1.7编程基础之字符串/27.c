@@ -12,11 +12,10 @@ char str[NUM];
 void printReverse(char* str, int start, int end);
 
 int main() {
+    // 如果一行中含有空格，可以这样读取
+    // use cin.getline(), or use getchar() and judge '\n' and EOF 
     char ch = getchar();
     int count = 0;
-
-    // 如果一行中含有空格，可以这样读取
-    // use cin.getline(), or use getchar() and judge '\n' and EOF
     while (ch != '\n' && ch != EOF) {
         str[count++] = ch;
         ch = getchar();
