@@ -33,6 +33,7 @@ int main() {
     for (int i = 0; i < row * col; ++i) {
         switch (direction) {
             case 0: // right
+                // printf("right, (%d,%d)", x, y);
                 if (y < margin_right) {
                     printf("%d\n", m[x][y]);
                     ++y;
@@ -40,7 +41,7 @@ int main() {
                 if (y == margin_right) {
                     printf("%d\n", m[x][y]);
                     direction = 1;
-                    margin_right--;
+                    margin_top++;
                     ++x;
                 }
                 break;
@@ -52,7 +53,7 @@ int main() {
                 if (x == margin_bottom) {
                     printf("%d\n", m[x][y]);
                     direction = 2;
-                    margin_bottom--;
+                    margin_right--;
                     --y;
                 }
                 break;
@@ -64,11 +65,12 @@ int main() {
                 if (y == margin_left) {
                     printf("%d\n", m[x][y]);
                     direction = 3;
-                    margin_left++;
+                    margin_bottom--;
                     --x;
                 }
                 break;
             case 3: // up
+                // printf("up, %d, (%d,%d)", direction, x, y);
                 if (x > margin_top) {
                     printf("%d\n", m[x][y]);
                     x--;
@@ -76,9 +78,10 @@ int main() {
                 if (x == margin_top) {
                     printf("%d\n", m[x][y]);
                     direction = 0;
-                    margin_top++;
+                    margin_left++;
                     ++y;
                 }
+                
                 break;
         }
     }
