@@ -1,0 +1,105 @@
+% \documentclass[a4paper]{ctexart}
+\documentclass[a4paper]{article}
+\usepackage[UTF8, scheme=plain]{ctex}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktocpage=true
+}
+\usepackage[margin=1in]{geometry}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xassoccnt}
+
+% 首行缩进
+\usepackage{indentfirst}
+
+% 首字母占两行
+\usepackage{lettrine}
+
+% ipa 音标
+\usepackage{tipa}
+
+\usepackage[yyyymmdd]{datetime}
+
+% 自定义标题
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{fontspec}
+
+% 定义颜色
+\usepackage{color}
+\definecolor{SkyBlue}{RGB}{50, 130, 246}
+
+% 不显示自动编号 且 能自动生成目录
+% \setcounter{secnumdepth}
+% {0}
+
+\newfontfamily\headingfont[]{Consolas}
+\renewcommand{\maketitlehooka}{\headingfont}
+\title{\Huge NUMBER THEORY}
+% \title{\heiti\zihao{2} WORD LIST}
+% \author{Zhang Ziyan}
+% \date{2024/09}
+
+% \renewcommand\contentsname{目录}
+
+% 行距
+\renewcommand{\baselinestretch}
+{1.25}
+
+\fancyhf{}
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+
+\begin{document}
+    % 标题页不显示页码
+    \maketitle
+    \thispagestyle{empty}
+
+    \newpage
+
+    % 目录 罗马数字页码
+    \setcounter{page}{1}
+    \pagenumbering{Roman}
+    \cfoot{\thepage}
+
+    % foot decorative lines
+    \renewcommand{\footrulewidth}{1pt}
+    \fancyhead[R]{\textbf{Number Theory}}
+    \tableofcontents
+
+    \newpage
+
+    % 正文 阿拉伯数字页码
+
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    % 当前页 of 总页数
+    \cfoot{Page \thepage\ of \pageref{LastPage}}
+
+    \zihao{4}
+
+    \begin{sloppy}
+        \setcounter{section}{0}
+        % \begin{enumerate}
+        \begin{itemize}
+            \input{./parts/A_part}
+            % \input{./parts/B_part}
+            % \input{./parts/C_part}
+            % \input{./parts/D_part}
+            % \input{./parts/E_part}
+            % \input{./parts/F_part}
+            % \input{./parts/H_part}
+            % \input{./parts/I_part}
+            % \input{./parts/L_part}
+            % \input{./parts/M_part}
+            % \input{./parts/O_part}
+            % \input{./parts/P_part}
+            % \input{./parts/R_part}
+            % \input{./parts/S_part}
+            % \input{./parts/W_part}
+        \end{itemize}
+    \end{sloppy}
+\end{document}
