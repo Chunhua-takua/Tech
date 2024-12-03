@@ -29,6 +29,9 @@
 \usepackage{titling}
 \usepackage{fontspec}
 
+% 数学符号
+\usepackage{amssymb}
+
 % 定义颜色
 \usepackage{color}
 \definecolor{SkyBlue}{RGB}{50, 130, 246}
@@ -48,7 +51,7 @@
 
 % 行距
 \renewcommand{\baselinestretch}
-{1.25}
+{1.5}
 
 \fancyhf{}
 \pagestyle{fancy} %fancyhdr宏包新增的页面风格
@@ -79,27 +82,9 @@
     % 当前页 of 总页数
     \cfoot{Page \thepage\ of \pageref{LastPage}}
 
-    \zihao{4}
-
+    \zihao{5}
     \begin{sloppy}
         \setcounter{section}{0}
-        % \begin{enumerate}
-        \begin{itemize}
-            \input{./parts/A_part}
-            % \input{./parts/B_part}
-            % \input{./parts/C_part}
-            % \input{./parts/D_part}
-            % \input{./parts/E_part}
-            % \input{./parts/F_part}
-            % \input{./parts/H_part}
-            % \input{./parts/I_part}
-            % \input{./parts/L_part}
-            % \input{./parts/M_part}
-            % \input{./parts/O_part}
-            % \input{./parts/P_part}
-            % \input{./parts/R_part}
-            % \input{./parts/S_part}
-            % \input{./parts/W_part}
-        \end{itemize}
+        \input{./parts/Chapter1}
     \end{sloppy}
 \end{document}
