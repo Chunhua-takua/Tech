@@ -1,4 +1,5 @@
 \section{FACTORIZATION 因子分解}
+
 \subsection{整数与带余除法}
 
 自然数 Natural numbers, 
@@ -85,3 +86,31 @@ $m=q_1q_2\cdots q_s, q=q_{s+1}q_{s+2}\cdots q_{s+t}$,
     a=bq+r, 0\leq r<|b|,
 \]
 且$q$和$r$是唯一的。
+
+\subsection{辗转相除与裴蜀等式}
+\textbf{定理1} 若 $a=bq+r$，其中$a, b, r$为整数，$a, b$不全为0，则
+\[
+    (a,b)=(b,r).
+\]
+
+\textbf{定理2}(贝祖等式) 任意两整数$a,b(b\neq 0)$的正最大公因子$d=(a,b)$是唯一存在的，即$d=r_s$（是$a$与$b$辗转相除的最后晨零余数）。而且存在整数$u,v$使得
+\[ua+vb=d. \]
+
+\textbf{系1} 两整数$a,b$互素 $\Leftrightarrow$ 存在整数$u,v$使
+\[ua+vb=1. \]
+
+\textbf{系2} 设$a,b$为整数，$(a,b)=d$. 则
+\[
+    \{am+bn\mid m, n\in \mathbb{Z}\} = \{dk\mid k\in \mathbb{Z}\}.
+\]
+
+\textbf{定理3}（贝祖等式） 任意$s$个非零整数$a_1, \cdots, a_s$的正最大公因子$d=(a_1, \cdots, a_s)$存在且唯一，且
+\[
+    (a_1, \cdots, a_{s-1}, a_s)=((a_1, \cdots, a_{s-1}), a_s).
+\]
+而且存在整数$u_1,\cdots, u_s$, 使得
+\[
+    u_1a_1+\cdots +u_sa_s=d.
+\]
+
+
