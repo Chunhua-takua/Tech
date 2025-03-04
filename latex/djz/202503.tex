@@ -1,23 +1,79 @@
 \section{202503}
 
-% \subsection{解答}
 \item{
     $a=2^{44}, b=3^{33}, c=5^{22}$, 比较$a, b, c$的大小.
-} 
+
+    % \iffalse
+    \fangsong\zihao{4}
+    思路: 把指数化为一样,比较底数大小.
+
+    解答: 
+    \begin{align*}
+        a &= (2^4)^{11} = 16^{11}\\
+        b &= (3^3)^{11} = 27^{11}\\
+        c &= (5^2)^{11} = 25^{11}\\
+        & 16^{11} < 25^{11} < 27^{11}\\
+        &\therefore a < c < b.
+    \end{align*}
+    % \fi
+}
 \\ \\
 \item{
     已知$100^a=20, 1000^b=50$, 则$a+\frac{3}{2}b-\frac{3}{2}$的值是多少？
-} 
+
+     % \iffalse
+     \fangsong\zihao{4}
+     思路: 观察$100^a, 1000^b$ 发现 $a,b$都出现在指数上, 要求$a+\frac{3}{2}b-\frac{3}{2}$的值, 应该想到尝试把$a+\frac{3}{2}b-\frac{3}{2}$放在指数上.
+ 
+     解答: 
+     \begin{align*}
+         100^{a+\frac{3}{2}b-\frac{3}{2}} &= \frac{100^a\cdot 100^{\frac{3}{2}b}}{100^\frac{3}{2}}\\
+         &= \frac{100^a\cdot 10^{2\cdot \frac{3}{2}b}}{10^{2\cdot\frac{3}{2}}}\\
+         &= \frac{100^a\cdot 10^{3b}} {10^{3}}\\
+         &= \frac{100^a\cdot 1000^{b}} {1000}\\
+         &= \frac{20\times 50} {1000}\\
+         &= 1\\
+         &\therefore a+\frac{3}{2}b-\frac{3}{2} = 0.
+     \end{align*}
+     % \fi
+}
 \\ \\
 \item{
     若$3^{x-1}=\frac{1}{27}$, 求$x$.
-} 
+}
 \\ \\
 \item{
     已知$a^{2n}=3, a^{3m}=5$, 求$a^{6n-9m}$.
-} 
+
+    % \iffalse
+    \fangsong\zihao{4}
+    思路: 将$a^{6n-9m}$凑出$a^{2n}, a^{3m}$, 直接代入计算. 结果使用分数形式即可.
+
+    解答: 
+    \begin{align*}
+        a^{6n-9m} &= \frac{a^{6n}}{a^{9m}}\\
+        &= \frac{(a^{2n})^3} {(a^{3m})^3}\\
+        &= \frac{3^3} {5^3}\\
+        &= \frac{27} {125}.
+    \end{align*}
+    % \fi
+}
 \\ \\
 \item{
     已知$3\cdot2^x + 2^{x+1}=40$, 求$x$.
-} 
+
+        % \iffalse
+        \fangsong\zihao{4}
+        思路: 将左边的2个$2^{x}$整理到一起.
+    
+        解答: 
+        \begin{align*}
+            3\cdot2^x + 2^{x+1} &= 40\\
+            3\cdot2^x + 2\cdot 2^{x} &= 40\\
+            5\cdot2^x &= 40\\
+            2^x &= 8\\
+            \therefore x = 3.
+        \end{align*}
+        % \fi
+}
 \\ \\
