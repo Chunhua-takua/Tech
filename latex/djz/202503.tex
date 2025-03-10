@@ -2,8 +2,9 @@
 
 \item{
     $a=2^{44}, b=3^{33}, c=5^{22}$, 比较$a, b, c$的大小.
-    \iffalse
+    \ifshowSolution
     \fangsong\zihao{4}
+    \\
     思路: 把指数化为一样,比较底数大小.
 
     解答: 
@@ -17,33 +18,38 @@
     \fi
 }
 \\ \\ \\
+
 \item{
     已知$100^a=20, 1000^b=50$, 则$a+\frac{3}{2}b-\frac{3}{2}$的值是多少？
-     \iffalse
-     \fangsong\zihao{4}
-     思路: 观察$100^a, 1000^b$ 发现 $a,b$都出现在指数上, 要求$a+\frac{3}{2}b-\frac{3}{2}$的值, 应该想到尝试把$a+\frac{3}{2}b-\frac{3}{2}$放在指数上.
- 
-     解答: 
-     \begin{align*}
-         100^{a+\frac{3}{2}b-\frac{3}{2}} &= \frac{100^a\cdot 100^{\frac{3}{2}b}}{100^\frac{3}{2}}\\
-         &= \frac{100^a\cdot 10^{2\cdot \frac{3}{2}b}}{10^{2\cdot\frac{3}{2}}}\\
-         &= \frac{100^a\cdot 10^{3b}} {10^{3}}\\
-         &= \frac{100^a\cdot 1000^{b}} {1000}\\
-         &= \frac{20\times 50} {1000}\\
-         &= 1\\
-         &\therefore a+\frac{3}{2}b-\frac{3}{2} = 0.
-     \end{align*}
-     \fi
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 观察$100^a, 1000^b$ 发现 $a,b$都出现在指数上, 要求$a+\frac{3}{2}b-\frac{3}{2}$的值, 应该想到尝试把$a+\frac{3}{2}b-\frac{3}{2}$放在指数上.
+
+    解答: 
+    \begin{align*}
+        100^{a+\frac{3}{2}b-\frac{3}{2}} &= \frac{100^a\cdot 100^{\frac{3}{2}b}}{100^\frac{3}{2}}\\
+        &= \frac{100^a\cdot 10^{2\cdot \frac{3}{2}b}}{10^{2\cdot\frac{3}{2}}}\\
+        &= \frac{100^a\cdot 10^{3b}} {10^{3}}\\
+        &= \frac{100^a\cdot 1000^{b}} {1000}\\
+        &= \frac{20\times 50} {1000}\\
+        &= 1\\
+        &\therefore a+\frac{3}{2}b-\frac{3}{2} = 0.
+    \end{align*}
+    \fi
 }
 \\ \\ \\
+
 \item{
-    若$3^{x-1}=\frac{1}{27}$, 求$x$.
+    (把 $\frac{1}{27}$ 化为以3为底的幂) 若$3^{x-1}=\frac{1}{27}$, 求$x$.
 }
 \\ \\ \\
+
 \item{
     (注意: 除号使用分数形式) 已知$a^{2n}=3, a^{3m}=5$, 求$a^{6n-9m}$.
-    \iffalse
+    \ifshowSolution
     \fangsong\zihao{4}
+    \\
     思路: 将$a^{6n-9m}$凑出$a^{2n}, a^{3m}$, 直接代入计算. 结果使用分数形式即可.
 
     解答: 
@@ -56,31 +62,47 @@
     \fi
 }
 \\ \\ \\
+
 \item{
     已知$3\cdot2^x + 2^{x+1}=40$, 求$x$.
-        \iffalse
-        \fangsong\zihao{4}
-        思路: 将左边的2个$2^{x}$整理到一起.
-    
-        解答: 
-        \begin{align*}
-            3\cdot2^x + 2^{x+1} &= 40\\
-            3\cdot2^x + 2\cdot 2^{x} &= 40\\
-            5\cdot2^x &= 40\\
-            2^x &= 8\\
-            \therefore x = 3.
-        \end{align*}
-        \fi
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 将左边的2个$2^{x}$整理到一起.
+
+    解答: 
+    \begin{align*}
+        3\cdot2^x + 2^{x+1} &= 40\\
+        3\cdot2^x + 2\cdot 2^{x} &= 40\\
+        5\cdot2^x &= 40\\
+        2^x &= 8\\
+        \therefore x = 3.
+    \end{align*}
+    \fi
 }
 \\ \\ \\
+
 \item{
     用多项式乘法法则推导完全平方公式.
 }
 \\ \\ \\
+
 \item{
     计算 $(-x-y)^2$.
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 先将括号里的负号处理掉, 再用公式.
+
+    解答: 
+    \begin{align*}
+        \mbox{原式} &= (x+y)^2\\
+        &= x^2 + y^2
+    \end{align*}
+    \fi
 }
 \\ \\ \\
+
 \item{
     判断下列各式的正误.
 
@@ -90,6 +112,7 @@
     $(-y-3)^2 = y^2 + 6y + 9$
 }
 \\ \\ \\
+
 \item{
     用完全平方公式计算.
 
@@ -103,6 +126,23 @@
 
 \item{
     多项式 $a^2 + 4$ 加上一个单项式后, 可化为一个多项式的平方, 求这个单项式.(列出所有结果)
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 想到完全平方公式 $(x\pm y)^2 = x^2 \pm 2xy + y^2$.
+
+    解答: 
+
+    (1) $a^2$对应公式里的$x^2$，$4$对应公式里的$y^2$，所以$x= \pm a, y= \pm 2$, 所以$2xy = \pm 4a$. 即
+    \begin{align*}
+        (a+2)^2 = a^2 + 4a + 4 \\
+        (a-2)^2 = a^2 - 4a + 4
+    \end{align*}
+    (2) $4$对应公式里的$x^2$, $a^2$对应公式里的$2xy$, 所以$x= \pm 2, y=\pm \frac{a^2}{4}$，所以$y^2 = \frac{a^4}{16}$. 即
+    \begin{align*}
+        (2 + \frac{a^2}{4})^2 = 4 + a^2 + \frac{a^4}{16}
+    \end{align*}
+    \fi
 }
 \\ \\ \\
 
@@ -127,11 +167,21 @@
     第\textcircled{1}个等式: $1\times 5 + 4 = 3^2;$ \\
     第\textcircled{2}个等式: $3\times 7 + 4 = 5^2;$ \\
     第\textcircled{3}个等式: $5\times 9 + 4 = 7^2; \\ \cdots $ \\
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 先找到等式中某个位置（比如第1个）的数字的规律，再找下一个位置数的规律，最后写出公式.
+    \fi
 }
 \\ \\ \\
 
 \item{
     已知多项式 $x-2a$ 与 $x^2+x-1$ 的乘积中不含 $x^2$ 项, 则常数$a$的值是多少？
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 不含 $x^2$ 项的意思即该项的“系数为0”.展开后合并同类项.
+    \fi
 }
 \\ \\ \\
 
@@ -153,6 +203,11 @@
 \item{
     已知公式: $(x-1)(x^n + x^{n-1} + \cdots + x + 1) = x^{n+1} - 1$ (n为正整数).
     
-    求 $2^{100} + 2{99} +\cdots + 2^2 + 2$ 的值.
+    求 $2^{100} + 2^{99} +\cdots + 2^2 + 2$ 的值.
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 使用公式前，必须把原式的形式整理得和公式完全一致.
+    \fi
 }
 \\ \\ \\

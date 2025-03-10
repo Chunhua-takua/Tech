@@ -1,11 +1,7 @@
 \documentclass[a4paper]{ctexart}
-\usepackage[UTF8, scheme=plain]{ctex}
 
+\usepackage[UTF8, scheme=plain]{ctex}
 \usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linktocpage=true
-}
 \usepackage[margin=1in]{geometry}
 \usepackage{ragged2e}
 \usepackage{fancyhdr}
@@ -15,33 +11,27 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{verbatim}
+\usepackage{indentfirst} % 首行缩进
 
-% 首行缩进
-\usepackage{indentfirst}
-\setlength{\parindent}{2em}
-
-% 不显示自动编号 且 能自动生成目录
-\setcounter{secnumdepth}
-{0}
-
-% 黑体2号
-\title{\heiti\zihao{2} 数学错题集}
 % \date{\today}
 % \date{2025年02月}
-
-% \renewcommand\contentsname{目录}
-
-% 行距
-\renewcommand{\baselinestretch}
-{1.5}
 
 \fancyhf{}
 \pagestyle{fancy} %fancyhdr宏包新增的页面风格
 
 \begin{document}
-    % 标题页不显示页码
+    % whether show solutions 
+    \newif\ifshowSolution
+    \showSolutiontrue
+
+    % 不显示自动编号 且 能自动生成目录
+    \setcounter{secnumdepth}{0}
+    % 行距
+    \renewcommand{\baselinestretch}{1.5}
+
+    \title{\heiti\zihao{2} 数学错题集}
     \maketitle
-    % \thispagestyle{empty}
+    \thispagestyle{empty} % 标题页不显示页码
     \centerline{开始时间：}
     \centerline{结束时间：}
 
@@ -53,7 +43,7 @@
 
     3. 除号尽量使用分数形式。
 
-    
+    \setlength{\parindent}{2em}
     \newpage
 
     % 目录 罗马数字页码
@@ -62,14 +52,14 @@
     \cfoot{\thepage}
 
     % foot decorative lines
-    \renewcommand{\footrulewidth}{1pt}
+    % \renewcommand{\footrulewidth}{1pt}
     % \fancyhead[R]{\textbf{《鲁迅全集》笔记}}
+
+    \hypersetup{colorlinks=true, linktocpage=true}
     \tableofcontents
 
-    \newpage
-
     % 正文 阿拉伯数字页码
-
+    \newpage
     \setcounter{page}{1}
     \pagenumbering{arabic}
     % 当前页 of 总页数
