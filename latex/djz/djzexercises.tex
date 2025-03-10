@@ -13,8 +13,7 @@
 \usepackage{verbatim}
 \usepackage{indentfirst} % 首行缩进
 
-% \date{\today}
-% \date{2025年02月}
+\date{} % not display time here
 
 \fancyhf{}
 \pagestyle{fancy} %fancyhdr宏包新增的页面风格
@@ -22,7 +21,7 @@
 \begin{document}
     % whether show solutions 
     \newif\ifshowSolution
-    \showSolutiontrue
+    \showSolutionfalse
 
     % 不显示自动编号 且 能自动生成目录
     \setcounter{secnumdepth}{0}
@@ -37,11 +36,14 @@
 
     要求：
     
-    1. 保证正确率；控制做题速度；
+    1. 保证正确率；提高做题速度；
 
     2. 规范答题，书写有条理；保持卷面整洁，少涂改；
 
     3. 除号尽量使用分数形式。
+
+    \vfill
+    \centerline{\date{\today}}
 
     \setlength{\parindent}{2em}
     \newpage
