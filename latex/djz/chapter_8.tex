@@ -1,5 +1,36 @@
-\section{202503}
+\section{整式乘法}
 
+\item {
+    （用2种方法）若把代数式$x^2-4x-5$化成$(x-m)^2+k$的形式,其中$m,k$为常数. 求$m+k$的值.
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路1: 把$x^2-4x-5$转化为$(x-m)^2+k$的形式, 求出m和k.
+
+        解答: 
+        \begin{align*}
+            x^2-4x-5 &= x^2 - 2\times 2x + 4 - 9 \\
+            &= (x-2)^2 - 9 \\
+        \end{align*}
+        所以,
+        \[\left\{ 
+            \begin{array}{lc}
+                m = 2\\
+                k =-9
+            \end{array}
+        \right.\]
+        $\therefore m+k=-7.$
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    用公式计算: $(x+2y-3z)^2$.
+    \\ \\ \\
+}
+
+\begin{comment}
 \item {
     $a=2^{44}, b=3^{33}, c=5^{22}$, 比较$a, b, c$的大小.
     \ifshowSolution
@@ -19,7 +50,9 @@
         \\ \\ \\
     \fi
 }
+\end{comment}
 
+\begin{comment}
 \item {
     已知$100^a=20, 1000^b=50$, 则$a+\frac{3}{2}b-\frac{3}{2}$的值是多少？
     \ifshowSolution
@@ -41,50 +74,7 @@
         \\ \\ \\
     \fi
 }
-
-\item {
-    (把 $\frac{1}{27}$ 化为以3为底的幂) 若$3^{x-1}=\frac{1}{27}$, 求$x$.
-}
-\\ \\ \\
-
-\item {
-    (注意: 除号使用分数形式) 已知$a^{2n}=3, a^{3m}=5$, 求$a^{6n-9m}$.
-    \ifshowSolution
-    \fangsong\zihao{4}
-    \\
-    思路: 将$a^{6n-9m}$凑出$a^{2n}, a^{3m}$, 直接代入计算. 结果使用分数形式即可.
-
-    解答: 
-    \begin{align*}
-        a^{6n-9m} &= \frac{a^{6n}}{a^{9m}}\\
-        &= \frac{(a^{2n})^3} {(a^{3m})^3}\\
-        &= \frac{3^3} {5^3}\\
-        &= \frac{27} {125}.
-    \end{align*}
-    \else
-        \\ \\ \\
-    \fi
-}
-
-\item {
-    已知$3\cdot2^x + 2^{x+1}=40$, 求$x$.
-    \ifshowSolution
-    \fangsong\zihao{4}
-    \\
-    思路: 将左边的2个$2^{x}$整理到一起.
-
-    解答: 
-    \begin{align*}
-        3\cdot2^x + 2^{x+1} &= 40\\
-        3\cdot2^x + 2\cdot 2^{x} &= 40\\
-        5\cdot2^x &= 40\\
-        2^x &= 8\\
-        \therefore x = 3.
-    \end{align*}
-    \else
-        \\ \\ \\
-    \fi
-}
+\end{comment}
 
 \item {
     用多项式乘法法则推导完全平方公式.
@@ -101,7 +91,7 @@
     解答: 
     \begin{align*}
         \mbox{原式} &= (x+y)^2\\
-        &= x^2 + y^2
+        &= x^2 +2xy + y^2
     \end{align*}
     \else
         \\ \\ \\
@@ -111,15 +101,15 @@
 \item {
     判断下列各式的正误.
 
-    $(a-b)^2 = a^2 - b^2$\\
-    $(-2a-3b)^2 = 4a^2 - 12ab +9b^2$\\
-    $(\frac13 m + \frac12 n)^2 = \frac19 m^2 + \frac16 mn + \frac14 n^2$\\
-    $(-y-3)^2 = y^2 + 6y + 9$
+    \textcircled{1}$(a-b)^2 = a^2 - b^2$\\
+    \textcircled{2}$(-2a-3b)^2 = 4a^2 - 12ab +9b^2$\\
+    \textcircled{3}$(\frac13 m + \frac12 n)^2 = \frac19 m^2 + \frac16 mn + \frac14 n^2$\\
+    \textcircled{4}$(-y-3)^2 = y^2 + 6y + 9$
+    \\ \\ \\
 }
-\\ \\ \\
 
 \item {
-    用完全平方公式计算.
+    用公式计算.
 
     $(1) (-\frac34 x + \frac43 y)^2$ \\ \\
 
@@ -176,7 +166,11 @@
     \ifshowSolution
         \fangsong\zihao{4}
         \\
-        思路: 先找到等式中某个位置 (比如第1个) 的数字的规律, 再找下一个位置数的规律, 最后写出公式.
+        思路: 先找到等式中第1列的数字的规律, 再找下一列数的规律, 最后写出公式. 第一列数是奇数1，3，5，可以用n表示为 $2n-1$. 第二列数比第一列大4，所以是$2n+3$. 依此类推.
+
+        解答: 
+
+        $(2n-1)\times (2n+3) + 4 = (2n+1)^2$.
     \else
         \\ \\ \\
     \fi
@@ -222,7 +216,7 @@
 }
 
 \item {
-    用若干A类正方形（边长a）、B类长方形（长a,宽b）、C类正方形（连长b）,拼成一个边长为 $2a + 2b$ 的正方形,需要B类正方形多少个？
+    用若干A类正方形(边长a)、B类长方形(长a,宽b)、C类正方形(连长b),拼成一个边长为 $2a + 2b$ 的正方形,需要B类正方形多少个？
     \ifshowSolution
         \fangsong\zihao{4}
         \\
@@ -293,6 +287,53 @@
 
 \item {
     写出 $(a+b)^2, (a-b)^2, ab$ 三者之间的等量关系.
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路:
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    若多项式 $2x^2 + kx - 14$ 是由整式 $x-2$ 与另一个整式 $2x+m$相乘得到的。求k的值.
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路:
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    已知 $a^2 + a - 3 = 0$, 计算$(a^2 - 3)(a+1)$.
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路:
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    若 $\lvert x+y-4 \rvert + (xy-3)^2 = 0$, 计算$x^2 + y^2$.
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路:
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    在计算 $(ax+1)(2x+b)$时，小泉同学看错了$b$的值, 计算结果为$2x^2 + 6x + 4$; 小张同学看错了$a$ 的值，计算结果为 $4x^2+12x+5$.
+
+    (1) 求 $a,b$.\\
+    (2) 计算 $(ax+1)(2x+b)$ 的正确结果.
     \ifshowSolution
         \fangsong\zihao{4}
         \\

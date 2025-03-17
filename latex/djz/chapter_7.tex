@@ -1,5 +1,6 @@
-\section{202502}
+\section{幂的运算}
 
+\begin{comment}
 \item {
     当 $ x=7, y=-\frac{1}{7}$ 时, 求 $x^{4n+1}\cdot y^{4n+2}$ ($n$为整数)的值.
     \ifshowSolution
@@ -17,8 +18,10 @@
     \else
         \\ \\ \\
     \fi
-} 
+}
+\end{comment}
 
+\begin{comment}
 \item {
     已知$ m=8^9, n=9^8 $, 用含$m, n$的式子表示 $72^{72}$.
     \ifshowSolution
@@ -36,8 +39,10 @@
     \else
         \\ \\ \\
     \fi
-} 
+}
+\end{comment}
 
+\begin{comment}
 \item {
     已知$x-y=k$, 求$(3x-3y)^3.$
     \ifshowSolution
@@ -52,8 +57,10 @@
     \else
         \\ \\ \\
     \fi
-} 
+}
+\end{comment}
 
+\begin{comment}
 \item {
     若$(a^nb^mb)^3 = a^9 b^{15}$, 求$2^{m+n}$.
     \ifshowSolution
@@ -76,6 +83,7 @@
         \\ \\ \\
     \fi
 }
+\end{comment}
 
 \begin{comment}
     \item {
@@ -128,6 +136,7 @@
     \\ \\ \\
 \end{comment}
 
+\begin{comment}
 \item {
     (用科学计数法表示)已知 $0.25 \upmu$m $ = 2.5\times 10^{-7}$m,那么 1 m 等于多少$\upmu$m?
     \ifshowSolution
@@ -147,6 +156,7 @@
         \\ \\ \\
     \fi
 }
+\end{comment}
 
 \begin{comment}
     \item {
@@ -155,6 +165,7 @@
     \\ \\ \\
 \end{comment}
 
+\begin{comment}
 \item {
     已知$a^2+b^2=8, a-b=3$,求$ab$的值.
     \ifshowSolution
@@ -165,6 +176,7 @@
         \\ \\ \\
     \fi
 }
+\end{comment}
 
 \begin{comment}
     \item {
@@ -178,42 +190,14 @@
     \\ \\ \\
 \end{comment}
 
-\item {
-    若把代数式$x^2-4x-5$化成$(x-m)^2+k$的形式,其中$m,k$为常数. 求$m+k$的值.
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 把$x^2-4x-5$转化为$(x-m)^2+k$的形式, 求出m和k.
 
-        解答: 
-        \begin{align*}
-            x^2-4x-5 &= x^2 - 2\times 2x + 4 - 9 \\
-            &= (x-2)^2 - 9 \\
-        \end{align*}
-        所以,
-        \[\left\{ 
-            \begin{array}{lc}
-                m = 2\\
-                k =-9
-            \end{array}
-        \right.\]
-        $\therefore m+k=-7.$
-    \else
-        \\ \\ \\
-    \fi
-}
 
-% \begin{comment}
-\item {
-    计算(用完全平方公式): $(x+2y-3z)^2$.
-}
-\\ \\ \\
-% \end{comment}
-
+\begin{comment}
 \item {
     (注意: 除号使用分数形式) 已知$10^{-m}=a, 10^{-n}=b$($m, n$是整数),求$10^{2m-3n}$的值(用含有$a, b$的代数式表示).
+    \\ \\ \\
 }
-\\ \\ \\
+\end{comment}
 
 \begin{comment}
 \item {
@@ -222,8 +206,8 @@
     (2) $x+y+3=2z$\\
     (3) $4x=z$\\
     (4) $x+1=y$
+    \\ \\
 }
-\\ \\
 \end{comment}
 
 \item {
@@ -235,7 +219,7 @@
 
     解答: 
     \begin{align*}
-        \mbox{原式} &= 3 + \pi - 3\\
+        \mbox{原式} &= 2 + \pi - 2\\
         &= \pi.
     \end{align*}
     \else
@@ -243,10 +227,12 @@
     \fi
 }
 
+\begin{comment}
 \item {
     已知$(x+2)^{x+5}=1$, 求$x$.
+    \\ \\ \\
 }
-\\ \\ \\
+\end{comment}
 
 \item {
     (用科学记数法)一个正方体集装箱的棱长为 $0.8 \rm{m}$.\\
@@ -260,3 +246,51 @@
         \\ \\ \\
     \fi
 }
+
+\begin{comment}
+    \item {
+        (把 $\frac{1}{27}$ 化为以3为底的幂) 若$3^{x-1}=\frac{1}{27}$, 求$x$.
+        \\ \\ \\
+    }
+\end{comment}
+    
+\item {
+    (注意: 除号使用分数形式) 已知$a^{2n}=3, a^{3m}=5$, 求$a^{6n-9m}$.
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 将$a^{6n-9m}$凑出$a^{2n}, a^{3m}$, 直接代入计算. 结果使用分数形式即可.
+
+    解答: 
+    \begin{align*}
+        a^{6n-9m} &= \frac{a^{6n}}{a^{9m}}\\
+        &= \frac{(a^{2n})^3} {(a^{3m})^3}\\
+        &= \frac{3^3} {5^3}\\
+        &= \frac{27} {125}.
+    \end{align*}
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\begin{comment}
+    \item {
+        已知$3\cdot2^x + 2^{x+1}=40$, 求$x$.
+        \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 将左边的2个$2^{x}$整理到一起.
+    
+        解答: 
+        \begin{align*}
+            3\cdot2^x + 2^{x+1} &= 40\\
+            3\cdot2^x + 2\cdot 2^{x} &= 40\\
+            5\cdot2^x &= 40\\
+            2^x &= 8\\
+            \therefore x = 3.
+        \end{align*}
+        \else
+            \\ \\ \\
+        \fi
+    }
+\end{comment}
