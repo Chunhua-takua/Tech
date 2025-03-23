@@ -20,6 +20,30 @@
             \end{array}
         \right.\]
         $\therefore m+k=-7.$
+        \\
+        \begin{tikzpicture}
+            \draw[dashed] (0,0) -- (15,0);
+        \end{tikzpicture}
+        \\
+        思路2: 对应项系数，常数项相等。
+        \begin{align*}
+            (x-m)^2+k &= x^2 - 2m\cdot x + m^2 + k \\
+        \end{align*}
+        所以,
+        \[\left\{ 
+            \begin{array}{lc}
+                4 = 2m\\
+                -5 = m^2 + k
+            \end{array}
+        \right.\]
+        所以，
+        \[\left\{ 
+            \begin{array}{lc}
+                m = 2\\
+                k =-9
+            \end{array}
+        \right.\]
+        $\therefore m+k=-7.$
     \else
         \\ \\ \\
     \fi
@@ -78,9 +102,10 @@
 
 \item {
     用多项式乘法法则推导完全平方公式.
+    \\ \\ \\
 }
-\\ \\ \\
 
+\begin{comment}
 \item {
     计算 $(-x-y)^2$.
     \ifshowSolution
@@ -97,7 +122,9 @@
         \\ \\ \\
     \fi
 }
+\end{comment}
 
+\begin{comment}
 \item {
     判断下列各式的正误.
 
@@ -107,50 +134,106 @@
     \textcircled{4}$(-y-3)^2 = y^2 + 6y + 9$
     \\ \\ \\
 }
+\end{comment}
 
 \item {
     用公式计算.
 
     $(1) (-\frac34 x + \frac43 y)^2$ \\ \\
 
-    $(2) (-7m-2n)^2$ \\ \\
+    % $(2) (-7m-2n)^2$ \\ \\
     
     $(3) (a+b+c)^2$ \\ \\
+    \\ \\
 }
-\\ \\
 
 \item {
     多项式 $a^2 + 4$ 加上一个单项式后, 可化为一个多项式的平方, 求这个单项式.(列出所有结果)
     \ifshowSolution
     \fangsong\zihao{4}
     \\
-    思路: 想到完全平方公式 $(x\pm y)^2 = x^2 \pm 2xy + y^2$.
+    思路: 想到完全平方公式 $(x + y)^2 = x^2 + 2xy + y^2$.
 
     解答: 
 
-    (1) $a^2$对应公式里的$x^2$, $4$对应公式里的$y^2$, 所以$x= \pm a, y= \pm 2$, 所以$2xy = \pm 4a$. 即
-    \begin{align*}
-        (a+2)^2 = a^2 + 4a + 4 \\
-        (a-2)^2 = a^2 - 4a + 4
-    \end{align*}
-    (2) $4$对应公式里的$x^2$, $a^2$对应公式里的$2xy$, 所以$x= \pm 2, y=\pm \frac{a^2}{4}$, 所以$y^2 = \frac{a^4}{16}$. 即
-    \begin{align*}
-        (2 + \frac{a^2}{4})^2 = 4 + a^2 + \frac{a^4}{16}
-    \end{align*}
+    (1) $a^2$对应公式里的$x^2$, $4$对应公式里的$2xy$
+    \[\left\{ 
+        \begin{array}{lc}
+            x^2 = a^2\\
+            2xy = 4
+        \end{array}
+    \right.\]
+    所以，
+    \[\left\{ 
+        \begin{array}{lc}
+            x = a\\
+            y = \frac2a
+        \end{array}
+    \right.\]
+    或
+    \[\left\{ 
+        \begin{array}{lc}
+            x = -a\\
+            y = -\frac2a
+        \end{array}
+    \right.\]
+    所以，$y^2 = \frac{4}{a^2} (a\neq 0).$
+
+    (2) $a^2$对应公式里的$x^2$, $4$对应公式里的$y^2$, 所以
+    \[\left\{ 
+        \begin{array}{lc}
+            x^2 = a^2 \\
+            y^2 = 4
+        \end{array}
+    \right.\]
+    所以，
+    \[\left\{ 
+        \begin{array}{lc}
+            x = \pm a \\
+            y = \pm 2
+        \end{array}
+    \right.\]
+    所以，$2xy = \pm 4a.$
+
+    
+    (3) $4$对应公式里的$x^2$, $a^2$对应公式里的$2xy$, 所以
+    \[\left\{ 
+        \begin{array}{lc}
+            x^2 = 4 \\
+            2xy = a^2
+        \end{array}
+    \right.\]
+    所以，
+    \[\left\{ 
+        \begin{array}{lc}
+            x = 2 \\
+            y = \frac{a^2}{4}
+        \end{array}
+    \right.\]
+    或
+    \[\left\{ 
+        \begin{array}{lc}
+            x = -2 \\
+            y = -\frac{a^2}{4}
+        \end{array}
+    \right.\]
+    所以，$y^2 = \frac{a^4}{16}.$
     \else
         \\ \\ \\
     \fi
 }
 
+\begin{comment}
 \item {
     计算: $(-xy^2)\cdot (x^2y - 6xy)$
+    \\ \\ \\
 }
-\\ \\ \\
 
 \item {
     计算: $(a+3)(a-1) + a(a-2)$
+    \\ \\ \\
 }
-\\ \\ \\
+\end{comment}
 
 \item {
     计算(用公式): $(x+2y-1)\cdot (x+2y+1)$
@@ -182,25 +265,52 @@
     \fangsong\zihao{4}
     \\
     思路: 不含 $x^2$ 项的意思即该项的“系数为0”.展开后合并同类项.
+
+    解答：
+    \begin{align*}
+        (x-2a)x^2+x-1 &= x^3 + (1-2a)x^2-(1+2a)x + 2a\\
+        1-2a &= 0 \\
+        a &= \frac12.
+    \end{align*}
+
     \else
         \\ \\ \\
     \fi
 }
 
+\begin{comment}
 \item {
     多项式 $4a^2+9$ 加上一个单项式后, 可化为一个多项式的平方, 求这个单项式.
+    \\ \\ \\
 }
-\\ \\ \\
+\end{comment}
 
+\begin{comment}
 \item {
     已知 $a^2+a-1=0$, 求 $a^3 + 2a^2 + 2023$ 的值.
+    \\ \\ \\
 }
-\\ \\ \\
+\end{comment}
 
 \item {
+    $\bigstar$
     用公式计算: $(a-2b+3c)\cdot (a+2b+3c)$.
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 先把原式整理为平方差公式的形式，再用公式.
+
+    解答：
+    \begin{align*}
+        \mbox{原式} &= (a+3c-2b)\cdot (a+3c+2b) \\
+        &= (a+3c)^2 - 4b^2 \\
+        &= a^2 + 6ac + 9c^2 - 4b^2. \\
+    \end{align*}
+
+    \else
+        \\ \\ \\
+    \fi
 }
-\\ \\ \\
 
 \item {
     已知公式: $(x-1)(x^n + x^{n-1} + \cdots + x + 1) = x^{n+1} - 1$ (n为正整数).
@@ -210,6 +320,15 @@
         \fangsong\zihao{4}
         \\
         思路: 使用公式前, 必须把原式的形式整理得和公式完全一致.
+
+        解答：记原式为S（这句话必须写，让别人知道S是什么）.
+        \begin{align*}
+            S + 1 &= 2^{100} + 2^{99} + \cdots + 2^2 + 2 + 1 \\
+            &= (2-1)\times (2^{100} + 2^{99} + \cdots + 2^2 + 2 + 1) \\
+            &= 2^{101} - 1 \\
+            \therefore
+            S &= 2^{101} - 2.
+        \end{align*}
     \else
         \\ \\ \\
     \fi
@@ -286,22 +405,49 @@
 }
 
 \item {
+    $\bigstar$
     写出 $(a+b)^2, (a-b)^2, ab$ 三者之间的等量关系.
     \ifshowSolution
         \fangsong\zihao{4}
         \\
-        % 思路:
+        思路: 直接相减.
+
+        解答：
+        \begin{align*}
+            (a+b)^2 - (a-b)^2 &= a^2 + 2ab + b^2 - (a^2 - 2ab + b^2) \\
+            &= 4ab.
+        \end{align*}
     \else
         \\ \\ \\
     \fi
 }
 
 \item {
+    $\bigstar$
     若多项式 $2x^2 + kx - 14$ 是由整式 $x-2$ 与另一个整式 $2x+m$相乘得到的,求k的值.
     \ifshowSolution
         \fangsong\zihao{4}
         \\
-        % 思路:
+        思路: 对应系数相等，常数项相等.
+
+        解答：
+        \begin{align*}
+            (x-2)(2x+m) &= 2x^2 + (m-4)x - 2m
+        \end{align*}
+        对应系数相等，常数项相等，所以
+        \[\left\{ 
+            \begin{array}{lc}
+                m-4 = k \\
+                2m = 14
+            \end{array}
+        \right.\]
+        所以
+        \[\left\{ 
+            \begin{array}{lc}
+                m = 7 \\
+                k = 3
+            \end{array}
+        \right.\]
     \else
         \\ \\ \\
     \fi
@@ -323,7 +469,7 @@
     \ifshowSolution
         \fangsong\zihao{4}
         \\
-        % 思路:
+        思路: 找出$x+y, xy, x^2+y^2$三者之间的数量关系.
     \else
         \\ \\ \\
     \fi
