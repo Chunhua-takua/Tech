@@ -13,6 +13,34 @@
         \fangsong\zihao{4}
         \\
         思路: 先满足等腰,再满足直角.
+
+        解答：
+        \begin{tikzpicture}
+            % 带端点标注的线段
+            \coordinate (A) at (0,0);
+            \coordinate (B) at (4,0);
+            \coordinate (O) at (2,0);
+            \coordinate (P) at (2,-4);
+            
+            \draw[|-|] (A) -- (B) 
+                node[left] at (0,0) {A}
+                node[right] at (4,0) {B};
+
+            \draw (A) +(283:4.47cm) arc (283:310:4.47cm);
+            \draw (B) +(231:4.47cm) arc (231:258:4.47cm);
+
+            \draw[-] (2,1) -- (2,-5);
+
+            \draw (O) +(258:2cm) arc (258:278:2cm);
+
+            \coordinate (C) at (2,-2);
+            \draw[-] (C) -- (A)
+                node[below left] at (C) {C};
+            \draw[-] (C) -- (B);
+
+            \fill (O) circle node[above left] {$O$};
+            \fill (P) circle node[below left] {$P$};
+        \end{tikzpicture}
     \else
         \\ \\ \\ \\ \\
     \fi
@@ -69,6 +97,30 @@
     \fill (P_2) circle (1pt) node[below left] {$P_2$};
     \fill (M) circle (0pt) node[below left] {$M$};
     \fill (N) circle (0pt) node[below left] {$N$};
+    \end{tikzpicture}
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路: 
+    \else
+        \\ \\ \\ \\
+    \fi
+}
+
+\item {
+    尺规作图.已知$\triangle ABC$，作它的三个角的角平分线.你有何发现？\\
+    \begin{tikzpicture}[scale=1.2]
+    % 绘制角AOB
+    \coordinate (A) at (2,3);
+    \coordinate (C) at (4,0);
+    \coordinate (B) at (0,0);
+    \draw (A) -- (B);
+    \draw (C) -- (B);
+    \draw (C) -- (A);
+    % 标注点
+    \fill (A) circle  node[above left] {$A$};
+    \fill (B) circle  node[below left] {$B$};
+    \fill (C) circle  node[below right] {$C$};
     \end{tikzpicture}
     \ifshowSolution
         \fangsong\zihao{4}
