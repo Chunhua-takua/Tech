@@ -2,57 +2,69 @@
 
 \item {
     $\bigstar$ 
-    如图,已知线段AB,求作等腰直角三角形,使其斜边等于线段AB,保留作图痕迹并证明.\\
+    如图, 已知线段AB, 求作等腰直角三角形, 使其斜边等于线段AB, 保留作图痕迹并证明. \\
     \begin{tikzpicture}
         % 带端点标注的线段
-        \draw[|-|] (0,0) -- (4,0) 
-            node[left] at (0,0) {A}
-            node[right] at (4,0) {B};
+        \draw[|-|] (0, 0) -- (4, 0) 
+            node[left] at (0, 0) {A}
+            node[right] at (4, 0) {B};
     \end{tikzpicture}
     \ifshowSolution
         \fangsong\zihao{4}
         \\
-        思路: 先满足等腰,再满足直角.
+        思路: 先满足等腰, 再满足直角. 
 
-        解答：
+        解答：\\
         \begin{tikzpicture}
             % 带端点标注的线段
-            \coordinate (A) at (0,0);
-            \coordinate (B) at (4,0);
-            \coordinate (O) at (2,0);
-            \coordinate (P) at (2,-4);
+            \coordinate (A) at (0, 0);
+            \coordinate (B) at (4, 0);
+            \coordinate (O) at (2, 0);
+            \coordinate (P) at (2, -4);
             
             \draw[|-|] (A) -- (B) 
-                node[left] at (0,0) {A}
-                node[right] at (4,0) {B};
+                node[left] at (0, 0) {A}
+                node[right] at (4, 0) {B};
 
-            \draw (A) +(283:4.47cm) arc (283:310:4.47cm);
-            \draw (B) +(231:4.47cm) arc (231:258:4.47cm);
+            \draw (A) +(283:4. 47cm) arc (283:310:4. 47cm);
+            \draw (B) +(231:4. 47cm) arc (231:258:4. 47cm);
 
-            \draw[-] (2,1) -- (2,-5);
+            \draw[-] (2, 1) -- (2, -5);
 
             \draw (O) +(258:2cm) arc (258:278:2cm);
 
-            \coordinate (C) at (2,-2);
+            \coordinate (C) at (2, -2);
             \draw[-] (C) -- (A)
                 node[below left] at (C) {C};
             \draw[-] (C) -- (B);
 
             \fill (O) circle node[above left] {$O$};
             \fill (P) circle node[below left] {$P$};
-        \end{tikzpicture}
+        \end{tikzpicture} \\
+        证明: \\
+        (1) 先证明 $\triangle ABC$ 是等腰三角形. \\
+         $\because OP$ 是 AB 的垂直平分线, 点 C 在 AB 上, \\
+        $\therefore AC = BC$. \\
+        (2) 再证明 $\triangle ABC$ 是直角三角形.\\
+        $\because OA = OC = OB$, \\
+        $\therefore \angle A = \angle ACO, \angle B = \angle BOC,$ \\
+        $\therefore \angle ACB = \angle A + \angle B.$ \\
+        $\because$ 三角形内角为 $180^\circ, $ \\
+        $\therefore \angle ACB = 90^\circ.$ \\
+        所以, $\triangle ABC$ 是等腰直角三角形.
+
     \else
         \\ \\ \\ \\ \\
     \fi
 }
 
 \item {
-    (尺规作图)如图,已知线段AB,作线段AB的垂直平分线.\\
+    (尺规作图)如图, 已知线段AB, 作线段AB的垂直平分线. \\
     \begin{tikzpicture}
         % 带端点标注的线段
-        \draw[|-|] (0,0) -- (4,4) 
-            node[left] at (0,0) {A}
-            node[right] at (4,4) {B};
+        \draw[|-|] (0, 0) -- (4, 4) 
+            node[left] at (0, 0) {A}
+            node[right] at (4, 4) {B};
     \end{tikzpicture}
     \ifshowSolution
         \fangsong\zihao{4}
@@ -64,31 +76,31 @@
 }
 
 \item {
-    如图,$P$ 为 $\angle AOB$ 内一点,$OA$ 垂直平分线段 $PP_1$, $OB$垂直平分线段 $PP_2$,连接$P_1P_2$ 交$OA$ 于点 $N$,若$P_1P_2=15$,求 $\triangle PMN$ 的周长.\\
-    \begin{tikzpicture}[scale=1.2]
+    如图, $P$ 为 $\angle AOB$ 内一点, $OA$ 垂直平分线段 $PP_1$, $OB$垂直平分线段 $PP_2$, 连接$P_1P_2$ 交$OA$ 于点 $N$, 若$P_1P_2=15$, 求 $\triangle PMN$ 的周长. \\
+    \begin{tikzpicture}[scale=1. 2]
     % 绘制角AOB
-    \coordinate (O) at (0,0);
-    \coordinate (A) at (4,4);
-    \coordinate (B) at (4,0);
+    \coordinate (O) at (0, 0);
+    \coordinate (A) at (4, 4);
+    \coordinate (B) at (4, 0);
     \draw (O) -- (A);
     \draw (O) -- (B);
     
     % 标注点P
-    \coordinate (P) at (3,2);
-    \coordinate (P_1) at (2,3);
+    \coordinate (P) at (3, 2);
+    \coordinate (P_1) at (2, 3);
     \coordinate (P_2) at (3, -2);
     \draw (P) -- (P_1);
     \draw (P) -- (P_2);
     \draw (P_1) -- (P_2);
 
-    \coordinate (M) at (2.17, 2.17);
-    \coordinate (N) at (2.6, 0);
+    \coordinate (M) at (2. 17, 2. 17);
+    \coordinate (N) at (2. 6, 0);
     \draw (M) -- (P);
     \draw (N) -- (P);
 
     
     % 标注所有点
-    node[left] at (0,0) {A}
+    node[left] at (0, 0) {A}
     \fill (O) circle  node[below left] {$O$};
     \fill (A) circle (0pt) node[below left] {$A$};
     \fill (B) circle (0pt) node[below left] {$B$};
@@ -108,12 +120,12 @@
 }
 
 \item {
-    尺规作图.已知$\triangle ABC$，作它的三个角的角平分线.你有何发现？\\
-    \begin{tikzpicture}[scale=1.2]
+    尺规作图. 已知$\triangle ABC$，作它的三个角的角平分线. 你有何发现？\\
+    \begin{tikzpicture}[scale=1. 2]
     % 绘制角AOB
-    \coordinate (A) at (2,3);
-    \coordinate (C) at (4,0);
-    \coordinate (B) at (0,0);
+    \coordinate (A) at (2, 3);
+    \coordinate (C) at (4, 0);
+    \coordinate (B) at (0, 0);
     \draw (A) -- (B);
     \draw (C) -- (B);
     \draw (C) -- (A);
@@ -121,6 +133,49 @@
     \fill (A) circle  node[above left] {$A$};
     \fill (B) circle  node[below left] {$B$};
     \fill (C) circle  node[below right] {$C$};
+    \end{tikzpicture}
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路: 
+    \else
+        \\ \\ \\ \\
+    \fi
+}
+
+\item {
+    尺规作图. 过点$P$ 作直线$l$的垂线. \\
+    \begin{tikzpicture}[scale=1. 2]
+    % 绘制角AOB
+    \coordinate (A) at (0, 0);
+    \coordinate (C) at (4, 0);
+    \coordinate (P) at (1. 5, 2);
+    \draw (C) -- (A);
+    % 标注点
+    \fill (P) circle (2pt)  node[above left] {$P$};
+    \fill (C) circle  node[below right] {$l$};
+    \end{tikzpicture}
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路: 
+    \else
+        \\ \\ \\ \\
+    \fi
+}
+
+\item {
+    尺规作图. 过点$P$ 作直线$l$的垂线. \\
+    \par\bigskip
+    \begin{tikzpicture}[scale=1. 2]
+        % 绘制角AOB
+        \coordinate (A) at (0, 0);
+        \coordinate (C) at (4, 0);
+        \coordinate (P) at (1. 5, 0);
+        \draw (C) -- (A);
+        % 标注点
+        \fill (P) circle (2pt)  node[above left] {$P$};
+        \fill (C) circle  node[below right] {$l$};
     \end{tikzpicture}
     \ifshowSolution
         \fangsong\zihao{4}
