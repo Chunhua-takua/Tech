@@ -189,3 +189,96 @@
         \\ \\ \\ \\
     \fi
 }
+
+\item {
+    如图, $\angle AOB=45\degree$, 点 $M, N$分别在射线$OA，OB$上，$MN=5, S_{\triangle OMN} = 15$, 点$P$是直线$MN$上的一个动点，点$P$关于$OA$的对称点为$P_1$，点$P$关于$OB$的对称点为$P_2$. 连接$OP_1, OP_2, P_1P_2$, 当点$P$在直线$MN$上运动时，则 $\triangle OP_1P_2$的面积的最小值是多少？此时点$P$ 在哪里？ \\
+    \begin{tikzpicture}[scale=1. 2]
+    % 绘制角AOB
+    \coordinate (O) at (0, 0);
+    \coordinate (A) at (4, 4);
+    \coordinate (B) at (6, 0);
+    \draw (O) -- (A);
+    \draw (O) -- (B);
+    
+    % 标注点P
+    \coordinate (P) at (2.95, 0.89);
+    \coordinate (P_1) at (0.89, 2.95);
+    \coordinate (P_2) at (2.95, -0.89);
+    \draw [dashed] (P) -- (P_1);
+    \draw [dashed] (P) -- (P_2);
+    \draw (P_1) -- (P_2);
+    \draw (O) -- (P_1);
+    \draw (O) -- (P_2);
+
+    \coordinate (M) at (1.51, 1.51);
+    \coordinate (N) at (5, 0);
+    \draw (M) -- (P);
+    \draw (N) -- (P);
+    \draw (N) -- (M);
+
+    
+    % 标注所有点
+    node[left] at (0, 0) {A}
+    \fill (O) circle  node[below left] {$O$};
+    \fill (A) circle (0pt) node[below left] {$A$};
+    \fill (B) circle (0pt) node[below left] {$B$};
+    \fill (P) circle (1pt) node[below left] {$P$};
+    \fill (P_1) circle (1pt) node[below left] {$P_1$};
+    \fill (P_2) circle (1pt) node[below left] {$P_2$};
+    \fill (M) circle (0pt) node[below left] {$M$};
+    \fill (N) circle (0pt) node[below left] {$N$};
+    \end{tikzpicture}
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路: 18
+    \else
+        \\ \\ \\ \\
+    \fi
+}
+
+\item {
+    如图，把一张长方形纸片$ABCD$沿$EF$折叠后$ED$与$BC$的交点为$G$，$D,C$分别在$M,N$的位置上，若$\angle EFG=55\degree$，则$\angle AEM$是多少度？\\
+    \par\bigskip
+    \begin{tikzpicture}[scale=1. 2]
+    \coordinate (A) at (-5, 1);
+    \coordinate (B) at (-5, -1);
+    \coordinate (C) at (6, -1);
+    \coordinate (D) at (6, 1);
+    \coordinate (E) at (1, 1);
+    \coordinate (F) at (2.4, -1);
+    \coordinate (G) at (0.27, -1);
+    \coordinate (M) at (-0.71, -3.7);
+    \coordinate (N) at (1.17, -4.38);
+
+    % 画线
+    \draw [dashed] (C) -- (G);
+    \draw [dashed] (C) -- (D);
+    \draw [dashed] (E) -- (D);
+    \draw (A) -- (E);
+    \draw (A) -- (B);
+    \draw (G) -- (B);
+    \draw (E) -- (M);
+    \draw (N) -- (M);
+    \draw (N) -- (F);
+    \draw (E) -- (F);
+
+    % 标注点
+    \fill (A) circle (0pt) node[below left] {$A$};
+    \fill (B) circle (0pt) node[below left] {$B$};
+    \fill (C) circle (0pt) node[below left] {$C$};
+    \fill (D) circle (0pt) node[below left] {$D$};
+    \fill (E) circle (0pt) node[below left] {$E$};
+    \fill (F) circle (0pt) node[below left] {$F$};
+    \fill (G) circle (0pt) node[below left] {$G$};
+    \fill (M) circle (0pt) node[below left] {$M$};
+    \fill (N) circle (0pt) node[below left] {$N$};
+    \end{tikzpicture}
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路: 70
+    \else
+        \\ \\ \\ \\
+    \fi
+}
