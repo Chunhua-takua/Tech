@@ -76,51 +76,6 @@
     \fi
 }
 
-\begin{comment}
-\item {
-    如图, $P$ 为 $\angle AOB$ 内一点, $OA$ 垂直平分线段 $PP_1$, $OB$垂直平分线段 $PP_2$, 连接$P_1P_2$ 交$OA$ 于点 $N$, 若$P_1P_2=15$, 求 $\triangle PMN$ 的周长. \\
-    \begin{tikzpicture}[scale=1. 2]
-    % 绘制角AOB
-    \coordinate (O) at (0, 0);
-    \coordinate (A) at (4, 4);
-    \coordinate (B) at (4, 0);
-    \draw (O) -- (A);
-    \draw (O) -- (B);
-    
-    % 标注点P
-    \coordinate (P) at (3, 2);
-    \coordinate (P_1) at (2, 3);
-    \coordinate (P_2) at (3, -2);
-    \draw (P) -- (P_1);
-    \draw (P) -- (P_2);
-    \draw (P_1) -- (P_2);
-
-    \coordinate (M) at (2. 17, 2. 17);
-    \coordinate (N) at (2. 6, 0);
-    \draw (M) -- (P);
-    \draw (N) -- (P);
-
-    
-    % 标注所有点
-    node[left] at (0, 0) {A}
-    \fill (O) circle  node[below left] {$O$};
-    \fill (A) circle (0pt) node[below left] {$A$};
-    \fill (B) circle (0pt) node[below left] {$B$};
-    \fill (P) circle (1pt) node[below left] {$P$};
-    \fill (P_1) circle (1pt) node[below left] {$P_1$};
-    \fill (P_2) circle (1pt) node[below left] {$P_2$};
-    \fill (M) circle (0pt) node[below left] {$M$};
-    \fill (N) circle (0pt) node[below left] {$N$};
-    \end{tikzpicture}
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        % 思路: 
-    \else
-        \\ \\ \\ \\
-    \fi
-}
-\end{comment}
 
 \item {
     $\bigstar$
@@ -191,43 +146,42 @@
 }
 
 \item {
-    如图, $\angle AOB=45\degree$, 点 $M, N$分别在射线$OA，OB$上，$MN=5, S_{\triangle OMN} = 15$, 点$P$是直线$MN$上的一个动点，点$P$关于$OA$的对称点为$P_1$，点$P$关于$OB$的对称点为$P_2$. 连接$OP_1, OP_2, P_1P_2$, 当点$P$在直线$MN$上运动时，则 $\triangle OP_1P_2$的面积的最小值是多少？此时点$P$ 在哪里？ \\
+    如图, $\angle AOB=45\degree$, 点$M, N$分别在射线$OA,OB$上，$MN=5, S_{\triangle OMN} = 15$, 点$P$是直线$MN$上的一个动点，点$P$关于$OA$的对称点为$P_1$，点$P$关于$OB$的对称点为$P_2$. 连接$OP_1, OP_2, P_1P_2$, 当点$P$在直线$MN$上运动时，则 $\triangle OP_1P_2$的面积的最小值是多少？此时点$P$ 在哪里？ \\
     \begin{tikzpicture}[scale=1. 2]
-    % 绘制角AOB
-    \coordinate (O) at (0, 0);
-    \coordinate (A) at (4, 4);
-    \coordinate (B) at (6, 0);
-    \draw (O) -- (A);
-    \draw (O) -- (B);
+        % 绘制角AOB
+        \coordinate (O) at (0, 0);
+        \coordinate (A) at (4, 4);
+        \coordinate (B) at (6, 0);
+        \draw (O) -- (A);
+        \draw (O) -- (B);
+        
+        % 标注点P
+        \coordinate (P) at (2.95, 0.97);
+        \coordinate (P_1) at (0.89, 2.95);
+        \coordinate (P_2) at (2.95, -0.89);
+        \draw [dashed] (P) -- (P_1);
+        \draw [dashed] (P) -- (P_2);
+        \draw (P_1) -- (P_2);
+        \draw (O) -- (P_1);
+        \draw (O) -- (P_2);
     
-    % 标注点P
-    \coordinate (P) at (2.95, 0.89);
-    \coordinate (P_1) at (0.89, 2.95);
-    \coordinate (P_2) at (2.95, -0.89);
-    \draw [dashed] (P) -- (P_1);
-    \draw [dashed] (P) -- (P_2);
-    \draw (P_1) -- (P_2);
-    \draw (O) -- (P_1);
-    \draw (O) -- (P_2);
-
-    \coordinate (M) at (1.51, 1.51);
-    \coordinate (N) at (5, 0);
-    \draw (M) -- (P);
-    \draw (N) -- (P);
-    \draw (N) -- (M);
-
+        \coordinate (M) at (1.61, 1.61);
+        \coordinate (N) at (5, 0);
+        \draw (M) -- (P);
+        \draw (N) -- (P);
+        \draw (N) -- (M);
     
-    % 标注所有点
-    node[left] at (0, 0) {A}
-    \fill (O) circle  node[below left] {$O$};
-    \fill (A) circle (0pt) node[below left] {$A$};
-    \fill (B) circle (0pt) node[below left] {$B$};
-    \fill (P) circle (1pt) node[below left] {$P$};
-    \fill (P_1) circle (1pt) node[below left] {$P_1$};
-    \fill (P_2) circle (1pt) node[below left] {$P_2$};
-    \fill (M) circle (0pt) node[below left] {$M$};
-    \fill (N) circle (0pt) node[below left] {$N$};
-    \end{tikzpicture}
+        % 标注所有点
+        node[left] at (0, 0) {A}
+        \fill (O) circle  node[below left] {$O$};
+        \fill (A) circle (0pt) node[below left] {$A$};
+        \fill (B) circle (0pt) node[below left] {$B$};
+        \fill (P) circle (1pt) node[below left] {$P$};
+        \fill (P_1) circle (1pt) node[below left] {$P_1$};
+        \fill (P_2) circle (1pt) node[below left] {$P_2$};
+        \fill (M) circle (0pt) node[below left] {$M$};
+        \fill (N) circle (0pt) node[below left] {$N$};
+        \end{tikzpicture}
     \ifshowSolution
         \fangsong\zihao{4}
         \\
@@ -240,7 +194,7 @@
 \item {
     如图，把一张长方形纸片$ABCD$沿$EF$折叠后$ED$与$BC$的交点为$G$，$D,C$分别在$M,N$的位置上，若$\angle EFG=55\degree$，则$\angle AEM$是多少度？\\
     \par\bigskip
-    \begin{tikzpicture}[scale=1. 2]
+    \begin{tikzpicture}[scale=1]
     \coordinate (A) at (-5, 1);
     \coordinate (B) at (-5, -1);
     \coordinate (C) at (6, -1);
@@ -282,3 +236,88 @@
         \\ \\ \\ \\
     \fi
 }
+
+\item {
+    如图，是重叠的两个直角三角形。将其中一个直角三角形沿$BC$方向平移得到 $\triangle DEF$. 如果$AB=8, BE=4, DH=2$, 则图中阴影部分的面积是多少？\\
+    \par\bigskip
+    \begin{tikzpicture}[scale=0.5]
+        \coordinate (E) at (0, 0);
+        \coordinate (A) at (-4, 8);
+        \coordinate (B) at (-4, 0);
+        \coordinate (C) at (6, 0);
+        \coordinate (D) at (0, 8);
+        \coordinate (F) at (10, 0);
+        \coordinate (H) at (0, 4.8);
+        \draw (B) -- (A);
+        \draw (D) -- (A);
+        \draw (C) -- (A);
+        \draw (D) -- (F);
+        \draw (F) -- (B);
+        \draw (D) -- (E);
+        
+        % 标注所有点
+        \fill (A) circle (0pt) node[below left] {$A$};
+        \fill (B) circle (0pt) node[below left] {$B$};
+        \fill (C) circle (1pt) node[below left] {$C$};
+        \fill (D) circle (1pt) node[below left] {$D$};
+        \fill (E) circle (1pt) node[below left] {$E$};
+        \fill (F) circle (0pt) node[below left] {$F$};
+        \fill (H) circle (0pt) node[below left] {$H$};
+
+        % 加阴影
+        \pattern[pattern=horizontal lines, pattern color=gray] (D) -- (H) -- (C) -- (F);
+    \end{tikzpicture}
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路: 70
+    \else
+        \\ \\ \\ \\
+    \fi
+}
+
+\begin{comment}
+    \item {
+        如图, $P$ 为 $\angle AOB$ 内一点, $OA$ 垂直平分线段 $PP_1$, $OB$垂直平分线段 $PP_2$, 连接$P_1P_2$ 交$OA$ 于点 $N$, 若$P_1P_2=15$, 求 $\triangle PMN$ 的周长. \\
+        \begin{tikzpicture}[scale=1. 2]
+        % 绘制角AOB
+        \coordinate (O) at (0, 0);
+        \coordinate (A) at (4, 4);
+        \coordinate (B) at (4, 0);
+        \draw (O) -- (A);
+        \draw (O) -- (B);
+        
+        % 标注点P
+        \coordinate (P) at (3, 2);
+        \coordinate (P_1) at (2, 3);
+        \coordinate (P_2) at (3, -2);
+        \draw (P) -- (P_1);
+        \draw (P) -- (P_2);
+        \draw (P_1) -- (P_2);
+    
+        \coordinate (M) at (2. 17, 2. 17);
+        \coordinate (N) at (2. 6, 0);
+        \draw (M) -- (P);
+        \draw (N) -- (P);
+    
+        
+        % 标注所有点
+        node[left] at (0, 0) {A}
+        \fill (O) circle  node[below left] {$O$};
+        \fill (A) circle (0pt) node[below left] {$A$};
+        \fill (B) circle (0pt) node[below left] {$B$};
+        \fill (P) circle (1pt) node[below left] {$P$};
+        \fill (P_1) circle (1pt) node[below left] {$P_1$};
+        \fill (P_2) circle (1pt) node[below left] {$P_2$};
+        \fill (M) circle (0pt) node[below left] {$M$};
+        \fill (N) circle (0pt) node[below left] {$N$};
+        \end{tikzpicture}
+        \ifshowSolution
+            \fangsong\zihao{4}
+            \\
+            % 思路: 
+        \else
+            \\ \\ \\ \\
+        \fi
+    }
+    \end{comment}
