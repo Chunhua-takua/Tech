@@ -1,0 +1,76 @@
+\documentclass[a4paper]{ctexart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[UTF8, scheme=plain]{ctex}
+\usepackage{fancyhdr}
+\usepackage{gensymb}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{indentfirst} % 首行缩进
+\usepackage{lastpage}
+\usepackage{ragged2e}
+\usepackage{tikz}
+\usepackage{upgreek}
+\usepackage{verbatim}
+\usepackage{xassoccnt}
+
+\usetikzlibrary{calc}
+
+\date{} % not display time here
+
+\fancyhf{}
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+
+\begin{document}
+    % whether show solutions 
+    \newif\ifshowSolution
+    % \showSolutiontrue
+    \showSolutionfalse
+
+    % 不显示自动编号 且 能自动生成目录
+    \setcounter{secnumdepth}{0}
+    % 行距
+    \renewcommand{\baselinestretch}{1.5}
+
+    \title{\heiti\zihao{2} 数学错题集}
+    \maketitle
+    \thispagestyle{empty} % 标题页不显示页码
+    \centerline{开始时间：}
+    \centerline{结束时间：}
+
+    \vfill
+    \centerline{\date{\today}}
+
+    \setlength{\parindent}{2em}
+    \newpage
+
+    % 目录 罗马数字页码
+    \setcounter{page}{1}
+    \pagenumbering{Roman}
+    \cfoot{\thepage}
+
+    % foot decorative lines
+    % \renewcommand{\footrulewidth}{1pt}
+    % \fancyhead[R]{\textbf{《鲁迅全集》笔记}}
+
+    \hypersetup{colorlinks=true, linktocpage=true}
+    \tableofcontents
+
+    % 正文 阿拉伯数字页码
+    \newpage
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+    % 当前页 of 总页数
+    \cfoot{Page \thepage\ of \pageref{LastPage}}
+
+    \zihao{4}
+
+    \begin{sloppy}
+        \begin{enumerate}
+            \input{./chapter_7}
+            % \input{./chapter_8}
+            % \input{./chapter_9}
+        \end{enumerate}
+    \end{sloppy}
+\end{document}
