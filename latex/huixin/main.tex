@@ -1,0 +1,153 @@
+\documentclass{beamer}
+
+\mode<presentation> {
+	\usetheme{Madrid}
+	\usecolortheme{rose}
+	
+	% \setbeamertemplate｛footline｝
+	%若要删除所有幻灯片中的页脚，请取消注释此行
+	
+	%\setbeamertemplate｛footline｝[页码]
+	%若要用简单的幻灯片计数替换所有幻灯片中的页脚，请取消注释此行
+	
+	%\setbeamertemplate｛导航符号｝｛｝
+	%要删除所有幻灯片底部的导航符号，请取消注释此行
+}
+
+\usepackage{graphicx} % 允许包含图像
+\usepackage{booktabs} % 允许在表中使用\toprule、\ midrule和\ bottomrule
+\usepackage[UTF8,noindent]{ctexcap}  % 使用中文输入及显示
+\usepackage[bookmarks=true]{hyperref}
+
+%-----------------------------------
+%	以下为正文
+%-----------------------------------
+
+\title[巧求周长（一）]{巧求周长（一）} 
+% 简短标题显示在每张幻灯片的底部，完整标题仅在标题页上
+
+\author{Zhuo} % Your name
+\institute[会心升学] % 您的机构将出现在每张幻灯片的底部，可能是节省空间的简写
+{
+	% 会心升学 \\
+	% \medskip
+	% \textit{chenxiao1212@foxmail.com} % Your email address
+}
+\date{\today} % 日期，可以更改为自定义日期
+
+\begin{document}
+	
+	\begin{frame}
+		\titlepage % 将标题页打印为第一张幻灯片
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{目录}
+		\tableofcontents % 在整个演示过程中，如果您选择使用\ section｛｝和\ submission{}命令，这些命令将自动打印在此幻灯片上，作为演示的概述
+	\end{frame}
+	
+	%-----------------------------------
+	%	开始创建PPT
+	%-----------------------------------
+	
+	\input{./chapter_1}
+	
+	%------------------------------------------------
+	% \subsection{Subsection Example 2}
+	
+	% \begin{frame}
+	% 	\frametitle{Bullet Points}
+	% 	\begin{itemize}
+	% 		\item What we do may be small, but it has a certain character of permanence.
+	% 		\item Euclid geometry was as dazzling as first love.
+	% 		\item Talk is cheap, solve the PDE.
+	% 	\end{itemize}
+	% \end{frame}
+	
+	% %------------------------------------------------
+	
+	% \begin{frame}
+	% 	\frametitle{Blocks of Highlighted Text}
+	% 	\begin{block}{Block 1}
+	% 		Certainly the best times were when I was alone with mathematics: free of ambition and pretense, and indifferent to the world.
+	% 	\end{block}
+		
+	% 	% \begin{block}{Block 2}
+	% 	% 	Wir müssen wissen, Wir werden wissen.
+	% 	% \end{block}
+		
+	% 	\begin{block}{Block 3}
+	% 		If people do not believe that mathematics is simple, it is only because they do not realize how complicated life is.	
+	% 	\end{block}
+	% \end{frame}
+	
+	% %------------------------------------------------
+	
+	% \begin{frame}
+	% 	\frametitle{Multiple Columns}
+	% 	\begin{columns}[c] % The "c" option specifies centered vertical alignment while the "t" option is used for top vertical alignment
+			
+	% 		\column{.45\textwidth} % Left column and width
+	% 		\textbf{Heading}
+	% 		\begin{enumerate}
+	% 			\item Statement
+	% 			\item Explanation
+	% 			\item Example
+	% 		\end{enumerate}
+			
+	% 		\column{.5\textwidth} % Right column and width
+	% 		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ultricies in feugiat rutrum, porttitor sit amet augue. Aliquam ut tortor mauris. Sed volutpat ante purus, quis accumsan dolor.
+			
+	% 	\end{columns}
+	% \end{frame}
+	
+	% %------------------------------------------------
+	% \section{Second Section}
+	% %------------------------------------------------
+	
+	% \begin{frame}
+	% 	\frametitle{Table}
+	% 	\begin{table}
+	% 		\begin{tabular}{l l l}
+	% 			\toprule
+	% 			\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+	% 			\midrule
+	% 			Treatment 1 & 0.0003262 & 0.562 \\
+	% 			Treatment 2 & 0.0015681 & 0.910 \\
+	% 			Treatment 3 & 0.0009271 & 0.296 \\
+	% 			\bottomrule
+	% 		\end{tabular}
+	% 		\caption{Table caption}
+	% 	\end{table}
+	% \end{frame}
+	
+	% %------------------------------------------------
+	
+	% \begin{frame}
+	% 	\frametitle{Theorem}
+	% 	\begin{theorem}[Mass--energy equivalence]
+	% 	\centerline{$E = mc^2$}
+	% 	\end{theorem}
+	% \end{frame}
+	
+	%------------------------------------------------
+	
+	% \begin{frame}[fragile] % Need to use the fragile option when verbatim is used in the slide
+	% 	\frametitle{Verbatim}
+	% 	\begin{example}[Theorem Slide Code]
+	% 		\begin{verbatim}
+	% 			\begin{frame}
+	% 			\frametitle{Theorem}
+	% 			\begin{theorem}[Mass--energy equivalence]
+	% 			$E = mc^2$
+	% 			\end{theorem}
+	% 			\end{frame}
+	% 		\end{verbatim}
+	% 	\end{example}
+	% \end{frame}
+	
+	\begin{frame}
+		\Huge{\centerline{（结束）}}
+	\end{frame}
+	
+\end{document} 
