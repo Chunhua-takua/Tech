@@ -2,8 +2,9 @@
 
 \mode<presentation> {
 	\usetheme{Madrid}
-	\usecolortheme{rose}
-	
+	% \usecolortheme{default}
+	% \setbeamertemplate{navigation symbols}{}  % 隐藏导航符号
+
 	% \setbeamertemplate｛footline｝
 	%若要删除所有幻灯片中的页脚，请取消注释此行
 	
@@ -26,21 +27,24 @@
 \title[巧求周长（一）]{巧求周长（一）} 
 % 简短标题显示在每张幻灯片的底部，完整标题仅在标题页上
 
-\author{Zhuo} % Your name
-\institute[会心升学] % 您的机构将出现在每张幻灯片的底部，可能是节省空间的简写
+\author{Zhuo}
+\institute[] % 您的机构将出现在每张幻灯片的底部，可能是节省空间的简写
 {
 	% 会心升学 \\
 	% \medskip
-	% \textit{chenxiao1212@foxmail.com} % Your email address
+	% \textit{@163.com} % Your email address
 }
 \date{\today} % 日期，可以更改为自定义日期
 
 \begin{document}
-	
 	\begin{frame}
-		\titlepage % 将标题页打印为第一张幻灯片
+		\vspace{-1cm}
+		\begin{flushleft}
+			\includegraphics[width=1cm]{./pics/huixin_logo.png}
+		\end{flushleft}
+		\titlepage
 	\end{frame}
-	
+
 	\begin{frame}
 		\frametitle{目录}
 		\tableofcontents % 在整个演示过程中，如果您选择使用\ section｛｝和\ submission{}命令，这些命令将自动打印在此幻灯片上，作为演示的概述
@@ -51,7 +55,10 @@
 	%-----------------------------------
 	
 	\input{./chapter_1}
-	
+		
+	\begin{frame}
+		\Huge{\centerline{（结束）}}
+	\end{frame}
 	%------------------------------------------------
 	% \subsection{Subsection Example 2}
 	
@@ -145,9 +152,5 @@
 	% 		\end{verbatim}
 	% 	\end{example}
 	% \end{frame}
-	
-	\begin{frame}
-		\Huge{\centerline{（结束）}}
-	\end{frame}
-	
-\end{document} 
+
+\end{document}
