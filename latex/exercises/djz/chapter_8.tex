@@ -1,551 +1,7 @@
 \section{整式乘法}
 
-\item {
-    $\bigstar$
-    （用2种方法）若把代数式$x^2-4x-5$化成$(x-m)^2+k$的形式, 其中$m, k$为常数. 求$m+k$的值. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路1: 把$x^2-4x-5$转化为$(x-m)^2+k$的形式, 求出m和k. 
 
-        解答: 
-        \begin{align*}
-            x^2-4x-5 &= x^2 - 2\times 2x + 4 - 9 \\
-            &= (x-2)^2 - 9 \\
-        \end{align*}
-        所以, 
-        \[\left\{ 
-            \begin{array}{lc}
-                m = 2\\
-                k =-9
-            \end{array}
-        \right. \]
-        $\therefore m+k=-7. $
-        \\
-        \begin{tikzpicture}
-            \draw[dashed] (0, 0) -- (15, 0);
-        \end{tikzpicture}
-        \\
-        思路2: 对应项系数，常数项相等。
-        \begin{align*}
-            (x-m)^2+k &= x^2 - 2m\cdot x + m^2 + k \\
-        \end{align*}
-        所以, 
-        \[\left\{ 
-            \begin{array}{lc}
-                4 = 2m\\
-                -5 = m^2 + k
-            \end{array}
-        \right. \]
-        所以，
-        \[\left\{ 
-            \begin{array}{lc}
-                m = 2\\
-                k =-9
-            \end{array}
-        \right. \]
-        $\therefore m+k=-7. $
-    \else
-        \\ \\ \\
-    \fi
-}
 
-\item {
-    $\bigstar \bigstar$
-    用公式计算: $(x+2y-3z)^2$. 
-    \\ \\ \\
-}
-
-\item {
-    如果 $x^2 + (m-1)x + 16$是一个完全平方式展开后的结果，那么常数$m$的值是多少？ 
-    \\ \\ \\
-}
-
-\begin{comment}
-\item {
-    $a=2^{44}, b=3^{33}, c=5^{22}$, 比较$a, b, c$的大小. 
-    \ifshowSolution
-    \fangsong\zihao{4}
-    \\
-    思路: 把指数化为一样, 比较底数大小. 
-
-    解答: 
-    \begin{align*}
-        a &= (2^4)^{11} = 16^{11}\\
-        b &= (3^3)^{11} = 27^{11}\\
-        c &= (5^2)^{11} = 25^{11}\\
-        & 16^{11} < 25^{11} < 27^{11}\\
-        &\therefore a < c < b. 
-    \end{align*}
-    \else
-        \\ \\ \\
-    \fi
-}
-\end{comment}
-
-\begin{comment}
-\item {
-    已知$100^a=20, 1000^b=50$, 则$a+\frac{3}{2}b-\frac{3}{2}$的值是多少? 
-    \ifshowSolution
-    \fangsong\zihao{4}
-    \\
-    思路: 观察$100^a, 1000^b$ 发现 $a, b$都出现在指数上, 要求$a+\frac{3}{2}b-\frac{3}{2}$的值, 应该想到尝试把$a+\frac{3}{2}b-\frac{3}{2}$放在指数上. 
-
-    解答: 
-    \begin{align*}
-        100^{a+\frac{3}{2}b-\frac{3}{2}} &= \frac{100^a\cdot 100^{\frac{3}{2}b}}{100^\frac{3}{2}}\\
-        &= \frac{100^a\cdot 10^{2\cdot \frac{3}{2}b}}{10^{2\cdot\frac{3}{2}}}\\
-        &= \frac{100^a\cdot 10^{3b}} {10^{3}}\\
-        &= \frac{100^a\cdot 1000^{b}} {1000}\\
-        &= \frac{20\times 50} {1000}\\
-        &= 1\\
-        &\therefore a+\frac{3}{2}b-\frac{3}{2} = 0. 
-    \end{align*}
-    \else
-        \\ \\ \\
-    \fi
-}
-\end{comment}
-
-\begin{comment}
-\item {
-    用多项式乘法法则推导完全平方公式. 
-    \\ \\ \\
-}
-\end{comment}
-
-\begin{comment}
-\item {
-    计算 $(-x-y)^2$. 
-    \ifshowSolution
-    \fangsong\zihao{4}
-    \\
-    思路: 先将括号里的负号处理掉, 再用公式. 
-
-    解答: 
-    \begin{align*}
-        \mbox{原式} &= (x+y)^2\\
-        &= x^2 +2xy + y^2
-    \end{align*}
-    \else
-        \\ \\ \\
-    \fi
-}
-\end{comment}
-
-\begin{comment}
-\item {
-    判断下列各式的正误. 
-
-    \textcircled{1}$(a-b)^2 = a^2 - b^2$\\
-    \textcircled{2}$(-2a-3b)^2 = 4a^2 - 12ab +9b^2$\\
-    \textcircled{3}$(\frac13 m + \frac12 n)^2 = \frac19 m^2 + \frac16 mn + \frac14 n^2$\\
-    \textcircled{4}$(-y-3)^2 = y^2 + 6y + 9$
-    \\ \\ \\
-}
-\end{comment}
-
-\begin{comment}
-\item {
-    用公式计算. 
-
-    $(1) (-\frac34 x + \frac43 y)^2$ \\ \\
-
-    $(2) (-7m-2n)^2$ \\ \\
-    
-    $(3) (a+b+c)^2$ \\ \\
-    \\ \\
-}
-\end{comment}
-
-\item {
-    $\bigstar$
-    多项式 $a^2 + 4$ 加上一个单项式后, 可化为一个多项式的平方, 求这个单项式. (列出所有结果)
-    \ifshowSolution
-    \fangsong\zihao{4}
-    \\
-    思路: 想到完全平方公式 $(x + y)^2 = x^2 + 2xy + y^2$. 
-
-    解答: 
-
-    (1) $a^2$对应公式里的$x^2$, $4$对应公式里的$2xy$
-    \[\left\{ 
-        \begin{array}{lc}
-            x^2 = a^2\\
-            2xy = 4
-        \end{array}
-    \right. \]
-    所以，
-    \[\left\{ 
-        \begin{array}{lc}
-            x = a\\
-            y = \frac2a
-        \end{array}
-    \right. \]
-    或
-    \[\left\{ 
-        \begin{array}{lc}
-            x = -a\\
-            y = -\frac2a
-        \end{array}
-    \right. \]
-    所以，$y^2 = \frac{4}{a^2} (a\neq 0). $
-
-    (2) $a^2$对应公式里的$x^2$, $4$对应公式里的$y^2$, 所以
-    \[\left\{ 
-        \begin{array}{lc}
-            x^2 = a^2 \\
-            y^2 = 4
-        \end{array}
-    \right. \]
-    所以，
-    \[\left\{ 
-        \begin{array}{lc}
-            x = \pm a \\
-            y = \pm 2
-        \end{array}
-    \right. \]
-    所以，$2xy = \pm 4a. $
-
-    
-    (3) $4$对应公式里的$x^2$, $a^2$对应公式里的$2xy$, 所以
-    \[\left\{ 
-        \begin{array}{lc}
-            x^2 = 4 \\
-            2xy = a^2
-        \end{array}
-    \right. \]
-    所以，
-    \[\left\{ 
-        \begin{array}{lc}
-            x = 2 \\
-            y = \frac{a^2}{4}
-        \end{array}
-    \right. \]
-    或
-    \[\left\{ 
-        \begin{array}{lc}
-            x = -2 \\
-            y = -\frac{a^2}{4}
-        \end{array}
-    \right. \]
-    所以，$y^2 = \frac{a^4}{16}. $
-    \else
-        \\ \\ \\ \\ \\ \\
-    \fi
-}
-
-\begin{comment}
-\item {
-    计算: $(-xy^2)\cdot (x^2y - 6xy)$
-    \\ \\ \\
-}
-
-\item {
-    计算: $(a+3)(a-1) + a(a-2)$
-    \\ \\ \\
-}
-\end{comment}
-
-\begin{comment}
-\item {
-    计算(用公式): $(x+2y-1)\cdot (x+2y+1)$
-    \\ \\ \\
-}
-\end{comment}
-
-\item {
-    $\bigstar \bigstar$
-    观察下列各式, 写出第n个等式. 
-
-    第\textcircled{1}个等式: $1\times 5 + 4 = 3^2;$ \\
-    第\textcircled{2}个等式: $3\times 7 + 4 = 5^2;$ \\
-    第\textcircled{3}个等式: $5\times 9 + 4 = 7^2; \\ \cdots $ \\
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 先找到等式中第1列的数字的规律, 再找下一列数的规律, 最后写出公式. 第一列数是奇数1，3，5，可以用n表示为 $2n-1$. 第二列数比第一列大4，所以是$2n+3$. 依此类推. 
-
-        解答: 
-
-        $(2n-1)\times (2n+3) + 4 = (2n+1)^2$. 
-    \else
-        \\ \\ \\
-    \fi
-}
-
-\item {
-    $\bigstar \bigstar$
-    已知多项式 $x-2a$ 与 $x^2+x-1$ 的乘积中不含 $x^2$ 项, 则常数$a$的值是多少? 
-    \ifshowSolution
-    \fangsong\zihao{4}
-    \\
-    思路: 不含 $x^2$ 项的意思即该项的“系数为0”. 展开后合并同类项. 
-
-    解答：
-    \begin{align*}
-        (x-2a)x^2+x-1 &= x^3 + (1-2a)x^2-(1+2a)x + 2a\\
-        1-2a &= 0 \\
-        a &= \frac12. 
-    \end{align*}
-
-    \else
-        \\ \\ \\
-    \fi
-}
-
-\begin{comment}
-\item {
-    多项式 $4a^2+9$ 加上一个单项式后, 可化为一个多项式的平方, 求这个单项式. 
-    \\ \\ \\
-}
-\end{comment}
-
-\begin{comment}
-\item {
-    已知 $a^2+a-1=0$, 求 $a^3 + 2a^2 + 2023$ 的值. 
-    \\ \\ \\
-}
-\end{comment}
-
-\item {
-    $\bigstar$
-    用公式计算: $(a-2b+3c)\cdot (a+2b+3c)$. 
-    \ifshowSolution
-    \fangsong\zihao{4}
-    \\
-    思路: 先把原式整理为平方差公式的形式，再用公式. 
-
-    解答：
-    \begin{align*}
-        \mbox{原式} &= (a+3c-2b)\cdot (a+3c+2b) \\
-        &= (a+3c)^2 - 4b^2 \\
-        &= a^2 + 6ac + 9c^2 - 4b^2. \\
-    \end{align*}
-
-    \else
-        \\ \\ \\
-    \fi
-}
-
-\item {
-    已知公式: $(x-1)(x^n + x^{n-1} + \cdots + x + 1) = x^{n+1} - 1$ (n为正整数). 
-    
-    利用上述公式, 求 $2^{100} + 2^{99} +\cdots + 2^2 + 2$ 的值. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 使用公式前, 必须把原式的形式整理得和公式完全一致. 
-
-        解答：记原式为S（这句话必须写，让别人知道S是什么）. 
-        \begin{align*}
-            S + 1 &= 2^{100} + 2^{99} + \cdots + 2^2 + 2 + 1 \\
-            &= (2-1)\times (2^{100} + 2^{99} + \cdots + 2^2 + 2 + 1) \\
-            &= 2^{101} - 1 \\
-            \therefore
-            S &= 2^{101} - 2. 
-        \end{align*}
-    \else
-        \\ \\ \\
-    \fi
-}
-
-\item {
-    $\bigstar$
-    （用2种方法）用若干A类正方形(边长a)、B类长方形(长a, 宽b)、C类正方形(边长b), 拼成一个边长为 $2a + 2b$ 的正方形, 需要B类正方形多少个? 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 画图. 
-    \else
-        \\ \\ \\ \\ \\ \\ \\ \\
-    \fi
-}
-
-\begin{comment}
-\item {
-    观察``杨辉三角'', 计算 $(a+b)^5$ 的结果中, 项 $a^3b^2$的系数, 
-    \[
-    \begin{matrix}
-        & & & & 1 & & & \\
-        & & & 1 & & 1 & & \\
-        & & 1 & & 2 & & 1 & \\
-        & 1 & & 3 & & 3 & & 1 \\
-        1 & & 4 & & 6 & & 4 & & 1
-    \end{matrix}
-    \]
-    \begin{align*}
-        (a+b)^1 &= a+b \\
-        (a+b)^2 &= a^2 + 2ab + b^2 \\
-        (a+b)^3 &= a^3 + 3a^2b + 3ab^2 + b^3 \\
-        (a+b)^4 &= a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4 \\
-    \end{align*}
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        % 思路: 画图. 
-    \else
-        \\ \\ \\
-    \fi
-}
-\end{comment}
-
-\begin{comment}
-\item {
-    判断 $49^8 - 14^2\times 7^{12}$ 能否被9整除, 并说明理由. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        % 思路: . 
-    \else
-        \\ \\ \\
-    \fi
-}
-\end{comment}
-
-\begin{comment}
-\item {
-    求代数式 $y^2 +10y + 27$ 的最小值. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 将原式整理成 $(y + m)^2 + k$ 的形式; 再利用 $a \geq 0$ 的性质，计算出原式的最小值. 
-    \else
-        \\ \\ \\
-    \fi
-}
-\end{comment}
-
-\item {
-    $\bigstar\bigstar$
-    求代数式 $-m^2 + 4m + 8$ 的最值, 并判断是最大值还是最小值. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 利用 $a^2 \geq 0$ 的性质. 
-    \else
-        \\ \\ \\
-    \fi
-}
-
-\item {
-    $\bigstar$
-    写出 $(a+b)^2, (a-b)^2, ab$ 三者之间的等量关系. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 直接相减. 
-
-        解答：
-        \begin{align*}
-            (a+b)^2 - (a-b)^2 &= a^2 + 2ab + b^2 - (a^2 - 2ab + b^2) \\
-            &= 4ab. 
-        \end{align*}
-    \else
-        \\ \\ \\
-    \fi
-}
-
-\item {
-    $\bigstar$
-    若多项式 $2x^2 + kx - 14$ 是由整式 $x-2$ 与另一个整式 $2x+m$相乘得到的, 求k的值. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 对应系数相等，常数项相等. 
-
-        解答：
-        \begin{align*}
-            (x-2)(2x+m) &= 2x^2 + (m-4)x - 2m
-        \end{align*}
-        对应系数相等，常数项相等，所以
-        \[\left\{ 
-            \begin{array}{lc}
-                m-4 = k \\
-                2m = 14
-            \end{array}
-        \right. \]
-        所以
-        \[\left\{ 
-            \begin{array}{lc}
-                m = 7 \\
-                k = 3
-            \end{array}
-        \right. \]
-    \else
-        \\ \\ \\
-    \fi
-}
-
-\begin{comment}
-\item {
-    已知 $a^2 + a - 3 = 0$, 计算$(a^2 - 3)(a+1)$. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        % 思路:
-    \else
-        \\ \\ \\
-    \fi
-}
-\end{comment}
-
-\item {
-    若 $\lvert x+y-4 \rvert + (xy-3)^2 = 0$, 计算$x^2 + y^2$. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 找出$x+y, xy, x^2+y^2$三者之间的数量关系. 
-    \else
-        \\ \\ \\
-    \fi
-}
-
-\begin{comment}
-\item {
-    在计算 $(ax+1)(2x+b)$时，小泉同学看错了$b$的值, 计算结果为$2x^2 + 6x + 4$; 小张同学看错了$a$ 的值，计算结果为 $4x^2+12x+5$. 
-
-    (1) 求 $a, b$. \\
-    (2) 计算 $(ax+1)(2x+b)$ 的正确结果. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 小泉同学算出的a是正确的, 小张同学算出的b是正确的. 
-    \else
-        \\ \\ \\ \\ 
-    \fi
-}
-\end{comment}
-
-\item {
-    若 $x=2y+2$, 则求 $x^2 - 4xy + 4y^2$ 的值. 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路: 直接把$x=2y+2$ 代入，可以消去字母. 
-    \else
-        \\ \\ \\ \\ 
-    \fi
-}
-
-\item {
-    若$(3z^3 + M)(2z^2 - 1)$是一个五次多项式, 则下列说法中正确的是(\quad). 
-
-    A. M是一个三次单项式
-
-    B. M是一个三次多项式
-
-    C. M的次数不高于三
-
-    D. M不可能是一个常数
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        % 思路: 直接把$x=2y+2$ 代入，可以消去字母. 
-    \else
-        \\ \\ \\ \\ 
-    \fi
-}
 
 \item {
     已知多项式$x-a$与$x^2 - 2x + 1$的乘积的结果中不含 $x^2$ 项. 求常数$a$的值. 
@@ -646,3 +102,527 @@
         \\ \\ \\ \\ 
     \fi
 }
+
+\item {
+    若 $\lvert x+y-4 \rvert + (xy-3)^2 = 0$, 计算$x^2 + y^2$. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 找出$x+y, xy, x^2+y^2$三者之间的数量关系. 
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    $\bigstar\bigstar$
+    求代数式 $-m^2 + 4m + 8$ 的最值, 并判断是最大值还是最小值. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 利用 $a^2 \geq 0$ 的性质. 
+    \else
+        \\ \\ \\
+    \fi
+}
+
+
+\item {
+    $\bigstar$
+    若多项式 $2x^2 + kx - 14$ 是由整式 $x-2$ 与另一个整式 $2x+m$相乘得到的, 求k的值. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 对应系数相等，常数项相等. 
+
+        解答：
+        \begin{align*}
+            (x-2)(2x+m) &= 2x^2 + (m-4)x - 2m
+        \end{align*}
+        对应系数相等，常数项相等，所以
+        \[\left\{ 
+            \begin{array}{lc}
+                m-4 = k \\
+                2m = 14
+            \end{array}
+        \right. \]
+        所以
+        \[\left\{ 
+            \begin{array}{lc}
+                m = 7 \\
+                k = 3
+            \end{array}
+        \right. \]
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    $\bigstar \bigstar$
+    观察下列各式, 写出第n个等式. 
+
+    第\textcircled{1}个等式: $1\times 5 + 4 = 3^2;$ \\
+    第\textcircled{2}个等式: $3\times 7 + 4 = 5^2;$ \\
+    第\textcircled{3}个等式: $5\times 9 + 4 = 7^2; \\ \cdots $ \\
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 先找到等式中第1列的数字的规律, 再找下一列数的规律, 最后写出公式. 第一列数是奇数1，3，5，可以用n表示为 $2n-1$. 第二列数比第一列大4，所以是$2n+3$. 依此类推. 
+
+        解答: 
+
+        $(2n-1)\times (2n+3) + 4 = (2n+1)^2$. 
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    $\bigstar$
+    多项式 $a^2 + 4$ 加上一个单项式后, 可化为一个多项式的平方, 求这个单项式. 
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 想到完全平方公式 $(x + y)^2 = x^2 + 2xy + y^2$. 
+
+    解答: 
+
+    (1) $a^2$对应公式里的$x^2$, $4$对应公式里的$2xy$
+    \[\left\{ 
+        \begin{array}{lc}
+            x^2 = a^2\\
+            2xy = 4
+        \end{array}
+    \right. \]
+    所以，
+    \[\left\{ 
+        \begin{array}{lc}
+            x = a\\
+            y = \frac2a
+        \end{array}
+    \right. \]
+    或
+    \[\left\{ 
+        \begin{array}{lc}
+            x = -a\\
+            y = -\frac2a
+        \end{array}
+    \right. \]
+    所以，$y^2 = \frac{4}{a^2} (a\neq 0). $
+
+    (2) $a^2$对应公式里的$x^2$, $4$对应公式里的$y^2$, 所以
+    \[\left\{ 
+        \begin{array}{lc}
+            x^2 = a^2 \\
+            y^2 = 4
+        \end{array}
+    \right. \]
+    所以，
+    \[\left\{ 
+        \begin{array}{lc}
+            x = \pm a \\
+            y = \pm 2
+        \end{array}
+    \right. \]
+    所以，$2xy = \pm 4a. $
+
+    
+    (3) $4$对应公式里的$x^2$, $a^2$对应公式里的$2xy$, 所以
+    \[\left\{ 
+        \begin{array}{lc}
+            x^2 = 4 \\
+            2xy = a^2
+        \end{array}
+    \right. \]
+    所以，
+    \[\left\{ 
+        \begin{array}{lc}
+            x = 2 \\
+            y = \frac{a^2}{4}
+        \end{array}
+    \right. \]
+    或
+    \[\left\{ 
+        \begin{array}{lc}
+            x = -2 \\
+            y = -\frac{a^2}{4}
+        \end{array}
+    \right. \]
+    所以，$y^2 = \frac{a^4}{16}. $
+    \else
+        \\ \\ \\ \\ \\ \\
+    \fi
+}
+
+
+
+\item {
+    如果 $x^2 + (m-1)x + 16$是一个完全平方式展开后的结果，那么常数$m$的值是多少？ 
+    \\ \\ \\
+}
+
+
+\item {
+    $\bigstar$
+    用公式计算: $(a-2b+3c)\cdot (a+2b+3c)$. 
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 先把原式整理为平方差公式的形式，再用公式. 
+
+    解答：
+    \begin{align*}
+        \mbox{原式} &= (a+3c-2b)\cdot (a+3c+2b) \\
+        &= (a+3c)^2 - 4b^2 \\
+        &= a^2 + 6ac + 9c^2 - 4b^2. \\
+    \end{align*}
+
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    $\bigstar$
+    （用2种方法）用若干A类正方形(边长a)、B类长方形(长a, 宽b)、C类正方形(边长b), 拼成一个边长为 $2a + 2b$ 的正方形, 需要B类正方形多少个? 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 画图. 
+    \else
+        \\ \\ \\ \\ \\ \\ \\ \\
+    \fi
+}
+
+\begin{comment}
+
+\item {
+    若$(3z^3 + M)(2z^2 - 1)$是一个五次多项式, 则下列说法中正确的是(\quad). 
+
+    A. M是一个三次单项式
+
+    B. M是一个三次多项式
+
+    C. M的次数不高于三
+
+    D. M不可能是一个常数
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路: 直接把$x=2y+2$ 代入，可以消去字母. 
+    \else
+        \\ \\ \\ \\ 
+    \fi
+}
+    
+\item {
+    若 $x=2y+2$, 则求 $x^2 - 4xy + 4y^2$ 的值. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 直接把$x=2y+2$ 代入，可以消去字母. 
+    \else
+        \\ \\ \\ \\ 
+    \fi
+}
+    
+\item {
+    $\bigstar$
+    写出 $(a+b)^2, (a-b)^2, ab$ 三者之间的等量关系. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 直接相减. 
+
+        解答：
+        \begin{align*}
+            (a+b)^2 - (a-b)^2 &= a^2 + 2ab + b^2 - (a^2 - 2ab + b^2) \\
+            &= 4ab. 
+        \end{align*}
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    已知公式: $(x-1)(x^n + x^{n-1} + \cdots + x + 1) = x^{n+1} - 1$ (n为正整数). 
+    
+    利用上述公式, 求 $2^{100} + 2^{99} +\cdots + 2^2 + 2$ 的值. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 使用公式前, 必须把原式的形式整理得和公式完全一致. 
+
+        解答：记原式为S（这句话必须写，让别人知道S是什么）. 
+        \begin{align*}
+            S + 1 &= 2^{100} + 2^{99} + \cdots + 2^2 + 2 + 1 \\
+            &= (2-1)\times (2^{100} + 2^{99} + \cdots + 2^2 + 2 + 1) \\
+            &= 2^{101} - 1 \\
+            \therefore
+            S &= 2^{101} - 2. 
+        \end{align*}
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    $\bigstar \bigstar$
+    用公式计算: $(x+2y-3z)^2$. 
+    \\ \\ \\
+}
+
+\item {
+    $\bigstar$
+    （用2种方法）若把代数式$x^2-4x-5$化成$(x-m)^2+k$的形式, 其中$m, k$为常数. 求$m+k$的值. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路1: 把$x^2-4x-5$转化为$(x-m)^2+k$的形式, 求出m和k. 
+
+        解答: 
+        \begin{align*}
+            x^2-4x-5 &= x^2 - 2\times 2x + 4 - 9 \\
+            &= (x-2)^2 - 9 \\
+        \end{align*}
+        所以, 
+        \[\left\{ 
+            \begin{array}{lc}
+                m = 2\\
+                k =-9
+            \end{array}
+        \right. \]
+        $\therefore m+k=-7. $
+        \\
+        \begin{tikzpicture}
+            \draw[dashed] (0, 0) -- (15, 0);
+        \end{tikzpicture}
+        \\
+        思路2: 对应项系数，常数项相等。
+        \begin{align*}
+            (x-m)^2+k &= x^2 - 2m\cdot x + m^2 + k \\
+        \end{align*}
+        所以, 
+        \[\left\{ 
+            \begin{array}{lc}
+                4 = 2m\\
+                -5 = m^2 + k
+            \end{array}
+        \right. \]
+        所以，
+        \[\left\{ 
+            \begin{array}{lc}
+                m = 2\\
+                k =-9
+            \end{array}
+        \right. \]
+        $\therefore m+k=-7. $
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    $a=2^{44}, b=3^{33}, c=5^{22}$, 比较$a, b, c$的大小. 
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 把指数化为一样, 比较底数大小. 
+
+    解答: 
+    \begin{align*}
+        a &= (2^4)^{11} = 16^{11}\\
+        b &= (3^3)^{11} = 27^{11}\\
+        c &= (5^2)^{11} = 25^{11}\\
+        & 16^{11} < 25^{11} < 27^{11}\\
+        &\therefore a < c < b. 
+    \end{align*}
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    已知$100^a=20, 1000^b=50$, 则$a+\frac{3}{2}b-\frac{3}{2}$的值是多少? 
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 观察$100^a, 1000^b$ 发现 $a, b$都出现在指数上, 要求$a+\frac{3}{2}b-\frac{3}{2}$的值, 应该想到尝试把$a+\frac{3}{2}b-\frac{3}{2}$放在指数上. 
+
+    解答: 
+    \begin{align*}
+        100^{a+\frac{3}{2}b-\frac{3}{2}} &= \frac{100^a\cdot 100^{\frac{3}{2}b}}{100^\frac{3}{2}}\\
+        &= \frac{100^a\cdot 10^{2\cdot \frac{3}{2}b}}{10^{2\cdot\frac{3}{2}}}\\
+        &= \frac{100^a\cdot 10^{3b}} {10^{3}}\\
+        &= \frac{100^a\cdot 1000^{b}} {1000}\\
+        &= \frac{20\times 50} {1000}\\
+        &= 1\\
+        &\therefore a+\frac{3}{2}b-\frac{3}{2} = 0. 
+    \end{align*}
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    用多项式乘法法则推导完全平方公式. 
+    \\ \\ \\
+}
+
+\item {
+    计算 $(-x-y)^2$. 
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 先将括号里的负号处理掉, 再用公式. 
+
+    解答: 
+    \begin{align*}
+        \mbox{原式} &= (x+y)^2\\
+        &= x^2 +2xy + y^2
+    \end{align*}
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    判断下列各式的正误. 
+
+    \textcircled{1}$(a-b)^2 = a^2 - b^2$\\
+    \textcircled{2}$(-2a-3b)^2 = 4a^2 - 12ab +9b^2$\\
+    \textcircled{3}$(\frac13 m + \frac12 n)^2 = \frac19 m^2 + \frac16 mn + \frac14 n^2$\\
+    \textcircled{4}$(-y-3)^2 = y^2 + 6y + 9$
+    \\ \\ \\
+}
+
+\item {
+    用公式计算. 
+
+    $(1) (-\frac34 x + \frac43 y)^2$ \\ \\
+
+    $(2) (-7m-2n)^2$ \\ \\
+    
+    $(3) (a+b+c)^2$ \\ \\
+    \\ \\
+}
+
+\item {
+    计算: $(-xy^2)\cdot (x^2y - 6xy)$
+    \\ \\ \\
+}
+
+\item {
+    计算: $(a+3)(a-1) + a(a-2)$
+    \\ \\ \\
+}
+
+\item {
+    计算(用公式): $(x+2y-1)\cdot (x+2y+1)$
+    \\ \\ \\
+}
+
+\item {
+    $\bigstar \bigstar$
+    已知多项式 $x-2a$ 与 $x^2+x-1$ 的乘积中不含 $x^2$ 项, 则常数$a$的值是多少? 
+    \ifshowSolution
+    \fangsong\zihao{4}
+    \\
+    思路: 不含 $x^2$ 项的意思即该项的“系数为0”. 展开后合并同类项. 
+
+    解答：
+    \begin{align*}
+        (x-2a)x^2+x-1 &= x^3 + (1-2a)x^2-(1+2a)x + 2a\\
+        1-2a &= 0 \\
+        a &= \frac12. 
+    \end{align*}
+
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    多项式 $4a^2+9$ 加上一个单项式后, 可化为一个多项式的平方, 求这个单项式. 
+    \\ \\ \\
+}
+
+\item {
+    已知 $a^2+a-1=0$, 求 $a^3 + 2a^2 + 2023$ 的值. 
+    \\ \\ \\
+}
+
+\item {
+    观察``杨辉三角'', 计算 $(a+b)^5$ 的结果中, 项 $a^3b^2$的系数, 
+    \[
+    \begin{matrix}
+        & & & & 1 & & & \\
+        & & & 1 & & 1 & & \\
+        & & 1 & & 2 & & 1 & \\
+        & 1 & & 3 & & 3 & & 1 \\
+        1 & & 4 & & 6 & & 4 & & 1
+    \end{matrix}
+    \]
+    \begin{align*}
+        (a+b)^1 &= a+b \\
+        (a+b)^2 &= a^2 + 2ab + b^2 \\
+        (a+b)^3 &= a^3 + 3a^2b + 3ab^2 + b^3 \\
+        (a+b)^4 &= a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4 \\
+    \end{align*}
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路: 画图. 
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    判断 $49^8 - 14^2\times 7^{12}$ 能否被9整除, 并说明理由. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路: . 
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    求代数式 $y^2 +10y + 27$ 的最小值. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 将原式整理成 $(y + m)^2 + k$ 的形式; 再利用 $a \geq 0$ 的性质，计算出原式的最小值. 
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    已知 $a^2 + a - 3 = 0$, 计算$(a^2 - 3)(a+1)$. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        % 思路:
+    \else
+        \\ \\ \\
+    \fi
+}
+
+\item {
+    在计算 $(ax+1)(2x+b)$时，小泉同学看错了$b$的值, 计算结果为$2x^2 + 6x + 4$; 小张同学看错了$a$ 的值，计算结果为 $4x^2+12x+5$. 
+
+    (1) 求 $a, b$. \\
+    (2) 计算 $(ax+1)(2x+b)$ 的正确结果. 
+    \ifshowSolution
+        \fangsong\zihao{4}
+        \\
+        思路: 小泉同学算出的a是正确的, 小张同学算出的b是正确的. 
+    \else
+        \\ \\ \\ \\ 
+    \fi
+}
+\end{comment}
