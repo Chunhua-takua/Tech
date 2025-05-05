@@ -18,7 +18,7 @@
 \usetikzlibrary{calc}
 \usetikzlibrary{patterns}
 
-\date{} % not display time here
+\date{}
 
 \fancyhf{}
 \pagestyle{fancy} %fancyhdr宏包新增的页面风格
@@ -26,13 +26,11 @@
 \begin{document}
     % whether show solutions 
     \newif\ifshowSolution
-    % \showSolutiontrue
-    \showSolutionfalse
+    \showSolutionfalse % true
 
     % 不显示自动编号 且 能自动生成目录
     \setcounter{secnumdepth}{0}
-    % 行距
-    \renewcommand{\baselinestretch}{1.25}
+    \renewcommand{\baselinestretch}{1.25} % 行距
 
     \title{\heiti\zihao{2} 数学错题集}
     \maketitle
@@ -46,7 +44,7 @@
 
     2. 规范答题，书写有条理；保持卷面整洁，少涂改；
 
-    3. 除号尽量使用分数形式；
+    3. 除号使用分数形式；
 
     4. 能用公式的计算题用公式。
 
@@ -61,10 +59,6 @@
     \pagenumbering{Roman}
     \cfoot{\thepage}
 
-    % foot decorative lines
-    % \renewcommand{\footrulewidth}{1pt}
-    % \fancyhead[R]{\textbf{《鲁迅全集》笔记}}
-
     \hypersetup{colorlinks=true, linktocpage=true}
     \tableofcontents
 
@@ -72,8 +66,7 @@
     \newpage
     \setcounter{page}{1}
     \pagenumbering{arabic}
-    % 当前页 of 总页数
-    \cfoot{Page \thepage\ of \pageref{LastPage}}
+    \cfoot{Page \thepage\ of \pageref{LastPage}} % 当前页 of 总页数
 
     \zihao{5}
 
