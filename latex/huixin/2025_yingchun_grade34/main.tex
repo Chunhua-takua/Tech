@@ -2,7 +2,7 @@
 
 \mode<presentation> {
 	\usetheme{Madrid}
-	% \usecolortheme{default}
+	% \usecolortheme{spruce}   % 浅绿色
 	% \setbeamertemplate{navigation symbols}{}  % 隐藏导航符号
 
 	% \setbeamertemplate｛footline｝
@@ -20,6 +20,8 @@
 \usepackage[UTF8,noindent]{ctexcap}  % 使用中文输入及显示
 \usepackage{gensymb}
 \usepackage[bookmarks=true]{hyperref}
+\usepackage{tikz}  % 用于图片处理和定位
+\usepackage{graphicx}  % 用于插入图片
 
 %-----------------------------------
 %	以下为正文
@@ -61,9 +63,12 @@
 	\input{./contents/chapter_1.tex}
 	\input{./contents/chapter_2.tex}
 	\input{./contents/chapter_3.tex}
-		
+
+	\setbeamertemplate{background canvas}{
+		\includegraphics[width=\paperwidth,height=\paperheight]{./pics/end.jpg}
+	}
 	\begin{frame}
-		\Huge{\centerline{（结束）}}
+		\Huge{\centerline{下次课见}}
 	\end{frame}
 	%------------------------------------------------
 	% \subsection{Subsection Example 2}
