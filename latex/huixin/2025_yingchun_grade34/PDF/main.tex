@@ -29,6 +29,11 @@
 \fancyhf{}
 \pagestyle{fancy} %fancyhdr宏包新增的页面风格
 
+% foot decorative lines
+\renewcommand{\footrulewidth}{1pt}
+% \fancyhead[R]{\textbf{《鲁迅全集》笔记}}
+\fancyhead[R]{\leftmark}
+
 \begin{document}
     % whether show solutions 
     \newif\ifshowSolution
@@ -65,7 +70,7 @@
     % 当前页 of 总页数
     \cfoot{Page \thepage\ of \pageref{LastPage}}
 
-    \zihao{4}
+    \zihao{5}
 
     \begin{sloppy}
         \begin{enumerate}
