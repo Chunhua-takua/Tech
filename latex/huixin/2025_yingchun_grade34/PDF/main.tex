@@ -68,7 +68,7 @@
     \setcounter{page}{1}
     \pagenumbering{arabic}
     % 当前页 of 总页数
-    \cfoot{Page \thepage\ of \pageref{LastPage}}
+    \cfoot{\thepage\ / \pageref{LastPage}}
 
     \zihao{5}
 
@@ -81,6 +81,9 @@
         \end{enumerate}
         \begin{enumerate}
             \input{./contents/chapter_3}
+        \end{enumerate}
+        \begin{enumerate}
+            \input{./contents/chapter_7}
         \end{enumerate}
     \end{sloppy}
 \end{document}
