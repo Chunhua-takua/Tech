@@ -31,8 +31,15 @@
 
 % foot decorative lines
 \renewcommand{\footrulewidth}{1pt}
-% \fancyhead[R]{\textbf{《鲁迅全集》笔记}}
 \fancyhead[R]{\leftmark}
+
+\newcommand{\myoverline}[1]{%
+  \leavevmode % 确保在段落中正常工作
+  \rlap{\raisebox{2ex}{\rule{1.5cm}{0.4pt}}}% 上划线（位置0.5ex，粗细0.4pt）
+  #1% 文本内容
+}
+
+\setmainfont{SimHei}
 
 \begin{document}
     % whether show solutions 
@@ -81,6 +88,9 @@
         \end{enumerate}
         \begin{enumerate}
             \input{./contents/chapter_3}
+        \end{enumerate}
+        \begin{enumerate}
+            \input{./contents/chapter_4}
         \end{enumerate}
         \begin{enumerate}
             \input{./contents/chapter_7}
