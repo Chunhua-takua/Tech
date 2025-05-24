@@ -39,6 +39,12 @@
   #1% 文本内容
 }
 
+\newcommand{\myoverlineThree}[1]{%
+  \leavevmode % 确保在段落中正常工作
+  \rlap{\raisebox{2ex}{\rule{1.2cm}{0.4pt}}}% 上划线（位置0.5ex，粗细0.4pt）
+  #1% 文本内容
+}
+
 \setmainfont{SimHei}
 
 \begin{document}
@@ -89,15 +95,15 @@
         \end{enumerate}
         \begin{enumerate}
             \input{./contents/chapter_3}
+        % \end{enumerate}
+        % \begin{enumerate}
+            \input{./contents/chapter_3_1}
         \end{enumerate}
         \begin{enumerate}
             \input{./contents/chapter_4}
         \end{enumerate}
         \begin{enumerate}
             \input{./contents/chapter_5}
-        \end{enumerate}
-        \begin{enumerate}
-            \input{./contents/chapter_7}
         \end{enumerate}
     \end{sloppy}
 \end{document}
