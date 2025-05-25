@@ -103,9 +103,36 @@
         \centering
         \includegraphics[width=0.4\textwidth]{./pics/Chapter_4/9.png}
     \end{figure}
+    \ifshowSolution 
+        \fangsong\zihao{5}\textcolor{blue}{
+            正解: \\
+            列表枚举。\\
+            \begin{tabular}{|c|c|c|c|}
+                \hline
+                $3\times 3$ & $2\times 2$ & $1\times 1$ & 摆法 \\
+                \hline
+                1 & 1 & 2 & 1 \\
+                1 & 0 & 6 & 1 \\
+                0 & 2 & 7 & 6 \\
+                0 & 1 & 11 & 6 \\
+                0 & 0 & 15 & 1 \\
+                \hline
+            \end{tabular} \\
+            共15种。
+        }
+    \else
+        \vspace{1cm}
+    \fi
     % 迎春杯三年级2022-试卷.pdf ;  15
 }
 
+    % \centering{\begin{tabular}{|c|c|c|}
+    % 列1 & 列2 & 列3 \\
+    % \midrule
+    % A & B & C \\
+    % D & E & F \\
+    % \end{tabular}} }
+    
 \item {
     【体育比赛·枚举】
     老师手中有4张牌, 按照``甲、乙、甲、乙''的顺序分发。如果这4张牌的点数分别是 1、2、3、4, 并且在整个过程中(包括最终), 甲手中牌的点数之和一直比乙大, 那么, 满足要求的分发顺序共有\underline{\hbox to 20mm{}}种.
