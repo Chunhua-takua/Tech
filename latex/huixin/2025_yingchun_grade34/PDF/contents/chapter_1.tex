@@ -309,55 +309,103 @@
     & \boxed{8} & \square & \square \\
     \end{array}
     \]
-    % \begin{figure}[H] 
-    %     \centering
-    %     \includegraphics[width=0.3\textwidth]{./pics/Chapter_7/3.png}
-    % \end{figure}
-    \vspace{1cm}
+    \ifshowSolution 
+        \fangsong\zihao{5}\textcolor{blue}{
+            正解: \\
+            （1）判断个位。排除 $1+6=7,2+6=8,4+6=10$，还剩$3+6=9,5+6=11$. 如果是$5+6=11$，则十位会产生矛盾。只能是$3+6=9$ \\
+            （2）百位。如果没有进位，则与数字不重复矛盾；所以百位两数之和是7. 只能是$2+5=7$。\\
+            （3）十位。填入4和1。\\
+            \[
+            \begin{array}{l@{\,} c@{\,} c@{\,} c@{\,}}
+            & \boxed{2} & \boxed{4} & \boxed{3} \\
+            + & \boxed{5}  & \boxed{7} & \boxed{6} \\
+            \cline{1-4}
+            & \boxed{8} & \boxed{1} & \boxed{9} \\
+            \end{array}
+            \]
+        }
+    \else
+        \vspace{1cm}
+    \fi
     % 2023YCB初赛真题答案小中.pdf; 819
     % 改
 }
 
 \item {
     【数字谜】
-    在右图的加法竖式中, 6个汉字恰好代表6个连续的数字, 那么, ``花园探秘'' 所代表的四位数是\underline{\hbox to 20mm{}}.
+    在下图的加法竖式中, 6个汉字恰好代表6个连续的数字, 那么, ``花园探秘'' 所代表的四位数是\underline{\hbox to 20mm{}}.
     \zihao{3}
     \[
     \begin{array}{l@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}}}
-    & 第 & 3 & 3 & 届 \\
-    + & 2 & 0 & 1 & 7 \\ 
-    \hline
-    & 花 & 园 & 探 & 秘 \\
+        & 第 & 3 & 3 & 届 \\
+        + & 2 & 0 & 1 & 7 \\ 
+        \hline
+        & 花 & 园 & 探 & 秘 \\
     \end{array}
     \]
-    % \begin{figure}[H] 
-    %     \centering
-    %     \includegraphics[width=0.4\textwidth]{./pics/Chapter_7/12.png}
-    % \end{figure}
-    % \vspace{1cm}
+    \ifshowSolution 
+        \fangsong\zihao{5}\textcolor{blue}{
+            正解: \\
+            （1）判断进位。十位没有向前进位，百位没有向前进位. \\
+            （2）百位。$园=3$. 因为是6个连续的数字，所以不可能有9.\\
+            （3）个位。枚举。如果$届=1$,则$秘=8$,与6个连续数字矛盾；如果$届=2$,则$秘=9$, 矛盾；所以，个位向前进位，$探=5$. 如果$届=4$,则$秘=1$,则这6个连续数字为$0\sim 5$或$1\sim 6$, 都会在千位产生矛盾. \\
+            所以，只能$届=7, 秘=4$. \\
+            （4）千位。$3\sim 7$共5个数字，其中有数字6。$第=6, 花=8$.
+            \[
+            \begin{array}{l@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}}}
+                & 6 & 3 & 3 & 7 \\
+                + & 2 & 0 & 1 & 7 \\ 
+                & \textcircled{0} & \textcircled{0} & \textcircled{1} &  \\ 
+                \hline
+                & 8 & 3 & 5 & 4 \\
+            \end{array}
+            \]
+        }
+    \else
+        \vspace{1cm}
+    \fi
     % 2021; 8354
 }
 
 \item {
     【数字谜】
-    在右面的乘法竖式中, 相同的汉字代表相同的数字, 不同的汉字代表不同的数字;那么, \myoverline{迎接夏天} 代表的四位数是\underline{\hbox to 20mm{}}.
+    在下面的乘法竖式中, 相同的汉字代表相同的数字, 不同的汉字代表不同的数字;那么, \myoverline{迎接夏天} 代表的四位数是\underline{\hbox to 20mm{}}.
     \zihao{3}
     \[
     \begin{array}{l@{\hspace{1em}}  c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}}}
-    \quad & \quad & 迎 & 春 \\
-    \times &\quad & 春 & 天 \\ 
-    \hline
-    \quad &\quad & 春 & 天 \\ 
-    \quad & 晚 & 春 \\ 
-    \hline
-    迎& 接 & 夏 & 天 \\
+        \quad & \quad & 迎 & 春 \\
+        \times &\quad & 春 & 天 \\ 
+        \hline
+        \quad &\quad & 春 & 天 \\ 
+        \quad & 晚 & 春 \\ 
+        \hline
+        迎& 接 & 夏 & 天 \\
     \end{array}
     \]
-    % \begin{figure}[H] 
-    %     \centering
-    %     \includegraphics[width=0.4\textwidth]{./pics/Chapter_7/14.png}
-    % \end{figure}
-    \vspace{1cm}
+    \ifshowSolution 
+        \fangsong\zihao{5}\textcolor{blue}{
+            正解: \\
+            （1）黄金三角，$迎=1,晚=9,接=0$。十位没有向前进位，百位没有向前进位. \\
+            （2）判断``春''。$春\times 春$的个位是春，则$春=5或6$. \\
+            如果$春=5$，则与9矛盾；所以，$春=6$.\\
+            （3）判断``夏''。看加法，个位不会向前进位，所以 $夏=2$. \\
+            所以，只能$届=7, 秘=4$. \\
+            （4）判断``天''。枚举，得 $天=4$.
+            \[
+            \begin{array}{l@{\hspace{1em}}  c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}}}
+                \quad & \quad & 1 & 6 \\
+                \times &\quad & 6 & 4 \\ 
+                \hline
+                \quad &\quad & 6 & 4 \\ 
+                \quad & 9 & 6 \\
+                \hline
+                1& 0 & 2 & 4 \\
+            \end{array}
+            \]
+        }
+    \else
+        \vspace{1cm}
+    \fi
     % 2021, 迎春杯四年级真题.pdf; 1024
 }
 

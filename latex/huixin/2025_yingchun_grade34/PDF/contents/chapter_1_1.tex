@@ -3,14 +3,29 @@
 \item {
     【整除】
     再过12天就到2016年了, 昊昊感慨地说: 我到目前只经过2个闰年, 并且我出生的年份是9的倍数, 那么2016年昊昊是\underline{\hbox to 20mm{}}岁． 
-    \ifshowSolution
-        \fangsong\zihao{4}
-        \\
-        思路:
-
-        正解:
+    \ifshowSolution 
+        \fangsong\zihao{5}\textcolor{blue}{
+            正解: \\
+            （1）黄金三角，$迎=1,晚=9,接=0$。十位没有向前进位，百位没有向前进位. \\
+            （2）判断``春''。$春\times 春$的个位是春，则$春=5或6$. \\
+            如果$春=5$，则与9矛盾；所以，$春=6$.\\
+            （3）判断``夏''。看加法，个位不会向前进位，所以 $夏=2$. \\
+            所以，只能$届=7, 秘=4$. \\
+            （4）判断``天''。枚举，得 $天=4$.
+            \[
+            \begin{array}{l@{\hspace{1em}}  c@{\hspace{1em}} c@{\hspace{1em}} c@{\hspace{1em}}}
+                \quad & \quad & 1 & 6 \\
+                \times &\quad & 6 & 4 \\ 
+                \hline
+                \quad &\quad & 6 & 4 \\ 
+                \quad & 9 & 6 \\
+                \hline
+                1& 0 & 2 & 4 \\
+            \end{array}
+            \]
+        }
     \else
-        \\ \\ \\
+        \vspace{1cm}
     \fi
 }
 
