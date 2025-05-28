@@ -2,3 +2,8 @@
 *.log
 *.gz
 *.gitignore
+*.vscode
+*.exe
+*.aux
+*.out
+*.toc
