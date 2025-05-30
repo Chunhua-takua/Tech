@@ -69,16 +69,17 @@
     \end{figure}
     \ifshowSolution 
         \fangsong\zihao{5}\textcolor{blue}{
-            正解: 10.\\
+            正解: 40.\\
             \begin{figure}[H] 
                 \centering
                 \includegraphics[width=0.3\textwidth]{./pics/Chapter_2/seikai_2.png}
             \end{figure}
             \begin{align*}
-                5a &= 6-7a \\
-                a &= \frac12 \\
-                S_{阴影} &= 5a\cdot (6-4a)\\
-                &= 10.
+                5a &= 6-a \\
+                a &= 1 \\
+                S_{阴影} &= 5a\cdot (12-4a) \\
+                &= 5\times 8\\
+                &= 40.
             \end{align*}
         }
     \else
@@ -96,6 +97,7 @@
     \ifshowSolution 
         \fangsong\zihao{5}\textcolor{blue}{
             正解: \\
+            方法1. \\
             \begin{figure}[H] 
                 \centering
                 \includegraphics[width=0.3\textwidth]{./pics/Chapter_2/seikai_4.png}
@@ -106,11 +108,20 @@
                 S_{小长方形} &= a\cdot (4a+30)\\
                 &= 34.
             \end{align*}
+            方法2.\\
+            \begin{align*}
+                大正方形的边长 &=(70+80+90+100)\div 10 \\
+                 &= 34\\
+                小长方形的宽 &= 70\div 2 - 34\\
+                &= 1\\
+                \therefore S_{小长方形} &= 1\times 34\\
+                &= 34.
+            \end{align*}
         }
     \else
         \vspace{1cm}
     \fi
-    % 
+    % 2023YCB初赛真题答案小中.pdf, 34
 }
 
 \item {
@@ -164,43 +175,6 @@
     % 8
 }
 
-% \item {
-%     【三角形面积】
-%     如图, 正六边形$ABCDEF$中, 以AB为边长向内作正方形$ABGH$, $CG$与$FH$交于点$M$.\\
-%     (1) 如果正六边形$ABCDEF$的边长是20, 那么三角形$AFH$的面积是\underline{\hbox to 20mm{}}.\\
-%     (2) 如果正六边形$ABCDEF$的面积是24, 那么阴影部分面积之和是\underline{\hbox to 20mm{}}.
-%     \begin{figure}[H] 
-%         \centering
-%         \includegraphics[width=0.4\textwidth]{./pics/Chapter_2/3.png}
-%     \end{figure}
-%     \ifshowSolution 
-%         \fangsong\zihao{5}\textcolor{blue}{
-%             正解: \\
-%             (1) \\
-%             $AB = AF = AH = 20$,\\
-%             $\angle FAH = 30\degree,$\\
-%             $\therefore \triangle AFH$边 $AF$ 上的高 $h=10$,\\
-%             $\therefore S_{\triangle AFH} = \frac12\cdot AF\cdot h = \frac12\times 20\times 10 = 100.$ \\
-%             \\(2)\\
-%             设 $AB=a.$
-%             \begin{align*}
-%                 S_{\triangle ABO} &= 4 \\
-%                 \frac12\cdot a\cdot \frac{AE}{2} &= 4 \\
-%                 a\cdot AE &= 16.\\
-%                 S_{\triangle AFH} &= \frac{a^2}{4}. \\
-%                 S_{\triangle MHG} + S_{\triangle MDE} &= \frac{1}{2}HG\cdot EH \\
-%                 &= \frac{a}{2}\cdot (AE-a). \\
-%                 S_{阴影} &= S_{ABCDEF} - 2S_{\triangle AFH} - S_{\triangle MHG} - S_{\triangle MDE} \\
-%                 &= 24 - \frac{a^2}{2} - \frac{1}{2}a\cdot AE + \frac{a^2}{2} \\
-%                 &= 16.
-%             \end{align*}
-%         }
-%     \else
-%         \vspace{1cm}
-%     \fi
-%     % 2024数学花园探秘笔试小中年级夏季决赛C卷（B5试卷版）.pdf
-% }
-
 \item {
     【三角形面积·等差数列】
     如图, 一个面积为420平方厘米的长方形被四条线段分割成了五个三角形, 且这五个三角形的面积$S_1, S_2, S_3, S_4, S_5$依次构成等差数列, 那么$S_5$是\underline{\hbox to 20mm{}}平方厘米.
@@ -211,6 +185,7 @@
     \ifshowSolution 
         \fangsong\zihao{5}\textcolor{blue}{
             正解: \\
+            方法1（方程）.\\
             设公差为d, 则 
             \begin{align*}
                 5S_{5} - \frac{5\times 4}{2}d &= 420, \\
@@ -223,7 +198,18 @@
                     \textcircled{1} \\ 
                     \textcircled{2}  
                 \end{cases}$,
-            得 $S_{5}=112 {cm}^2.$
+            得 $S_{5}=112 {cm}^2.$\\
+            方法2.\\
+            \begin{align*}
+                S_{3} &= 420\div 5 \\
+                &= 84 \\
+                S_{4} + S_{5} &= 420\div 2\\
+                &=210 \\
+                \therefore 公差 &= (S_{4} + S_{5} - 2S_{3})\div 3\\
+                &= 14\\
+                S_{5} &= S_{3} + 14\times 2 \\
+                &= 112.
+            \end{align*}
         }
     \else
         \vspace{1cm}
@@ -247,7 +233,13 @@
                 &= 40.
             \end{align*}
             方法2.\\
-            连接对角线。
+            连接对角线.
+            \begin{figure}[H] 
+                \centering
+                \includegraphics[width=0.3\textwidth]{./pics/Chapter_2/seikai_17.png}
+            \end{figure}
+            阴影部分由小三角形组成.\\
+            $S_{阴影} = 2\times (2\times 2\div 2 + 4\times 2\div 2 + 6\times 2\div 2 + 8\times 2\div 2) = 40.$
         }
     \else
         \vspace{1cm}
@@ -265,17 +257,28 @@
     \ifshowSolution 
         \fangsong\zihao{5}\textcolor{blue}{
             正解: \\
-            用蝴蝶定理.\\
+            方法1（蝴蝶定理）.\\
             \begin{figure}[H] 
                 \centering
                 \includegraphics[width=0.4\textwidth]{./pics/Chapter_2/seikai_18.png}
             \end{figure}
-            根据X模型,\\
-            $\triangle EFH \backsim \triangle ADH$, \\
-            $FH:DH = FH:AH = 1:2$, \\
-            $\therefore S_{\triangle EFH} : S_{\triangle ADH}= 1:4$.  \\
-            $\therefore S_{\triangle EFH}=\frac{15}{2} $.\\
-            $\therefore S_{正六边形} = 2(S_{\triangle EFH} + S_{\triangle AFH} + S_{\triangle ADH}) = 135 {cm}^2$.
+            \begin{gather*}
+                在梯形ADFE中,S_{\triangle ADH}=30,
+                S_{\triangle AFH} = S_{\triangle DEH} = 15. \\
+                根据蝴蝶定理,S_{\triangle AFH} \cdot S_{\triangle DEH} = S_{\triangle FEH} \cdot S_{\triangle ADH}\\
+                15 \times 15 = S_{\triangle FEH} \cdot 30\\
+                S_{\triangle FEH} = \frac{15}{2}\\
+                \therefore S_{正六边形} = 2(S_{\triangle EFH} + S_{\triangle AFH} + S_{\triangle ADH}) \\
+                = 135 {cm}^2.\\
+            \end{gather*}
+            方法2（X模型相似）.\\
+            \begin{gather*}
+                根据X模型, \triangle EFH \backsim \triangle ADH, \\
+                FH:DH = FH:AH = 1:2, \\
+                \therefore S_{\triangle EFH} : S_{\triangle ADH}= 1:4.  \\
+                \therefore S_{\triangle EFH}=\frac{15}{2} .\\
+                \therefore S_{正六边形} = 2(S_{\triangle EFH} + S_{\triangle AFH} + S_{\triangle ADH}) = 135 {cm}^2.
+            \end{gather*}
         }
     \else
         \vspace{1cm}
@@ -293,12 +296,11 @@
     \ifshowSolution 
         \fangsong\zihao{5}\textcolor{blue}{
             正解: \\
-            % \begin{figure}[H] 
-            %     \centering
-            %     \includegraphics[width=0.4\textwidth]{./pics/Chapter_2/seikai_18.png}
-            % \end{figure}
+            \begin{figure}[H] 
+                \centering
+                \includegraphics[width=0.4\textwidth]{./pics/Chapter_2/seikai_19.png}
+            \end{figure}
             $S_{阴影} = 126 {cm}^2$.
-            方法2: 分割法\\
         }
     \else
         \vspace{1cm}
@@ -320,14 +322,14 @@
                 \centering
                 \includegraphics[width=0.3\textwidth]{./pics/Chapter_2/seikai_10.png}
             \end{figure}
-            \begin{align*}
-                S_{KLMG} &= 3\times 5 = 15, \\
-                S_{MOPJ} &= OP\cdot JC, \\
-                &= 5JC, \\
-                S_{KLMG} &= S_{MOPJ},\\
-                \therefore JC &= 3 = PC.\\
-                S_{正方形ABCD} &= (3+5+3)^2 = 121 {cm}^2.\\
-            \end{align*}
+            \begin{gather*}
+                S_{KLMG} = 3\times 5 = 15, \\
+                S_{MOPJ} = OP\cdot JC, \\
+                = 5JC, \\
+                S_{KLMG} = S_{MOPJ},\\
+                \therefore JC = 3 = PC.\\
+                S_{正方形ABCD} = (3+5+3)^2 = 121 {cm}^2.\\
+            \end{gather*}
         }
     \else
         \vspace{1cm}
@@ -526,3 +528,41 @@
     \fi
     % 华数真题2021-2023（小中组）.pdf, 2022.2.19线上小中组解析1.pdf; 54
 }
+
+
+% \item {
+%     【三角形面积】
+%     如图, 正六边形$ABCDEF$中, 以AB为边长向内作正方形$ABGH$, $CG$与$FH$交于点$M$.\\
+%     (1) 如果正六边形$ABCDEF$的边长是20, 那么三角形$AFH$的面积是\underline{\hbox to 20mm{}}.\\
+%     (2) 如果正六边形$ABCDEF$的面积是24, 那么阴影部分面积之和是\underline{\hbox to 20mm{}}.
+%     \begin{figure}[H] 
+%         \centering
+%         \includegraphics[width=0.4\textwidth]{./pics/Chapter_2/3.png}
+%     \end{figure}
+%     \ifshowSolution 
+%         \fangsong\zihao{5}\textcolor{blue}{
+%             正解: \\
+%             (1) \\
+%             $AB = AF = AH = 20$,\\
+%             $\angle FAH = 30\degree,$\\
+%             $\therefore \triangle AFH$边 $AF$ 上的高 $h=10$,\\
+%             $\therefore S_{\triangle AFH} = \frac12\cdot AF\cdot h = \frac12\times 20\times 10 = 100.$ \\
+%             \\(2)\\
+%             设 $AB=a.$
+%             \begin{align*}
+%                 S_{\triangle ABO} &= 4 \\
+%                 \frac12\cdot a\cdot \frac{AE}{2} &= 4 \\
+%                 a\cdot AE &= 16.\\
+%                 S_{\triangle AFH} &= \frac{a^2}{4}. \\
+%                 S_{\triangle MHG} + S_{\triangle MDE} &= \frac{1}{2}HG\cdot EH \\
+%                 &= \frac{a}{2}\cdot (AE-a). \\
+%                 S_{阴影} &= S_{ABCDEF} - 2S_{\triangle AFH} - S_{\triangle MHG} - S_{\triangle MDE} \\
+%                 &= 24 - \frac{a^2}{2} - \frac{1}{2}a\cdot AE + \frac{a^2}{2} \\
+%                 &= 16.
+%             \end{align*}
+%         }
+%     \else
+%         \vspace{1cm}
+%     \fi
+%     % 2024数学花园探秘笔试小中年级夏季决赛C卷（B5试卷版）.pdf
+% }
