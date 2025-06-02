@@ -49,11 +49,6 @@
 \setmainfont{SimHei}
 
 \begin{document}
-    % whether show solutions 
-    \newif\ifshowSolution
-    \showSolutiontrue
-    % \showSolutionfalse
-
     % 不显示自动编号 且 能自动生成目录
     \setcounter{secnumdepth}{0}
     % 行距
@@ -82,10 +77,14 @@
     \setcounter{page}{1}
     \pagenumbering{arabic}
     % 当前页 of 总页数
-    \cfoot{\thepage\ / \pageref{LastPage}}
+    \cfoot{\thepage\ /~\pageref{LastPage}}
 
     \zihao{5}
 
+    % whether show solutions 
+    \newif\ifshowSolution{}
+    \showSolutiontrue{}
+    % \showSolutionfalse{}
     \begin{sloppy}
         % \begin{enumerate}
         %     \input{./contents/chapter_1}
